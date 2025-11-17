@@ -16,14 +16,26 @@ export default function Navigation({ cartItemCount = 0 }) {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-gray-900">
+          <div style={{ display: 'flex', gap: '32px' }}>
+            <Link 
+              to="/" 
+              style={{ padding: '8px 12px' }}
+              className="text-gray-700 hover:text-gray-900"
+            >
               Home
             </Link>
-            <Link to="/about" className="text-gray-700 hover:text-gray-900">
+            <Link 
+              to="/about" 
+              style={{ padding: '8px 12px' }}
+              className="text-gray-700 hover:text-gray-900"
+            >
               About
             </Link>
-            <Link to="/products" className="text-gray-700 hover:text-gray-900">
+            <Link 
+              to="/products" 
+              style={{ padding: '8px 12px' }}
+              className="text-gray-700 hover:text-gray-900"
+            >
               Products
             </Link>
           </div>
@@ -31,17 +43,21 @@ export default function Navigation({ cartItemCount = 0 }) {
           {/* Cart Icon */}
           <div className="flex items-center space-x-4">
             <Link to="/cart" className="relative">
-              <svg
-                className="w-6 h-6 text-gray-700 hover:text-gray-900"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+              <svg 
+                viewBox="0 0 34 30" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg" 
+                className="block w-6 h-6 lg:w-8 lg:h-7"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                <path 
+                  d="M16.9994 1C14.0664 1 11.6944 5.60349 11.6944 11.2858H22.3129C22.3129 5.60349 19.9325 1 17.0079 1H16.9994Z" 
+                  stroke="currentColor" 
+                  vectorEffect="non-scaling-stroke"
+                />
+                <path 
+                  d="M33 11.286H1V29H33V11.286Z" 
+                  stroke="currentColor" 
+                  vectorEffect="non-scaling-stroke"
                 />
               </svg>
               {cartItemCount > 0 && (
