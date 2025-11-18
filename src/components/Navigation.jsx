@@ -22,21 +22,21 @@ export default function Navigation({ cartItemCount = 0 }) {
               style={{ padding: '8px 12px' }}
               className="text-gray-700 hover:text-gray-900"
             >
-              Home
+             Shop 
             </Link>
             <Link 
               to="/about" 
               style={{ padding: '8px 12px' }}
               className="text-gray-700 hover:text-gray-900"
             >
-              About
+              Catering 
             </Link>
             <Link 
               to="/products" 
               style={{ padding: '8px 12px' }}
               className="text-gray-700 hover:text-gray-900"
             >
-              Products
+              Contact 
             </Link>
           </div>
 

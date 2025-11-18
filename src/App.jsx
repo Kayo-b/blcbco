@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { CartProvider, useCart } from './context/CartContext';
 import Navigation from './components/Navigation';
+import Menu from './components/Menu';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -17,6 +18,7 @@ function AppContent() {
     <div className="flex flex-col min-h-screen">
       <Navigation cartItemCount={getItemCount()} />
       <main className="flex-grow">
+      {/* <Menu/> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
