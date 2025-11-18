@@ -18,21 +18,21 @@ export default function Navigation({ cartItemCount = 0, onCartClick }) {
           {/* Desktop Navigation */}
           <div style={{ display: 'flex', gap: '32px' }}>
             <Link 
-              to="/" 
+              to="/products" 
               style={{ padding: '8px 12px' }}
               className="text-gray-700 hover:text-gray-900"
             >
              Shop 
             </Link>
             <Link 
-              to="/about" 
+              to="/catering" 
               style={{ padding: '8px 12px' }}
               className="text-gray-700 hover:text-gray-900"
             >
               Catering 
             </Link>
             <Link 
-              to="/products" 
+              to="/about" 
               style={{ padding: '8px 12px' }}
               className="text-gray-700 hover:text-gray-900"
             >
@@ -110,18 +110,25 @@ export default function Navigation({ cartItemCount = 0, onCartClick }) {
                 Home
               </Link>
               <Link
-                to="/about"
-                className="text-gray-700 hover:text-gray-900 py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                About
-              </Link>
-              <Link
                 to="/products"
                 className="text-gray-700 hover:text-gray-900 py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Products
+                Shop
+              </Link>
+              <Link
+                to="/catering"
+                className="text-gray-700 hover:text-gray-900 py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Catering
+              </Link>
+              <Link
+                to="/about"
+                className="text-gray-700 hover:text-gray-900 py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact
               </Link>
             </div>
           </div>

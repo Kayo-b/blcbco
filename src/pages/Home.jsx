@@ -7,22 +7,22 @@ export default function Home() {
       {/* Vertical Menu Container */}
       <div className="flex flex-col p-6 space-y-4">
         <Link 
-          to="/" 
+          to="/products" 
           className="text-gray-700 hover:text-gray-900 px-4 py-3 rounded hover:bg-gray-100"
         >
-          Shop 
+          shop 
         </Link>
         <Link 
           to="/about" 
           className="text-gray-700 hover:text-gray-900 px-4 py-3 rounded hover:bg-gray-100"
         >
-          Catering 
+          catering 
         </Link>
         <Link 
-          to="/products" 
+          to="/about" 
           className="text-gray-700 hover:text-gray-900 px-4 py-3 rounded hover:bg-gray-100"
         >
-          Contact 
+         about 
         </Link>
       </div>
     </nav>
