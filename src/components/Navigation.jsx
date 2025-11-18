@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
-export default function Navigation({ cartItemCount = 0 }) {
+export default function Navigation({ cartItemCount = 0, onCartClick }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -42,7 +42,7 @@ export default function Navigation({ cartItemCount = 0 }) {
 
           {/* Cart Icon */}
           <div className="flex items-center space-x-4">
-            <Link to="/cart" className="relative">
+            <button onClick={onCartClick} className="relative">
               <svg 
                 viewBox="0 0 34 30" 
                 fill="none" 
@@ -65,7 +65,7 @@ export default function Navigation({ cartItemCount = 0 }) {
                   {cartItemCount}
                 </span>
               )}
-            </Link>
+            </button>
 
             {/* Mobile menu button */}
             <button

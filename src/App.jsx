@@ -1,8 +1,10 @@
+import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { CartProvider, useCart } from './context/CartContext';
 import Navigation from './components/Navigation';
 import Menu from './components/Menu';
 import Footer from './components/Footer';
+import CartDrawer from './components/CartDrawer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Products from './pages/Products';
@@ -13,10 +15,14 @@ import Confirmation from './pages/Confirmation';
 
 function AppContent() {
   const { getItemCount } = useCart();
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Navigation cartItemCount={getItemCount()} />
+      <Navigation 
+        cartItemCount={getItemCount()} 
+        onCartClick={() => setIsCartOpen(true)}
+      />
       <main className="flex-grow">
       {/* <Menu/> */}
         <Routes>
@@ -30,6 +36,7 @@ function AppContent() {
         </Routes>
       </main>
       <Footer />
+      <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
     </div>
   );
 }
