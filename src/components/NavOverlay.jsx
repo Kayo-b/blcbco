@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 
-export default function CartDrawer({ isOpen, onClose }) {
+export default function NavOverlay({ isOpen, onClose }) {
   const { cart, updateQuantity, removeFromCart, getTotal } = useCart();
 
   return (
@@ -9,16 +9,16 @@ export default function CartDrawer({ isOpen, onClose }) {
       {/* Overlay */}
       {isOpen && (
         <div 
-          className="fixed inset-0 bg-black/50 z-40 transition-opacity"
+          className="fixed inset-0 bg-orange/80 z-40 transition-opacity"
           onClick={onClose}
         />
       )}
 
       {/* Drawer */}
       <div className={`
-        fixed right-0 top-0 h-full w-full sm:w-96 bg-orange-500 shadow-2xl z-50
+        fixed top-0 left-0 w-full h-[400px] bg-orange-500 shadow-2xl z-50
         transition-transform duration-300 ease-in-out
-        ${isOpen ? 'translate-x-0' : 'translate-x-full'}
+        ${isOpen ? 'translate-y-0' : '-translate-y-full'}
         flex flex-col
       `}>
         {/* Header */}

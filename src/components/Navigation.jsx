@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
-export default function Navigation({ cartItemCount = 0, onCartClick }) {
+export default function Navigation({ cartItemCount = 0, onCartClick, onContactClick }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -31,13 +31,13 @@ export default function Navigation({ cartItemCount = 0, onCartClick }) {
             >
               Catering 
             </Link>
-            <Link 
-              to="/about" 
+            <button
+              onClick={onContactClick}
               style={{ padding: '8px 12px' }}
               className="text-gray-700 hover:text-gray-900"
             >
               Contact 
-            </Link>
+            </button>
           </div>
 
           {/* Cart Icon */}

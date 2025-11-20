@@ -3,59 +3,57 @@ import { Link } from 'react-router-dom';
 export default function Catering() {
   const cateringStyles = [
     {
-      title: "Full Meal Experience",
-      description: "Perfect for family dinners, weekend lunches, or when you want to bring everyone together around the table. We bring the complete Brazilian feast to your home.",
-      examples: "Feijoada completa, moqueca with rice and pirão, churrasco spread, arroz de carreteiro"
+      title: "Service Option 1",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      examples: "Food placeholder, food placeholder, food placeholder, food placeholder"
     },
     {
-      title: "Party Portions & Finger Foods",
-      description: "The stars of every Brazilian birthday party! Those beloved salgadinhos that disappear in minutes. Perfect for celebrations where people mingle and snack.",
-      examples: "Coxinhas, risólis, bolinhas de queijo, pastéis, kibe, empadinhas"
+      title: "Service Option 2",
+      description: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      examples: "Food placeholder, food placeholder, food placeholder, food placeholder, food placeholder, food placeholder"
     },
     {
-      title: "Sweet Treats Table",
-      description: "No Brazilian party is complete without the sweets table! We bring all those nostalgic docinhos that make celebrations special.",
-      examples: "Brigadeiros, beijinhos, cajuzinhos, olho de sogra, cocada, quindim, pudim"
+      title: "Service Option 3",
+      description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+      examples: "Food placeholder, food placeholder, food placeholder, food placeholder, food placeholder, food placeholder, food placeholder"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-orange-50">
+    <div className="min-h-screen bg-blue-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-orange-400 to-yellow-400 text-white py-16 px-4">
+      <div className="bg-gradient-to-br from-blue-300 to-green-500 text-white py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Brazilian Catering 🇧🇷
+            Catering Services
           </h1>
           <p className="text-xl md:text-2xl text-white">
-            Bringing Brazilian flavors to your family & friends gatherings
+            Page subtitle text placeholder
           </p>
           <p className="text-lg mt-3 text-orange-100">
-            Perfect for groups up to 10 people
+            Additional description text
           </p>
         </div>
       </div>
 
       {/* Introduction */}
       <div className="max-w-4xl mx-auto px-4 py-12">
-        <div className="bg-white rounded-2xl shadow-sm p-8 mb-12 border-4 border-orange-200">
+        <div className="bg-white rounded-xl shadow-sm p-8 mb-12 border-4 border-orange-200">
           <h2 className="text-3xl font-bold text-orange-600 mb-6 text-center">
-            Let's Celebrate Together! 🎉
+            Section Heading
           </h2>
           <div className="text-gray-700 space-y-4 text-lg">
             <p className="leading-relaxed">
-              Remember those amazing Brazilian parties? The ones where the table is full of delicious salgadinhos, 
-              where everyone gathers around for a proper meal, and there's always room for more brigadeiros? 
-              That's exactly what we bring to your home!
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
             </p>
             <p className="leading-relaxed">
-              Whether you're planning a birthday party, a family gathering, a weekend lunch with friends, 
-              or just want to treat your loved ones to authentic Brazilian food, we've got you covered. 
-              We keep it simple, delicious, and true to the Brazilian spirit of sharing good food with good people.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
             <p className="leading-relaxed">
-              Everything is made fresh, with love, using traditional recipes. No fancy presentations needed – 
-              just honest, tasty Brazilian food that brings people together.
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+              totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
             </p>
           </div>
         </div>
@@ -63,13 +61,13 @@ export default function Catering() {
         {/* Catering Styles */}
         <div className="mb-12">
           <h2 className="text-3xl font-bold text-orange-600 mb-8 text-center">
-            What We Can Bring to Your Party
+            Service Options
           </h2>
           <div className="space-y-6">
             {cateringStyles.map((style, index) => (
               <div 
                 key={index}
-                className="bg-white rounded-2xl shadow-sm p-8 border-l-8 border-orange-400 hover:border-yellow-400 transition-colors"
+                className="bg-white rounded-xl shadow-sm p-8 border-l-8 border-orange-400 hover:border-yellow-400 transition-colors"
               >
                 <h3 className="text-2xl font-bold text-gray-800 mb-3">
                   {style.title}
@@ -89,42 +87,39 @@ export default function Catering() {
         </div>
 
         {/* What's Served */}
-        <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl shadow-sm p-8 mb-12 border-4 border-yellow-200">
+        <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl shadow-sm p-8 mb-12 border-4 border-yellow-200">
           <h2 className="text-3xl font-bold text-orange-600 mb-6 text-center">
-            The Favorites 💛
+            Menu Options
           </h2>
           <div className="text-gray-700 space-y-6">
             <p className="text-lg leading-relaxed text-center">
-              These are the classics that everyone asks for. Your guests will recognize them, 
-              love them, and definitely ask for seconds!
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
             <div className="grid md:grid-cols-2 gap-8 my-8">
               <div className="bg-white rounded-xl p-6 shadow-sm">
-                <h4 className="text-2xl font-bold text-orange-500 mb-4">Salgadinhos 🥟</h4>
+                <h4 className="text-2xl font-bold text-orange-500 mb-4">Category 1</h4>
                 <p className="text-gray-600 leading-relaxed">
-                  Coxinha de frango, Risólis de queijo, Bolinhas de queijo, Pastéis, 
-                  Kibe, Empadinhas, Pão de queijo
+                  Food placeholder, Food placeholder, Food placeholder, Food placeholder, 
+                  Food placeholder, Food placeholder, Food placeholder
                 </p>
               </div>
               <div className="bg-white rounded-xl p-6 shadow-sm">
-                <h4 className="text-2xl font-bold text-orange-500 mb-4">Docinhos 🍬</h4>
+                <h4 className="text-2xl font-bold text-orange-500 mb-4">Category 2</h4>
                 <p className="text-gray-600 leading-relaxed">
-                  Brigadeiros, Beijinhos, Cajuzinhos, Olho de sogra, 
-                  Cocada, Quindim, Pudim de leite
+                  Food placeholder, Food placeholder, Food placeholder, Food placeholder, 
+                  Food placeholder, Food placeholder, Food placeholder
                 </p>
               </div>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-sm">
-              <h4 className="text-2xl font-bold text-orange-500 mb-4 text-center">Full Meals 🍛</h4>
+              <h4 className="text-2xl font-bold text-orange-500 mb-4 text-center">Category 3</h4>
               <p className="text-gray-600 leading-relaxed text-center">
-                Feijoada completa with all the fixings, Moqueca de peixe with rice and pirão, 
-                Churrasco spread, Arroz de carreteiro, Strogonoff brasileiro, 
-                Picanha with farofa and vinagrete
+                Food placeholder, Food placeholder, Food placeholder, Food placeholder, 
+                Food placeholder, Food placeholder
               </p>
             </div>
             <p className="text-lg leading-relaxed text-center mt-6">
-              We can mix and match based on what you're craving! Just let us know what kind 
-              of vibe you're going for, and we'll help you put together the perfect menu.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
           </div>
         </div>
@@ -132,46 +127,42 @@ export default function Catering() {
         {/* How It Works */}
         <div className="bg-white rounded-2xl shadow-sm p-8 mb-12 border-4 border-orange-200">
           <h2 className="text-3xl font-bold text-orange-600 mb-6 text-center">
-            How It Works
+            Process Steps
           </h2>
           <div className="text-gray-700 space-y-6 text-lg">
             <div className="flex items-start gap-4">
               <span className="text-4xl font-bold text-orange-400 flex-shrink-0">1</span>
               <div>
-                <h4 className="font-bold text-gray-800 mb-2">Tell us about your party</h4>
+                <h4 className="font-bold text-gray-800 mb-2">Step One</h4>
                 <p className="leading-relaxed">
-                  How many people? What's the occasion? Are you thinking full meal or snacks? 
-                  Any favorites you definitely want included?
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.
                 </p>
               </div>
             </div>
             <div className="flex items-start gap-4">
               <span className="text-4xl font-bold text-orange-400 flex-shrink-0">2</span>
               <div>
-                <h4 className="font-bold text-gray-800 mb-2">We plan the menu together</h4>
+                <h4 className="font-bold text-gray-800 mb-2">Step Two</h4>
                 <p className="leading-relaxed">
-                  Based on what you tell us, we'll suggest a menu that fits perfectly. 
-                  We can adjust anything to match your preferences and dietary needs.
+                  Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
                 </p>
               </div>
             </div>
             <div className="flex items-start gap-4">
               <span className="text-4xl font-bold text-orange-400 flex-shrink-0">3</span>
               <div>
-                <h4 className="font-bold text-gray-800 mb-2">We make everything fresh</h4>
+                <h4 className="font-bold text-gray-800 mb-2">Step Three</h4>
                 <p className="leading-relaxed">
-                  On the day of your event, we prepare everything fresh using traditional recipes 
-                  and quality ingredients. Nothing frozen, nothing pre-made.
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
                 </p>
               </div>
             </div>
             <div className="flex items-start gap-4">
               <span className="text-4xl font-bold text-orange-400 flex-shrink-0">4</span>
               <div>
-                <h4 className="font-bold text-gray-800 mb-2">Enjoy your party!</h4>
+                <h4 className="font-bold text-gray-800 mb-2">Step Four</h4>
                 <p className="leading-relaxed">
-                  We deliver everything ready to enjoy. You get to relax and spend time 
-                  with your guests while we take care of the food.
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
                 </p>
               </div>
             </div>
@@ -181,11 +172,10 @@ export default function Catering() {
         {/* Contact CTA */}
         <div className="bg-gradient-to-br from-orange-400 to-yellow-400 text-white rounded-2xl shadow-lg p-8 md:p-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Let's Make Your Party Special! 🎊
+            Call to Action Heading
           </h2>
           <p className="text-xl md:text-2xl mb-8 leading-relaxed">
-            Every party is different, and we love hearing about what you're planning. 
-            Get in touch and let's chat about bringing some Brazilian flavor to your gathering!
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
             <Link
@@ -198,14 +188,14 @@ export default function Catering() {
               to="/products"
               className="bg-orange-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-orange-700 transition text-lg shadow-lg"
             >
-              Check Out Our Shop
+              View Products
             </Link>
           </div>
           <p className="text-lg text-white mt-6">
-            📧 info@balacobaco.com | 📱 (555) 123-4567
+            contact@placeholder.com | (555) 123-4567
           </p>
           <p className="text-sm text-orange-100 mt-3">
-            We usually respond within a few hours. Can't wait to hear from you!
+            Additional contact information text.
           </p>
         </div>
       </div>

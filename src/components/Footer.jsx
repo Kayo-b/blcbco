@@ -18,7 +18,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-2 text-gray-300">
               <li>Phone: (555) 123-4567</li>
-              <li>Email: info@bakery.com</li>
+              <li>Email: contact@placeholder.com</li>
               <li>Address: 123 Main St, City, ST 12345</li>
             </ul>
           </div>

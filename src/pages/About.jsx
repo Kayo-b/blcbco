@@ -11,15 +11,12 @@ export default function About() {
       <section className="mb-8 sm:mb-12">
         <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Our Story</h2>
         <p className="text-base text-gray-600 mb-3 sm:mb-4 leading-relaxed">
-          Founded in 2010, our bakery started with a simple mission: to bring 
-          authentic, handcrafted baked goods to our community. What began as a 
-          small family operation has grown into a beloved local institution.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
         <p className="text-base text-gray-600 mb-3 sm:mb-4 leading-relaxed">
-          We believe in using traditional baking methods passed down through 
-          generations, combined with the finest locally-sourced ingredients. 
-          Every loaf of bread, every pastry, and every cake is made with care 
-          and attention to detail.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </section>
 
@@ -29,19 +26,19 @@ export default function About() {
         <ul className="space-y-3 sm:space-y-4 text-gray-600">
           <li className="flex items-start">
             <span className="text-blue-600 mr-2 text-xl">•</span>
-            <span className="text-base leading-relaxed"><strong>Quality:</strong> We never compromise on ingredients or technique</span>
+            <span className="text-base leading-relaxed"><strong>Quality:</strong> Lorem ipsum dolor sit amet</span>
           </li>
           <li className="flex items-start">
             <span className="text-blue-600 mr-2 text-xl">•</span>
-            <span className="text-base leading-relaxed"><strong>Community:</strong> Supporting local farmers and suppliers</span>
+            <span className="text-base leading-relaxed"><strong>Community:</strong> Consectetur adipiscing elit</span>
           </li>
           <li className="flex items-start">
             <span className="text-blue-600 mr-2 text-xl">•</span>
-            <span className="text-base leading-relaxed"><strong>Sustainability:</strong> Eco-friendly practices in everything we do</span>
+            <span className="text-base leading-relaxed"><strong>Sustainability:</strong> Sed do eiusmod tempor incididunt</span>
           </li>
           <li className="flex items-start">
             <span className="text-blue-600 mr-2 text-xl">•</span>
-            <span className="text-base leading-relaxed"><strong>Passion:</strong> Baking is not just our business, it's our love</span>
+            <span className="text-base leading-relaxed"><strong>Passion:</strong> Ut labore et dolore magna aliqua</span>
           </li>
         </ul>
       </section>

@@ -13,7 +13,7 @@ export default function Home() {
           shop 
         </Link>
         <Link 
-          to="/about" 
+          to="/catering" 
           className="text-gray-700 hover:text-gray-900 px-4 py-3 rounded hover:bg-gray-100"
         >
           catering 

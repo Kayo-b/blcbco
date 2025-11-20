@@ -40,10 +40,10 @@ export default function Confirmation() {
           </svg>
         </div>
         <h1 className="text-3xl font-bold text-gray-800 mb-2">
-          Order Confirmed!
+          Order Confirmed
         </h1>
         <p className="text-gray-600">
-          Thank you for your order. We'll have it ready for you soon!
+          Order confirmation message text.
         </p>
       </div>
 
@@ -90,13 +90,13 @@ export default function Confirmation() {
       {/* Contact Info */}
       <div className="bg-blue-50 rounded-lg p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-800 mb-2">
-          Questions?
+          Contact Information
         </h2>
         <p className="text-gray-700 mb-2">
-          If you have any questions about your order, please contact us:
+          Additional information text placeholder.
         </p>
         <p className="text-gray-700">Phone: (555) 123-4567</p>
-        <p className="text-gray-700">Email: info@bakery.com</p>
+        <p className="text-gray-700">Email: contact@placeholder.com</p>
       </div>
 
       {/* Return Button */}

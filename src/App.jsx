@@ -12,16 +12,19 @@ import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import Confirmation from './pages/Confirmation';
 import Catering from './pages/Catering';
+import NavOverlay from './components/NavOverlay';
 
 function AppContent() {
   const { getItemCount } = useCart();
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [isContactOpen, setIsContactOpen] = useState(false);
 
   return (
     <div className="flex flex-col min-h-screen">
       <Navigation 
         cartItemCount={getItemCount()} 
         onCartClick={() => setIsCartOpen(true)}
+        onContactClick={() => setIsContactOpen(true)}
       />
       <main className="flex-grow">
       {/* <Menu/> */}
@@ -38,6 +41,7 @@ function AppContent() {
       </main>
       <Footer />
       <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
+      <NavOverlay isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
     </div>
   );
 }
