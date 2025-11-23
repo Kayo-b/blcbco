@@ -32,7 +32,7 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
               Catering 
             </Link>
             <button
-              onClick={onContactClick}
+              onMouseEnter={onContactClick}
               style={{ padding: '8px 12px' }}
               className="text-gray-700 hover:text-gray-900"
             >

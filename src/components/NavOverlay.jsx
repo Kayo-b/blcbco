@@ -1,136 +1,34 @@
-import { Link } from 'react-router-dom';
-import { useCart } from '../context/CartContext';
+// import { Link } from 'react-router-dom';
+// import { useCart } from '../context/CartContext';
 
 export default function NavOverlay({ isOpen, onClose }) {
-  const { cart, updateQuantity, removeFromCart, getTotal } = useCart();
+  // const { cart } = useCart();
 
   return (
     <>
       {/* Overlay */}
-      {isOpen && (
+      {/* {isOpen && (
         <div 
-          className="fixed inset-0 bg-orange/80 z-40 transition-opacity"
+          className="fixed inset-0 bg-black/30 z-40 transition-opacity"
           onClick={onClose}
         />
-      )}
+      )} */}
 
       {/* Drawer */}
       <div className={`
-        fixed top-0 left-0 w-full h-[400px] bg-orange-500 shadow-2xl z-50
-        transition-transform duration-300 ease-in-out
-        ${isOpen ? 'translate-y-0' : '-translate-y-full'}
+        fixed top-15 left-0 w-full h-[400px] bg-orange-100 shadow-2xl z-50
+        transition-opacity duration-300 ease-in-out
+        ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}
         flex flex-col
       `}>
         {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-orange-600">
-          <div className="flex items-center gap-2">
-            <svg className="w-6 h-6 text-white" viewBox="0 0 34 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M16.9994 1C14.0664 1 11.6944 5.60349 11.6944 11.2858H22.3129C22.3129 5.60349 19.9325 1 17.0079 1H16.9994Z" stroke="currentColor" vectorEffect="non-scaling-stroke"/>
-              <path d="M33 11.286H1V29H33V11.286Z" stroke="currentColor" vectorEffect="non-scaling-stroke"/>
-            </svg>
-            <span className="text-white font-medium">Cart ({cart.length})</span>
-          </div>
-          <button 
-            onClick={onClose}
-            className="text-white hover:text-gray-200 p-2"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
+        <div 
+        onMouseOut={onClose}
+        className="flex items-center justify-between p-6 border-b border-orange-600">
+          <p>Phone: (555) 123-4567</p>
+          <p>Email: contact@placeholder.com</p>
+          <p>Address: 123 Main St, City, ST 12345</p>
         </div>
-
-        {/* Cart Items - Scrollable */}
-        <div className="flex-1 overflow-y-auto p-6">
-          {cart.length === 0 ? (
-            <div className="text-center text-white py-12">
-              <p className="mb-4">Your cart is empty</p>
-              <button
-                onClick={onClose}
-                className="bg-white text-orange-500 px-6 py-2 rounded hover:bg-gray-100"
-              >
-                Continue Shopping
-              </button>
-            </div>
-          ) : (
-            <div className="space-y-4">
-              {cart.map((item) => (
-                <div
-                  key={item.id}
-                  className="bg-white rounded-lg p-4 shadow"
-                >
-                  <div className="flex gap-4">
-                    {/* Thumbnail */}
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="w-20 h-20 object-cover rounded"
-                    />
-
-                    {/* Item Details */}
-                    <div className="flex-1">
-                      <h3 className="font-semibold text-gray-800 text-sm mb-1">
-                        {item.name}
-                      </h3>
-                      <p className="text-gray-600 text-sm mb-2">
-                        ${item.price.toFixed(2)}
-                      </p>
-
-                      {/* Quantity Controls */}
-                      <div className="flex items-center gap-2">
-                        <button
-                          onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                          className="bg-gray-200 text-gray-700 w-8 h-8 rounded hover:bg-gray-300 flex items-center justify-center"
-                        >
-                          −
-                        </button>
-                        <span className="text-sm font-semibold w-8 text-center">
-                          {item.quantity}
-                        </span>
-                        <button
-                          onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                          className="bg-gray-200 text-gray-700 w-8 h-8 rounded hover:bg-gray-300 flex items-center justify-center"
-                        >
-                          +
-                        </button>
-                        <button
-                          onClick={() => removeFromCart(item.id)}
-                          className="ml-auto text-red-600 hover:text-red-700 text-xs"
-                        >
-                          Remove
-                        </button>
-                      </div>
-                    </div>
-
-                    {/* Price */}
-                    <div className="text-right">
-                      <p className="font-bold text-gray-900">
-                        ${(item.price * item.quantity).toFixed(2)}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-
-        {/* Footer with Total and Checkout */}
-        {cart.length > 0 && (
-          <div className="border-t border-orange-600 p-6 bg-orange-600">
-            <div className="flex items-center justify-between mb-4 text-white">
-              <span className="text-lg font-semibold">SUBTOTAL:</span>
-              <span className="text-2xl font-bold">£{getTotal().toFixed(2)}</span>
-            </div>
-            <Link
-              to="/checkout"
-              onClick={onClose}
-              className="block w-full bg-white text-orange-500 text-center py-4 rounded font-semibold hover:bg-gray-100 transition"
-            >
-              CHECKOUT
-            </Link>
-          </div>
-        )}
       </div>
     </>
   );

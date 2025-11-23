@@ -18,6 +18,7 @@ function AppContent() {
   const { getItemCount } = useCart();
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
+  console.log(isContactOpen)
 
   return (
     <div className="flex flex-col min-h-screen">
