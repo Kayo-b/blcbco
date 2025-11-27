@@ -26,26 +26,26 @@ export default function About() {
         <ul className="space-y-3 sm:space-y-4 text-gray-600">
           <li className="flex items-start">
             <span className="text-blue-600 mr-2 text-xl">•</span>
-            <span className="text-base leading-relaxed"><strong>Quality:</strong> Lorem ipsum dolor sit amet</span>
+            <span className="text-base leading-relaxed"><strong>A:</strong> Lorem ipsum dolor sit amet</span>
           </li>
           <li className="flex items-start">
             <span className="text-blue-600 mr-2 text-xl">•</span>
-            <span className="text-base leading-relaxed"><strong>Community:</strong> Consectetur adipiscing elit</span>
+            <span className="text-base leading-relaxed"><strong>B:</strong> Consectetur adipiscing elit</span>
           </li>
           <li className="flex items-start">
             <span className="text-blue-600 mr-2 text-xl">•</span>
-            <span className="text-base leading-relaxed"><strong>Sustainability:</strong> Sed do eiusmod tempor incididunt</span>
+            <span className="text-base leading-relaxed"><strong>C:</strong> Sed do eiusmod tempor incididunt</span>
           </li>
           <li className="flex items-start">
             <span className="text-blue-600 mr-2 text-xl">•</span>
-            <span className="text-base leading-relaxed"><strong>Passion:</strong> Ut labore et dolore magna aliqua</span>
+            <span className="text-base leading-relaxed"><strong>D:</strong> Ut labore et dolore magna aliqua</span>
           </li>
         </ul>
       </section>
 
       {/* Bakery Photo Placeholder */}
       <section>
-        <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">Visit Us</h2>
+        <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">See more</h2>
         <div className="bg-gray-200 h-48 sm:h-64 rounded-lg flex items-center justify-center">
           <p className="text-gray-500 text-base sm:text-lg">Bakery Photo</p>
         </div>

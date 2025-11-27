@@ -68,7 +68,7 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
                 />
               </svg>
               {cartItemCount > 0 && (
-                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                <span className="absolute inset-0 flex items-center justify-center uppercase pt-[0.5rem] pb-[1px] text-[0.625rem] lg:pt-[0.625rem] lg:text-[0.875rem]">
                   {cartItemCount}
                 </span>
               )}
