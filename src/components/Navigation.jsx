@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
-export default function Navigation({ cartItemCount = 0, onCartClick, onContactClick }) {
+export default function Navigation({ cartItemCount = 0, onCartClick, onContactClick, onContactClose }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -10,16 +10,19 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="text-2xl font-bold text-gray-800">
+            <Link 
+              onMouseEnter={onContactClose}
+              to="/" className="text-2xl font-bold text-gray-800">
              BalacoBaco 
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div style={{ display: 'flex', gap: '32px' }}>
+          <div style={{ display: 'flex', gap: '32px' }} onMouseEnter={onContactClose}>
             <Link 
               to="/products" 
               style={{ padding: '8px 12px' }}
+              onMouseEnter={onContactClose}
               className="text-gray-700 hover:text-gray-900"
             >
              Shop 
@@ -27,6 +30,7 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
             <Link 
               to="/catering" 
               style={{ padding: '8px 12px' }}
+              onMouseEnter={onContactClose}
               className="text-gray-700 hover:text-gray-900"
             >
               Catering 
@@ -41,8 +45,11 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
           </div>
 
           {/* Cart Icon */}
-          <div className="flex items-center space-x-4">
-            <button onClick={onCartClick} className="relative">
+          <div
+            onMouseEnter={onContactClose}
+            className="flex items-center space-x-4">
+            <button 
+              onClick={onCartClick} className="relative">
               <svg 
                 viewBox="0 0 34 30" 
                 fill="none" 

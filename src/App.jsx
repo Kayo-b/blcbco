@@ -19,13 +19,14 @@ function AppContent() {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
   console.log(isContactOpen)
-
+  
   return (
     <div className="flex flex-col min-h-screen">
       <Navigation 
         cartItemCount={getItemCount()} 
         onCartClick={() => setIsCartOpen(true)}
         onContactClick={() => setIsContactOpen(true)}
+        onContactClose={() => setIsContactOpen(false)}
       />
       <main className="flex-grow">
       {/* <Menu/> */}
