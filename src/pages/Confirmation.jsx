@@ -1,8 +1,10 @@
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export default function Confirmation() {
   const location = useLocation();
   const { orderNumber, formData, total } = location.state || {};
+  const { t } = useTranslation();
 
   if (!orderNumber) {
     return (
@@ -24,7 +26,7 @@ export default function Confirmation() {
     <div className="max-w-4xl mx-auto px-4 py-12">
       {/* Success Message */}
       <div className="text-center mb-8">
-        <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+        <div className="w-16 h-16 bg-green-500 -full flex items-center justify-center mx-auto mb-4">
           <svg
             className="w-10 h-10 text-white"
             fill="none"
@@ -40,28 +42,28 @@ export default function Confirmation() {
           </svg>
         </div>
         <h1 className="text-3xl font-bold text-gray-800 mb-2">
-          Order Confirmed
+          {t('confirmation.title')}
         </h1>
         <p className="text-gray-600">
-          Order confirmation message text.
+          {t('confirmation.message')}
         </p>
       </div>
 
       {/* Order Details */}
-      <div className="bg-gray-100 rounded-lg p-6 mb-8">
+      <div className="bg-gray-100 p-6 mb-8">
         <div className="mb-6">
           <h2 className="text-xl font-bold text-gray-800 mb-2">
-            Order Number
+            {t('confirmation.orderNumber')}
           </h2>
           <p className="text-2xl font-mono text-blue-600">#{orderNumber}</p>
         </div>
 
         <div className="mb-6">
           <h2 className="text-xl font-bold text-gray-800 mb-2">
-            Order Summary
+            {t('checkout.orderSummary')}
           </h2>
           <p className="text-gray-700">
-            Total: <span className="font-bold">${total?.toFixed(2)}</span>
+            {t('checkout.total')}: <span className="font-bold">${total?.toFixed(2)}</span>
           </p>
         </div>
 
@@ -88,7 +90,7 @@ export default function Confirmation() {
       </div>
 
       {/* Contact Info */}
-      <div className="bg-blue-50 rounded-lg p-6 mb-8">
+      <div className="bg-blue-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-800 mb-2">
           Contact Information
         </h2>
@@ -103,9 +105,9 @@ export default function Confirmation() {
       <div className="text-center">
         <Link
           to="/"
-          className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors inline-block min-h-[44px]"
+          className="bg-blue-600 text-white px-8 py-3 hover:bg-blue-700 transition-colors inline-block min-h-[44px]"
         >
-          Return to Home
+          {t('confirmation.backToHome')}
         </Link>
       </div>
     </div>

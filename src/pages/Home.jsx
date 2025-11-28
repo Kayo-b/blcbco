@@ -1,28 +1,30 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function Home() {
+  const { t } = useTranslation();
+  
   return (
     <nav className="bg-white shadow-md w-64 h-screen left-0 top-5">
       {/* Vertical Menu Container */}
-      <div className="flex flex-col p-6 space-y-4">
+      <div className="flex flex-col p-6 space-y-18">
         <Link 
           to="/products" 
-          className="text-gray-700 hover:text-gray-900 px-4 py-3 rounded hover:bg-gray-100"
+          className="nav-link"
         >
-          shop 
+          {t('nav.shop')}
         </Link>
         <Link 
           to="/catering" 
-          className="text-gray-700 hover:text-gray-900 px-4 py-3 rounded hover:bg-gray-100"
+          className="nav-link"
         >
-          catering 
+          {t('nav.catering')}
         </Link>
         <Link 
           to="/about" 
-          className="text-gray-700 hover:text-gray-900 px-4 py-3 rounded hover:bg-gray-100"
+          className="nav-link"
         >
-         about 
+          {t('nav.about')}
         </Link>
       </div>
     </nav>

@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { useCart } from '../context/CartContext';
 
 export default function CartDrawer({ isOpen, onClose }) {
   const { cart, updateQuantity, removeFromCart, getTotal } = useCart();
+  const { t } = useTranslation();
 
   return (
     <>
@@ -28,7 +30,7 @@ export default function CartDrawer({ isOpen, onClose }) {
               <path d="M16.9994 1C14.0664 1 11.6944 5.60349 11.6944 11.2858H22.3129C22.3129 5.60349 19.9325 1 17.0079 1H16.9994Z" stroke="currentColor" vectorEffect="non-scaling-stroke"/>
               <path d="M33 11.286H1V29H33V11.286Z" stroke="currentColor" vectorEffect="non-scaling-stroke"/>
             </svg>
-            <span className="text-white font-medium">Cart ({cart.length})</span>
+            <span className="text-white font-medium">{t('cart.title')} ({cart.length})</span>
           </div>
           <button 
             onClick={onClose}
@@ -44,12 +46,12 @@ export default function CartDrawer({ isOpen, onClose }) {
         <div className="flex-1 overflow-y-auto p-6">
           {cart.length === 0 ? (
             <div className="text-center text-white py-12">
-              <p className="mb-4">Your cart is empty</p>
+              <p className="mb-4">{t('cart.empty')}</p>
               <button
                 onClick={onClose}
-                className="bg-white text-orange-500 px-6 py-2 rounded hover:bg-gray-100"
+                className="bg-white text-orange-500 px-6 py-2  hover:bg-gray-100"
               >
-                Continue Shopping
+                {t('cart.continueShopping')}
               </button>
             </div>
           ) : (
@@ -57,20 +59,20 @@ export default function CartDrawer({ isOpen, onClose }) {
               {cart.map((item) => (
                 <div
                   key={item.id}
-                  className="bg-white rounded-lg p-4 shadow"
+                  className="bg-white p-4 shadow"
                 >
                   <div className="flex gap-4">
                     {/* Thumbnail */}
                     <img
                       src={item.image}
                       alt={item.name}
-                      className="w-20 h-20 object-cover rounded"
+                      className="w-20 h-20 object-cover "
                     />
 
                     {/* Item Details */}
                     <div className="flex-1">
                       <h3 className="font-semibold text-gray-800 text-sm mb-1">
-                        {item.name}
+                        {t(`productNames.${item.nameKey}`)}
                       </h3>
                       <p className="text-gray-600 text-sm mb-2">
                         ${item.price.toFixed(2)}
@@ -80,7 +82,7 @@ export default function CartDrawer({ isOpen, onClose }) {
                       <div className="flex items-center gap-2">
                         <button
                           onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                          className="bg-gray-200 text-gray-700 w-8 h-8 rounded hover:bg-gray-300 flex items-center justify-center"
+                          className="bg-gray-200 text-gray-700 w-8 h-8  hover:bg-gray-300 flex items-center justify-center"
                         >
                           −
                         </button>
@@ -89,7 +91,7 @@ export default function CartDrawer({ isOpen, onClose }) {
                         </span>
                         <button
                           onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                          className="bg-gray-200 text-gray-700 w-8 h-8 rounded hover:bg-gray-300 flex items-center justify-center"
+                          className="bg-gray-200 text-gray-700 w-8 h-8  hover:bg-gray-300 flex items-center justify-center"
                         >
                           +
                         </button>
@@ -97,7 +99,7 @@ export default function CartDrawer({ isOpen, onClose }) {
                           onClick={() => removeFromCart(item.id)}
                           className="ml-auto text-red-600 hover:text-red-700 text-xs"
                         >
-                          Remove
+                          {t('cart.remove')}
                         </button>
                       </div>
                     </div>
@@ -125,9 +127,9 @@ export default function CartDrawer({ isOpen, onClose }) {
             <Link
               to="/checkout"
               onClick={onClose}
-              className="block w-full bg-white text-orange-500 text-center py-4 rounded font-semibold hover:bg-gray-100 transition"
+              className="block w-full bg-white text-orange-500 text-center py-4  font-semibold hover:bg-gray-100 transition"
             >
-              CHECKOUT
+              {t('cart.proceedToCheckout').toUpperCase()}
             </Link>
           </div>
         )}

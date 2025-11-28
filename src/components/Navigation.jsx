@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Navigation({ cartItemCount = 0, onCartClick, onContactClick, onContactClose }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <nav className="bg-white shadow-md">
@@ -13,7 +16,7 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
             <Link 
               onMouseEnter={onContactClose}
               to="/" className="text-2xl font-bold text-gray-800">
-             BalacoBaco 
+             balacobaco 
             </Link>
           </div>
 
@@ -23,31 +26,32 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
               to="/products" 
               style={{ padding: '8px 12px' }}
               onMouseEnter={onContactClose}
-              className="text-gray-700 hover:text-gray-900"
+              className="nav-link"
             >
-             Shop 
+              {t('nav.shop')}
             </Link>
             <Link 
               to="/catering" 
               style={{ padding: '8px 12px' }}
               onMouseEnter={onContactClose}
-              className="text-gray-700 hover:text-gray-900"
+              className="nav-link"
             >
-              Catering 
+              {t('nav.catering')}
             </Link>
             <button
               onMouseEnter={onContactClick}
               style={{ padding: '8px 12px' }}
-              className="text-gray-700 hover:text-gray-900"
+              className="nav-link"
             >
-              Contact 
+              {t('nav.contact')}
             </button>
           </div>
 
-          {/* Cart Icon */}
+          {/* Language Switcher & Cart Icon */}
           <div
             onMouseEnter={onContactClose}
             className="flex items-center space-x-4">
+            <LanguageSwitcher />
             <button 
               onClick={onCartClick} className="relative">
               <svg 
@@ -114,28 +118,28 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
                 className="text-gray-700 hover:text-gray-900 py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Home
+                {t('nav.home')}
               </Link>
               <Link
                 to="/products"
                 className="text-gray-700 hover:text-gray-900 py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Shop
+                {t('nav.shop')}
               </Link>
               <Link
                 to="/catering"
                 className="text-gray-700 hover:text-gray-900 py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Catering
+                {t('nav.catering')}
               </Link>
               <Link
                 to="/about"
                 className="text-gray-700 hover:text-gray-900 py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Contact
+                {t('nav.contact')}
               </Link>
             </div>
           </div>

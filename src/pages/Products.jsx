@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useCart } from '../context/CartContext';
 import ProductCard from '../components/ProductCard';
 import { products } from '../data/products';
@@ -6,6 +7,7 @@ import { products } from '../data/products';
 export default function Products() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const { addToCart } = useCart();
+  const { t } = useTranslation();
 
   const categories = ['all', 'breads', 'pastries', 'catering'];
 
@@ -18,7 +20,7 @@ export default function Products() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
       {/* Page Title */}
       <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6 sm:mb-8 text-center">
-        Our Products
+        {t('products.title')}
       </h1>
 
       {/* Category Filters */}
@@ -27,13 +29,13 @@ export default function Products() {
           <button
             key={category}
             onClick={() => setSelectedCategory(category)}
-            className={`px-4 sm:px-6 py-2.5 text-sm sm:text-base rounded-lg capitalize transition-colors min-h-[44px] ${
+            className={`product-filter bg-blue-600 text-white ${
               selectedCategory === category
                 ? 'bg-blue-600 text-white'
                 : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
             }`}
           >
-            {category}
+            {t(`products.${category === 'all' ? 'allProducts' : category}`)}
           </button>
         ))}
       </div>

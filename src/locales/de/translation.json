@@ -1,0 +1,183 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "shop": "Shop",
+    "catering": "Catering",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "welcome": "Willkommen in unserem Shop",
+    "browseCategories": "Kategorien durchsuchen",
+    "breads": "Brote",
+    "pastries": "Gebäck",
+    "cateringServices": "Catering-Services"
+  },
+  "about": {
+    "title": "Über uns",
+    "ourStory": "Unsere Geschichte",
+    "paragraph1": "Willkommen in unserer Bäckerei! Wir sind leidenschaftlich daran interessiert, köstliche Backwaren nach traditionellen Methoden und mit hochwertigen Zutaten herzustellen.",
+    "paragraph2": "Unser Team erfahrener Bäcker arbeitet jeden Tag daran, Ihnen frisches Brot, Gebäck und maßgeschneiderte Catering-Services für Ihre besonderen Anlässe zu bieten.",
+    "paragraph3": "Wir glauben an die Kunst des Backens und die Freude, die es unserer Gemeinschaft bringt. Jedes Produkt wird mit Sorgfalt und Liebe zum Detail hergestellt.",
+    "ourValues": "Unsere Werte",
+    "value1": "Qualität: Wir verwenden nur die besten Zutaten",
+    "value2": "Tradition: Bewährte Backmethoden",
+    "value3": "Frische: Täglich mit Sorgfalt gebacken",
+    "value4": "Gemeinschaft: Wir bedienen unsere Nachbarn mit Stolz",
+    "seeMore": "Mehr Sehen",
+    "photoPlaceholder": "Bäckerei Foto"
+  },
+  "products": {
+    "title": "Unsere Produkte",
+    "allProducts": "Alle Produkte",
+    "breads": "Brote",
+    "pastries": "Gebäck",
+    "addToCart": "In den Warenkorb",
+    "viewDetails": "Details anzeigen"
+  },
+  "productDetail": {
+    "backToProducts": "← Zurück zu Produkten",
+    "addToCart": "In den Warenkorb",
+    "description": "Beschreibung",
+    "category": "Kategorie"
+  },
+  "catering": {
+    "title": "Catering-Services",
+    "subtitle": "Perfekt für Ihre besonderen Anlässe",
+    "intro1": "Wir bieten umfassende Catering-Services für alle Arten von Veranstaltungen. Unser erfahrenes Team arbeitet mit Ihnen zusammen, um das perfekte Menü für Ihren Anlass zu erstellen.",
+    "intro2": "Von intimen Zusammenkünften bis zu großen Feiern bieten wir frische, köstliche Speisen, die Ihre Gäste beeindrucken werden.",
+    "intro3": "Alle unsere Catering-Optionen sind anpassbar, um Ihre spezifischen Bedürfnisse und Ernährungsanforderungen zu erfüllen.",
+    "serviceHeading": "Unser Catering-Stil",
+    "serviceOptions": "Service-Optionen",
+    "menuOptions": "Was Wir Servieren",
+    "menuIntro": "Unser Catering-Menü bietet eine große Auswahl an frisch zubereiteten Speisen.",
+    "category1": "Herzhafte Optionen",
+    "category1Items": "Sandwiches, Wraps, Salate, Warme Gerichte, Vorspeisen, Hauptgerichte, Beilagen",
+    "category2": "Süße Optionen",
+    "category2Items": "Kuchen, Gebäck, Kekse, Desserts, Süßes Brot, Spezialitäten, Individuelle Kreationen",
+    "category3": "Getränke",
+    "category3Items": "Kaffee, Tee, Säfte, Erfrischungsgetränke, Individuelle Getränkepakete",
+    "menuOutro": "Alle Artikel werden am Tag Ihrer Veranstaltung frisch zubereitet.",
+    "processSteps": "Wie Es Funktioniert",
+    "step1Title": "Kontaktieren Sie Uns",
+    "step1Text": "Nehmen Sie Kontakt auf, um Ihre Veranstaltungsdetails, Gästezahl und Präferenzen zu besprechen.",
+    "step2Title": "Menüplanung",
+    "step2Text": "Wir arbeiten gemeinsam daran, ein individuelles Menü zu erstellen, das Ihren Bedürfnissen und Ihrem Budget entspricht.",
+    "step3Title": "Bestätigung",
+    "step3Text": "Sobald Sie das Menü und die Details genehmigt haben, bestätigen wir Ihre Buchung und den Zeitplan.",
+    "step4Title": "Veranstaltungstag",
+    "step4Text": "Wir bereiten alles frisch vor und liefern es, um sicherzustellen, dass Ihre Veranstaltung ein Erfolg wird.",
+    "ctaHeading": "Bereit, Ihre Veranstaltung Zu Planen?",
+    "viewProducts": "Produkte Anzeigen",
+    "service1": {
+      "title": "Firmenveranstaltungen",
+      "description": "Perfekt für Geschäftstreffen, Konferenzen und Bürofeiern.",
+      "examples": "Frühstücksplatten, Lunchboxen, Kaffeepausen, Meeting-Pakete"
+    },
+    "service2": {
+      "title": "Private Feiern",
+      "description": "Machen Sie Ihre Feier besonders mit unseren individuellen Catering-Optionen.",
+      "examples": "Geburtstagskuchen, Party-Platten, Vorspeisenauswahl, Desserttische, Themenmenüs, Individuelle Bestellungen"
+    },
+    "service3": {
+      "title": "Besondere Anlässe",
+      "description": "Elegantes Catering für Hochzeiten, Jubiläen und Meilenstein-Events.",
+      "examples": "Hochzeitstorten, Buffetservice, Elegante Vorspeisen, Mehrgängige Menüs, Champagner-Service, Individuelle Desserts, Fine-Dining-Optionen"
+    },
+    "contactUs": "Kontaktieren Sie uns",
+    "contactText": "Interessiert an unseren Catering-Services? Kontaktieren Sie uns, um Ihre Veranstaltung zu besprechen und ein individuelles Angebot zu erhalten."
+  },
+  "cart": {
+    "title": "Warenkorb",
+    "empty": "Ihr Warenkorb ist leer",
+    "continueShopping": "Weiter einkaufen",
+    "quantity": "Menge",
+    "remove": "Entfernen",
+    "total": "Gesamt",
+    "proceedToCheckout": "Zur Kasse"
+  },
+  "checkout": {
+    "title": "Kasse",
+    "contactInfo": "Kontaktinformationen",
+    "name": "Vollständiger Name",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "deliveryAddress": "Lieferadresse",
+    "address": "Adresse",
+    "city": "Stadt",
+    "postalCode": "Postleitzahl",
+    "paymentMethod": "Zahlungsmethode",
+    "cashOnDelivery": "Barzahlung bei Lieferung",
+    "orderSummary": "Bestellübersicht",
+    "items": "Artikel",
+    "total": "Gesamt",
+    "placeOrder": "Bestellung aufgeben"
+  },
+  "confirmation": {
+    "title": "Bestellung bestätigt!",
+    "thankYou": "Vielen Dank für Ihre Bestellung!",
+    "orderNumber": "Bestellnummer",
+    "message": "Ihre Bestellung wurde erfolgreich aufgegeben. Wir werden uns in Kürze mit Ihnen in Verbindung setzen, um die Lieferdetails zu bestätigen. Sie erhalten eine Bestätigungs-E-Mail an die von Ihnen angegebene Adresse.",
+    "backToHome": "Zurück zur Startseite"
+  },
+  "footer": {
+    "businessName": "Firmenname",
+    "phone": "Telefon",
+    "email": "E-Mail",
+    "address": "Adresse"
+  },
+  "overlay": {
+    "getInTouch": "Kontakt aufnehmen",
+    "phone": "Telefon",
+    "email": "E-Mail",
+    "visitUs": "Besuchen Sie uns"
+  },
+  "productNames": {
+    "1": "Sauerteigbrot",
+    "2": "Vollkornbrot",
+    "3": "Französisches Baguette",
+    "4": "Roggenbrot",
+    "5": "Croissant",
+    "6": "Dänisches Gebäck",
+    "7": "Zimtschnecke",
+    "8": "Muffin",
+    "9": "Scone",
+    "10": "Eclair",
+    "11": "Frühstücksplatte",
+    "12": "Party-Platte",
+    "13": "Dessertbox",
+    "14": "Catering-Paket"
+  },
+  "productDescriptions": {
+    "1": "Traditionelles Sauerteigbrot mit knuspriger Kruste",
+    "2": "Gesundes Vollkornbrot",
+    "3": "Klassisches französisches Baguette",
+    "4": "Dichtes und aromatisches Roggenbrot",
+    "5": "Butteriges blättriges Gebäck",
+    "6": "Süßes gefülltes Gebäck",
+    "7": "Warme Zimtschnecke",
+    "8": "Weicher und saftiger Kuchen",
+    "9": "Traditionelles Teegebäck",
+    "10": "Mit Schokoladencreme gefülltes Gebäck",
+    "11": "Vollständige Frühstücksauswahl",
+    "12": "Sortierte Party-Speisen",
+    "13": "Vielfalt an süßen Leckereien",
+    "14": "Full-Service-Catering-Option"
+  },
+  "productFullDescriptions": {
+    "1": "Unser charakteristisches Sauerteigbrot wird mit einem 48-Stunden-Gärungsprozess hergestellt, was zu einem perfekt säuerlichen Geschmack und einer knusprigen goldenen Kruste führt. Hergestellt mit Bio-Mehl und unserem hausgemachten Sauerteig.",
+    "2": "Nahrhaftes Vollkornbrot aus 100% Vollkornmehl. Perfekt für Sandwiches oder Toast. Reich an Ballaststoffen und vollgepackt mit Nährstoffen.",
+    "3": "Authentisches französisches Baguette mit knuspriger Außenseite und weichem, luftigem Inneren. Täglich frisch nach traditionellen französischen Techniken gebacken.",
+    "4": "Traditionelles Roggenbrot mit Kümmel. Dichte Textur und reichhaltiger Geschmack, perfekt für Sandwiches oder mit Butter.",
+    "5": "Klassisches französisches Croissant mit Schichten von butterigem Teig. Leicht, blättrig und perfekt zum Frühstück.",
+    "6": "Süßes Gebäck gefüllt mit Obst oder Sahne. Ein köstlicher Genuss zu jeder Tageszeit.",
+    "7": "Weiches Brötchen mit Zimtzucker und Frischkäseglasur.",
+    "8": "Saftiger und fluffiger Muffin in verschiedenen Geschmacksrichtungen. Perfekt zu Kaffee oder Tee.",
+    "9": "Traditioneller britischer Scone, perfekt für den Nachmittagstee mit Marmelade und Sahne.",
+    "10": "Französisches Gebäck gefüllt mit reichhaltiger Schokoladencreme und mit Schokoladenglasur überzogen.",
+    "11": "Vollständige Frühstücksplatte mit Gebäck, Brot und süßen Artikeln. Perfekt für morgendliche Meetings oder Veranstaltungen.",
+    "12": "Sortierte Auswahl an herzhaften und süßen Artikeln, perfekt für Partys und Versammlungen.",
+    "13": "Wunderschöne Auswahl unserer besten Desserts und süßen Leckereien. Großartig für Feiern.",
+    "14": "Vollständiges Catering-Paket mit anpassbaren Optionen für Ihre Veranstaltung. Kontaktieren Sie uns für Details."
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "shop": "Loja",
+    "catering": "Catering",
+    "contact": "Contato"
+  },
+  "home": {
+    "welcome": "Bem-vindo à Nossa Loja",
+    "browseCategories": "Navegar por Categorias",
+    "breads": "Pães",
+    "pastries": "Doces",
+    "cateringServices": "Serviços de Catering"
+  },
+  "about": {
+    "title": "Sobre Nós",
+    "ourStory": "Nossa História",
+    "paragraph1": "Bem-vindo à nossa padaria! Somos apaixonados por criar deliciosos produtos de panificação usando métodos tradicionais e ingredientes de alta qualidade.",
+    "paragraph2": "Nossa equipe de padeiros experientes trabalha todos os dias para trazer a você pães frescos, doces e serviços de catering personalizados para seus eventos especiais.",
+    "paragraph3": "Acreditamos na arte da panificação e na alegria que ela traz para nossa comunidade. Cada produto é feito com cuidado e atenção aos detalhes.",
+    "ourValues": "Nossos Valores",
+    "value1": "Qualidade: Usamos apenas os melhores ingredientes",
+    "value2": "Tradição: Métodos tradicionais de panificação",
+    "value3": "Frescor: Assado diariamente com cuidado",
+    "value4": "Comunidade: Servindo nossos vizinhos com orgulho",
+    "seeMore": "Ver Mais",
+    "photoPlaceholder": "Foto da Padaria"
+  },
+  "products": {
+    "title": "Nossos Produtos",
+    "allProducts": "Todos os Produtos",
+    "breads": "Pães",
+    "pastries": "Doces",
+    "addToCart": "Adicionar ao Carrinho",
+    "viewDetails": "Ver Detalhes"
+  },
+  "productDetail": {
+    "backToProducts": "← Voltar aos Produtos",
+    "addToCart": "Adicionar ao Carrinho",
+    "description": "Descrição",
+    "category": "Categoria"
+  },
+  "catering": {
+    "title": "Serviços de Catering",
+    "subtitle": "Perfeito para suas ocasiões especiais",
+    "intro1": "Oferecemos serviços abrangentes de catering para todos os tipos de eventos. Nossa equipe experiente trabalhará com você para criar o menu perfeito para sua ocasião.",
+    "intro2": "De reuniões íntimas a grandes celebrações, oferecemos comida fresca e deliciosa que impressionará seus convidados.",
+    "intro3": "Todas as nossas opções de catering são personalizáveis para atender suas necessidades específicas e requisitos dietéticos.",
+    "serviceHeading": "Nosso Estilo de Catering",
+    "serviceOptions": "Opções de Serviço",
+    "menuOptions": "O Que Servimos",
+    "menuIntro": "Nosso menu de catering apresenta uma ampla seleção de itens preparados frescos.",
+    "category1": "Opções Salgadas",
+    "category1Items": "Sanduíches, Wraps, Saladas, Pratos quentes, Aperitivos, Pratos principais, Acompanhamentos",
+    "category2": "Opções Doces",
+    "category2Items": "Bolos, Doces, Biscoitos, Sobremesas, Pães doces, Itens especiais, Criações personalizadas",
+    "category3": "Bebidas",
+    "category3Items": "Café, Chá, Sucos, Refrigerantes, Pacotes de bebidas personalizados",
+    "menuOutro": "Todos os itens são preparados frescos no dia do seu evento.",
+    "processSteps": "Como Funciona",
+    "step1Title": "Entre em Contato",
+    "step1Text": "Entre em contato para discutir os detalhes do seu evento, número de convidados e preferências.",
+    "step2Title": "Planejamento do Menu",
+    "step2Text": "Trabalharemos juntos para criar um menu personalizado que atenda às suas necessidades e orçamento.",
+    "step3Title": "Confirmação",
+    "step3Text": "Assim que você aprovar o menu e os detalhes, confirmaremos sua reserva e cronograma.",
+    "step4Title": "Dia do Evento",
+    "step4Text": "Prepararemos e entregaremos tudo fresco, garantindo que seu evento seja um sucesso.",
+    "ctaHeading": "Pronto Para Planejar Seu Evento?",
+    "viewProducts": "Ver Produtos",
+    "service1": {
+      "title": "Eventos Corporativos",
+      "description": "Perfeito para reuniões de negócios, conferências e celebrações de escritório.",
+      "examples": "Pratos de café da manhã, Marmitas, Coffee breaks, Pacotes para reuniões"
+    },
+    "service2": {
+      "title": "Festas Particulares",
+      "description": "Torne sua celebração especial com nossas opções de catering personalizadas.",
+      "examples": "Bolos de aniversário, Pratos para festa, Seleção de aperitivos, Mesas de sobremesas, Menus temáticos, Pedidos personalizados"
+    },
+    "service3": {
+      "title": "Ocasiões Especiais",
+      "description": "Catering elegante para casamentos, aniversários e eventos marcantes.",
+      "examples": "Bolos de casamento, Serviço de buffet, Aperitivos elegantes, Refeições de múltiplos pratos, Serviço de champanhe, Sobremesas personalizadas, Opções de alta gastronomia"
+    },
+    "contactUs": "Entre em Contato",
+    "contactText": "Interessado em nossos serviços de catering? Entre em contato para discutir seu evento e receber um orçamento personalizado."
+  },
+  "cart": {
+    "title": "Carrinho de Compras",
+    "empty": "Seu carrinho está vazio",
+    "continueShopping": "Continuar Comprando",
+    "quantity": "Quantidade",
+    "remove": "Remover",
+    "total": "Total",
+    "proceedToCheckout": "Finalizar Compra"
+  },
+  "checkout": {
+    "title": "Finalizar Compra",
+    "contactInfo": "Informações de Contato",
+    "name": "Nome Completo",
+    "email": "E-mail",
+    "phone": "Telefone",
+    "deliveryAddress": "Endereço de Entrega",
+    "address": "Endereço",
+    "city": "Cidade",
+    "postalCode": "CEP",
+    "paymentMethod": "Método de Pagamento",
+    "cashOnDelivery": "Pagamento na Entrega",
+    "orderSummary": "Resumo do Pedido",
+    "items": "itens",
+    "total": "Total",
+    "placeOrder": "Fazer Pedido"
+  },
+  "confirmation": {
+    "title": "Pedido Confirmado!",
+    "thankYou": "Obrigado pelo seu pedido!",
+    "orderNumber": "Número do Pedido",
+    "message": "Seu pedido foi realizado com sucesso. Entraremos em contato em breve para confirmar os detalhes de entrega. Você receberá um e-mail de confirmação no endereço fornecido.",
+    "backToHome": "Voltar ao Início"
+  },
+  "footer": {
+    "businessName": "Nome da Empresa",
+    "phone": "Telefone",
+    "email": "E-mail",
+    "address": "Endereço"
+  },
+  "overlay": {
+    "getInTouch": "Entre em Contato",
+    "phone": "Telefone",
+    "email": "E-mail",
+    "visitUs": "Visite-nos"
+  },
+  "productNames": {
+    "1": "Pão de Fermentação Natural",
+    "2": "Pão Integral",
+    "3": "Baguete Francesa",
+    "4": "Pão de Centeio",
+    "5": "Croissant",
+    "6": "Folhado Dinamarquês",
+    "7": "Pão de Canela",
+    "8": "Muffin",
+    "9": "Scone",
+    "10": "Eclair",
+    "11": "Prato de Café da Manhã",
+    "12": "Bandeja de Festa",
+    "13": "Caixa de Sobremesas",
+    "14": "Pacote de Catering"
+  },
+  "productDescriptions": {
+    "1": "Pão tradicional de fermentação natural com crosta crocante",
+    "2": "Pão saudável de grãos integrais",
+    "3": "Baguete francesa clássica",
+    "4": "Pão de centeio denso e saboroso",
+    "5": "Massa folhada amanteigada",
+    "6": "Massa doce recheada",
+    "7": "Pão doce de canela quentinho",
+    "8": "Bolinho macio e úmido",
+    "9": "Bolinho tradicional para chá",
+    "10": "Massa recheada com creme de chocolate",
+    "11": "Seleção completa de café da manhã",
+    "12": "Comida sortida para festa",
+    "13": "Variedade de doces",
+    "14": "Opção completa de catering"
+  },
+  "productFullDescriptions": {
+    "1": "Nosso pão de fermentação natural é feito com um processo de fermentação de 48 horas, resultando em um sabor perfeitamente ácido e uma crosta dourada crocante. Feito com farinha orgânica e nosso fermento caseiro.",
+    "2": "Pão integral nutritivo feito com 100% de farinha de grãos integrais. Perfeito para sanduíches ou torradas. Rico em fibras e repleto de nutrientes.",
+    "3": "Baguete francesa autêntica com exterior crocante e interior macio e aerado. Assada fresca diariamente usando técnicas tradicionais francesas.",
+    "4": "Pão de centeio tradicional com sementes de alcaravia. Textura densa e sabor rico, perfeito para sanduíches ou com manteiga.",
+    "5": "Croissant francês clássico com camadas de massa amanteigada. Leve, folhado e perfeito para o café da manhã.",
+    "6": "Massa doce recheada com frutas ou creme. Um delicioso petisco a qualquer hora do dia.",
+    "7": "Pão macio enrolado com açúcar e canela e coberto com cobertura de cream cheese.",
+    "8": "Muffin macio e fofo disponível em vários sabores. Perfeito com café ou chá.",
+    "9": "Scone britânico tradicional, perfeito para o chá da tarde com geleia e creme.",
+    "10": "Massa francesa recheada com creme rico de chocolate e coberta com glacê de chocolate.",
+    "11": "Prato completo de café da manhã incluindo doces, pães e itens doces. Perfeito para reuniões matinais ou eventos.",
+    "12": "Seleção sortida de itens salgados e doces perfeitos para festas e reuniões.",
+    "13": "Belo sortimento de nossas melhores sobremesas e guloseimas doces. Ótimo para celebrações.",
+    "14": "Pacote completo de catering com opções personalizáveis para seu evento. Entre em contato para detalhes."
+  }
+}

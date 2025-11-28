@@ -1,7 +1,13 @@
 @import "tailwindcss";
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+  pointer-events:all
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 @media (prefers-color-scheme: light) {
@@ -17,6 +23,22 @@ button:focus-visible {
   }
 }
 
+body {
+  font-family: ui-monospace, monospace; /* Monospace font */
+}
+
 :root {
   background-color: #91acc37a;
+}
+
+.nav-link {
+  @apply text-gray-700 hover:text-gray-900 font-mono;
+}
+
+.product-filter {
+  @apply px-4 sm:px-6 py-2.5 text-sm sm:text-base capitalize transition-colors min-h-[44px];
+}
+
+.btn-base {
+  @apply sm:px-6 py-2.5 text-sm sm:text-base capitalize transition-colors min-h-[44px];
 }

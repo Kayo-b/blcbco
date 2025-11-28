@@ -1,8 +1,7 @@
-// import { Link } from 'react-router-dom';
-// import { useCart } from '../context/CartContext';
+import { useTranslation } from 'react-i18next';
 
 export default function NavOverlay({ isOpen, onClose }) {
-  // const { cart } = useCart();
+  const { t } = useTranslation();
 
   return (
     <>
@@ -16,6 +15,7 @@ export default function NavOverlay({ isOpen, onClose }) {
       {/* Drawer */}
       <div
       onMouseLeave={onClose}
+      onMouse
       // onClick={(e) => e.stopPropagation()}
       id="NavOverlay"
       className={`
@@ -27,9 +27,9 @@ export default function NavOverlay({ isOpen, onClose }) {
         {/* Header */}
         <div 
         className="flex items-center justify-between p-6 border-b border-orange-600">
-          <p>Phone: (555) 123-4567</p>
-          <p>Email: contact@placeholder.com</p>
-          <p>Address: 123 Main St, City, ST 12345</p>
+          <p>{t('overlay.phone')}: (555) 123-4567</p>
+          <p>{t('overlay.email')}: contact@placeholder.com</p>
+          <p>{t('footer.address')}: 123 Main St, City, ST 12345</p>
         </div>
       </div>
     </>

@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { useCart } from '../context/CartContext';
 
 export default function Checkout() {
   const navigate = useNavigate();
   const { cart, getTotal, clearCart } = useCart();
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -41,53 +43,53 @@ export default function Checkout() {
   if (cart.length === 0) {
     return (
       <div className="max-w-4xl mx-auto px-4 py-12 text-center">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">Checkout</h1>
-        <p className="text-gray-600 mb-8">Your cart is empty</p>
+        <h1 className="text-3xl font-bold text-gray-800 mb-4">{t('checkout.title')}</h1>
+        <p className="text-gray-600 mb-8">{t('cart.empty')}</p>
       </div>
     );
   }
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-      <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 sm:mb-8">Checkout</h1>
+      <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 sm:mb-8">{t('checkout.title')}</h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
         {/* Order Form */}
         <div>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label className="block text-gray-700 mb-2">Name *</label>
+              <label className="block text-gray-700 mb-2">{t('checkout.name')} *</label>
               <input
                 type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent min-h-[44px]"
+                className="w-full px-4 py-2 border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent min-h-[44px]"
               />
             </div>
 
             <div>
-              <label className="block text-gray-700 mb-2">Email *</label>
+              <label className="block text-gray-700 mb-2">{t('checkout.email')} *</label>
               <input
                 type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent min-h-[44px]"
+                className="w-full px-4 py-2 border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent min-h-[44px]"
               />
             </div>
 
             <div>
-              <label className="block text-gray-700 mb-2">Phone *</label>
+              <label className="block text-gray-700 mb-2">{t('checkout.phone')} *</label>
               <input
                 type="tel"
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent min-h-[44px]"
+                className="w-full px-4 py-2 border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent min-h-[44px]"
               />
             </div>
 
@@ -99,7 +101,7 @@ export default function Checkout() {
                 name="deliveryType"
                 value={formData.deliveryType}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent min-h-[44px]"
+                className="w-full px-4 py-2 border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent min-h-[44px]"
               >
                 <option value="pickup">Pickup</option>
                 <option value="delivery">Delivery</option>
@@ -109,7 +111,7 @@ export default function Checkout() {
             {formData.deliveryType === 'delivery' && (
               <div>
                 <label className="block text-gray-700 mb-2">
-                  Delivery Address *
+                  {t('checkout.deliveryAddress')} *
                 </label>
                 <input
                   type="text"
@@ -117,7 +119,7 @@ export default function Checkout() {
                   value={formData.address}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent min-h-[44px]"
+                  className="w-full px-4 py-2 border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent min-h-[44px]"
                 />
               </div>
             )}
@@ -131,13 +133,13 @@ export default function Checkout() {
                 value={formData.specialInstructions}
                 onChange={handleChange}
                 rows="4"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               ></textarea>
             </div>
 
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors min-h-[44px]"
+              className="w-full bg-blue-600 text-white px-8 py-3 hover:bg-blue-700 transition-colors min-h-[44px]"
             >
               Pay with Stripe
             </button>
@@ -146,9 +148,9 @@ export default function Checkout() {
 
         {/* Order Summary */}
         <div>
-          <div className="bg-gray-100 rounded-lg p-6 sticky top-4">
+          <div className="bg-gray-100 p-6 sticky top-4">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">
-              Order Summary
+              {t('checkout.orderSummary')}
             </h2>
 
             <div className="space-y-3 mb-6">
@@ -158,7 +160,7 @@ export default function Checkout() {
                   className="flex justify-between text-gray-700"
                 >
                   <span>
-                    {item.name} x {item.quantity}
+                    {t(`productNames.${item.nameKey}`)} x {item.quantity}
                   </span>
                   <span>${(item.price * item.quantity).toFixed(2)}</span>
                 </div>
@@ -167,7 +169,7 @@ export default function Checkout() {
 
             <div className="border-t border-gray-300 pt-4">
               <div className="flex justify-between items-center">
-                <span className="text-xl font-bold text-gray-800">Total:</span>
+                <span className="text-xl font-bold text-gray-800">{t('checkout.total')}:</span>
                 <span className="text-2xl font-bold text-gray-900">
                   ${getTotal().toFixed(2)}
                 </span>

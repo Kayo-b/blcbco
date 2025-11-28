@@ -11,7 +11,7 @@ export default function Cart() {
         <p className="text-gray-600 mb-8">Your cart is empty</p>
         <Link
           to="/products"
-          className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors inline-block min-h-[44px]"
+          className="bg-blue-600 text-white px-8 py-3 hover:bg-blue-700 transition-colors inline-block min-h-[44px]"
         >
           Continue Shopping
         </Link>
@@ -28,13 +28,13 @@ export default function Cart() {
         {cart.map((item) => (
           <div
             key={item.id}
-            className="bg-white rounded-lg shadow p-3 sm:p-4 flex flex-col sm:flex-row gap-3 sm:gap-4"
+            className="bg-white shadow p-3 sm:p-4 flex flex-col sm:flex-row gap-3 sm:gap-4"
           >
             {/* Thumbnail */}
             <img
               src={item.image}
               alt={item.name}
-              className="w-full sm:w-20 md:w-24 h-32 sm:h-20 md:h-24 object-cover rounded"
+              className="w-full sm:w-20 md:w-24 h-32 sm:h-20 md:h-24 object-cover "
             />
 
             {/* Item Details */}
@@ -49,7 +49,7 @@ export default function Cart() {
             <div className="flex items-center justify-center space-x-3 sm:space-x-4">
               <button
                 onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                className="bg-gray-200 text-gray-700 w-10 h-10 sm:w-12 sm:h-12 rounded hover:bg-gray-300 min-h-[44px] flex items-center justify-center text-lg font-semibold"
+                className="bg-gray-200 text-gray-700 w-10 h-10 sm:w-12 sm:h-12  hover:bg-gray-300 min-h-[44px] flex items-center justify-center text-lg font-semibold"
               >
                 -
               </button>
@@ -58,7 +58,7 @@ export default function Cart() {
               </span>
               <button
                 onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                className="bg-gray-200 text-gray-700 w-10 h-10 sm:w-12 sm:h-12 rounded hover:bg-gray-300 min-h-[44px] flex items-center justify-center text-lg font-semibold"
+                className="bg-gray-200 text-gray-700 w-10 h-10 sm:w-12 sm:h-12  hover:bg-gray-300 min-h-[44px] flex items-center justify-center text-lg font-semibold"
               >
                 +
               </button>
@@ -81,7 +81,7 @@ export default function Cart() {
       </div>
 
       {/* Subtotal & Buttons */}
-      <div className="bg-gray-100 rounded-lg p-4 sm:p-6">
+      <div className="bg-gray-100 p-4 sm:p-6">
         <div className="flex justify-between items-center mb-4 sm:mb-6">
           <span className="text-lg sm:text-xl font-semibold text-gray-800">Subtotal:</span>
           <span className="text-xl sm:text-2xl font-bold text-gray-900">
@@ -92,13 +92,13 @@ export default function Cart() {
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
           <Link
             to="/products"
-            className="bg-gray-200 text-gray-700 px-6 sm:px-8 py-3 rounded-lg hover:bg-gray-300 transition-colors text-center flex-1 min-h-[44px] flex items-center justify-center font-medium"
+            className="bg-gray-200 text-gray-700 px-6 sm:px-8 py-3 hover:bg-gray-300 transition-colors text-center flex-1 min-h-[44px] flex items-center justify-center font-medium"
           >
             Continue Shopping
           </Link>
           <Link
             to="/checkout"
-            className="bg-blue-600 text-white px-6 sm:px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors text-center flex-1 min-h-[44px] flex items-center justify-center font-medium"
+            className="bg-blue-600 text-white px-6 sm:px-8 py-3 hover:bg-blue-700 transition-colors text-center flex-1 min-h-[44px] flex items-center justify-center font-medium"
           >
             Checkout
           </Link>

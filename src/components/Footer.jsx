@@ -1,4 +1,8 @@
+import { useTranslation } from 'react-i18next';
+
 export default function Footer() {
+  const { t } = useTranslation();
+  
   return (
     <footer className="bg-gray-800 text-white mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -15,11 +19,11 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
+            <h3 className="text-lg font-semibold mb-4">{t('nav.contact')}</h3>
             <ul className="space-y-2 text-gray-300">
-              <li>Phone: (555) 123-4567</li>
-              <li>Email: contact@placeholder.com</li>
-              <li>Address: 123 Main St, City, ST 12345</li>
+              <li>{t('footer.phone')}: (555) 123-4567</li>
+              <li>{t('footer.email')}: contact@placeholder.com</li>
+              <li>{t('footer.address')}: 123 Main St, City, ST 12345</li>
             </ul>
           </div>
 
