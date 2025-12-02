@@ -38,13 +38,13 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
             >
               {t('nav.catering')}
             </Link>
-            <button
+            <Link
               onMouseEnter={onContactClick}
               style={{ padding: '8px 12px' }}
               className="nav-link"
             >
               {t('nav.contact')}
-            </button>
+            </Link>
           </div>
 
           {/* Language Switcher & Cart Icon */}
@@ -53,7 +53,7 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
             className="flex items-center space-x-4">
             <LanguageSwitcher />
             <button 
-              onClick={onCartClick} className="relative">
+              onClick={onCartClick} className="cart-btn relative">
               <svg 
                 viewBox="0 0 34 30" 
                 fill="none" 

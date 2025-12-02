@@ -18,13 +18,13 @@ export default function CartDrawer({ isOpen, onClose }) {
 
       {/* Drawer */}
       <div className={`
-        fixed right-0 top-0 h-full w-full sm:w-96 bg-orange-500 shadow-2xl z-50
+        fixed right-0 top-0 h-full w-full sm:w-96 bg-gray-400 shadow-2xl z-50
         transition-transform duration-300 ease-in-out
         ${isOpen ? 'translate-x-0' : 'translate-x-full'}
         flex flex-col
       `}>
         {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-orange-600">
+        <div className="flex items-center justify-between p-6 border-b border-gray-600">
           <div className="flex items-center gap-2">
             <svg className="w-6 h-6 text-white" viewBox="0 0 34 30" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M16.9994 1C14.0664 1 11.6944 5.60349 11.6944 11.2858H22.3129C22.3129 5.60349 19.9325 1 17.0079 1H16.9994Z" stroke="currentColor" vectorEffect="non-scaling-stroke"/>
@@ -34,7 +34,7 @@ export default function CartDrawer({ isOpen, onClose }) {
           </div>
           <button 
             onClick={onClose}
-            className="text-white hover:text-gray-200 p-2"
+            className="cart-drewer-close-btn"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -49,7 +49,7 @@ export default function CartDrawer({ isOpen, onClose }) {
               <p className="mb-4">{t('cart.empty')}</p>
               <button
                 onClick={onClose}
-                className="bg-white text-orange-500 px-6 py-2  hover:bg-gray-100"
+                className="bg-white text-gray-500 px-6 py-2  hover:bg-gray-100"
               >
                 {t('cart.continueShopping')}
               </button>
@@ -119,7 +119,7 @@ export default function CartDrawer({ isOpen, onClose }) {
 
         {/* Footer with Total and Checkout */}
         {cart.length > 0 && (
-          <div className="border-t border-orange-600 p-6 bg-orange-600">
+          <div className="border-t border-gray-600 p-6 bg-gray-600">
             <div className="flex items-center justify-between mb-4 text-white">
               <span className="text-lg font-semibold">SUBTOTAL:</span>
               <span className="text-2xl font-bold">£{getTotal().toFixed(2)}</span>
@@ -127,7 +127,7 @@ export default function CartDrawer({ isOpen, onClose }) {
             <Link
               to="/checkout"
               onClick={onClose}
-              className="block w-full bg-white text-orange-500 text-center py-4  font-semibold hover:bg-gray-100 transition"
+              className="block w-full bg-white text-gray-500 text-center py-4  font-semibold hover:bg-gray-100 transition"
             >
               {t('cart.proceedToCheckout').toUpperCase()}
             </Link>

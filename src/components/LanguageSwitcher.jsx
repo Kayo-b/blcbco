@@ -8,10 +8,10 @@ export default function LanguageSwitcher() {
   };
 
   return (
-    <div className="flex gap-2">
+    <div className="absolute top-0 right-0 gap-1 ">
       <button
         onClick={() => changeLanguage('en')}
-        className={`px-2 py-1 rounded ${
+        className={`language-btn ${
           i18n.language === 'en' ? 'bg-white text-black' : 'bg-black/20 text-white'
         }`}
       >
@@ -19,16 +19,16 @@ export default function LanguageSwitcher() {
       </button>
       <button
         onClick={() => changeLanguage('de')}
-        className={`px-2 py-1 rounded ${
-          i18n.language === 'de' ? 'bg-white text-black' : 'bg-black/20 text-white'
+        className={`language-btn ${
+          i18n.language === 'de' ? 'bg-white text-black' : 'bg-black/20 text-white transparent'
         }`}
       >
         DE
       </button>
       <button
         onClick={() => changeLanguage('pt')}
-        className={`px-2 py-1 rounded ${
-          i18n.language === 'pt' ? 'bg-white text-black' : 'bg-black/20 text-white'
+        className={`language-btn ${
+          i18n.language === 'pt' ? 'bg-white text-black' : 'bg-black/20 text-white transparent'
         }`}
       >
         PT

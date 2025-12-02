@@ -10,6 +10,10 @@ button:hover {
   cursor: pointer;
 }
 
+button {
+  color:#213547;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -19,7 +23,11 @@ button:hover {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #ffffff;
+
+  }
+  button:hover {
+    background-color: rgb(241, 241, 241);
   }
 }
 
@@ -41,4 +49,12 @@ body {
 
 .btn-base {
   @apply sm:px-6 py-2.5 text-sm sm:text-base capitalize transition-colors min-h-[44px];
+}
+
+.cart-btn:hover { 
+  background-color: transparent;
+}
+
+.language-btn {
+  @apply text-xs px-2 py-1
 }

@@ -9,7 +9,7 @@ export default function Products() {
   const { addToCart } = useCart();
   const { t } = useTranslation();
 
-  const categories = ['all', 'breads', 'pastries', 'catering'];
+  const categories = ['all', 'cakes', 'brazilianCakes', 'catering'];
 
   const filteredProducts =
     selectedCategory === 'all'
