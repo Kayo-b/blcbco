@@ -105,7 +105,7 @@ export default function Confirmation() {
       <div className="text-center">
         <Link
           to="/"
-          className="bg-blue-600 text-white px-8 py-3 hover:bg-blue-700 transition-colors inline-block min-h-[44px]"
+          className="bg-blue-200 text-white px-8 py-3 hover:bg-blue-700 transition-colors inline-block min-h-[44px]"
         >
           {t('confirmation.backToHome')}
         </Link>

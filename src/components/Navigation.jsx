@@ -12,6 +12,34 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
+          <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden text-gray-700"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                {isMenuOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                )}
+              </svg>
+            </button>
+
           <div className="flex-shrink-0">
             <Link 
               onMouseEnter={onContactClose}
@@ -21,7 +49,7 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
           </div>
 
           {/* Desktop Navigation */}
-          <div style={{ display: 'flex', gap: '32px' }} onMouseEnter={onContactClose}>
+          {/* <div style={{ display: 'flex', gap: '32px' }} onMouseEnter={onContactClose}>
             <Link 
               to="/products" 
               style={{ padding: '8px 12px' }}
@@ -45,7 +73,7 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
             >
               {t('nav.contact')}
             </Link>
-          </div>
+          </div> */}
 
           {/* Language Switcher & Cart Icon */}
           <div
@@ -79,40 +107,13 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
             </button>
 
             {/* Mobile menu button */}
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden text-gray-700"
-            >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                {isMenuOpen ? (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                ) : (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                )}
-              </svg>
-            </button>
-          </div>
+            </div>
         </div>
 
         {/* Mobile menu */}
         {isMenuOpen && (
           <div className="md:hidden pb-4">
-            <div className="flex flex-col space-y-2">
+            <div className="mobile-menu ">
               <Link
                 to="/"
                 className="text-gray-700 hover:text-gray-900 py-2"
@@ -134,13 +135,13 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
               >
                 {t('nav.catering')}
               </Link>
-              <Link
-                to="/about"
-                className="text-gray-700 hover:text-gray-900 py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {t('nav.contact')}
-              </Link>
+            <Link
+              onMouseDown={onContactClick}
+              style={{ padding: '8px 12px' }}
+              className="nav-link"
+            >
+              {t('nav.contact')}
+            </Link>
             </div>
           </div>
         )}

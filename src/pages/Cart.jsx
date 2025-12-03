@@ -11,7 +11,7 @@ export default function Cart() {
         <p className="text-gray-600 mb-8">Your cart is empty</p>
         <Link
           to="/products"
-          className="bg-blue-600 text-white px-8 py-3 hover:bg-blue-700 transition-colors inline-block min-h-[44px]"
+          className="bg-blue-200 text-white px-8 py-3 hover:bg-blue-700 transition-colors inline-block min-h-[44px]"
         >
           Continue Shopping
         </Link>
@@ -98,7 +98,7 @@ export default function Cart() {
           </Link>
           <Link
             to="/checkout"
-            className="bg-blue-600 text-white px-6 sm:px-8 py-3 hover:bg-blue-700 transition-colors text-center flex-1 min-h-[44px] flex items-center justify-center font-medium"
+            className="bg-blue-200 text-white px-6 sm:px-8 py-3 hover:bg-blue-700 transition-colors text-center flex-1 min-h-[44px] flex items-center justify-center font-medium"
           >
             Checkout
           </Link>

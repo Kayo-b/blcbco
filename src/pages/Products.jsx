@@ -29,9 +29,9 @@ export default function Products() {
           <button
             key={category}
             onClick={() => setSelectedCategory(category)}
-            className={`product-filter bg-blue-600 text-white ${
+            className={`product-filter bg-blue-200 text-white ${
               selectedCategory === category
-                ? 'bg-blue-600 text-white'
+                ? 'bg-blue-00 text-white'
                 : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
             }`}
           >

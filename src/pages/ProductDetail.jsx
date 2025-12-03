@@ -84,7 +84,7 @@ export default function ProductDetail() {
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-auto">
             <button
               onClick={handleAddToCart}
-              className="bg-blue-600 text-white px-6 sm:px-8 py-3 hover:bg-blue-700 transition-colors flex-1 min-h-[44px] font-medium"
+              className="bg-blue-200 text-white px-6 sm:px-8 py-3 hover:bg-blue-700 transition-colors flex-1 min-h-[44px] font-medium"
             >
               {t('products.addToCart')}
             </button>

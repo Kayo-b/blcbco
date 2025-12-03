@@ -7,32 +7,32 @@ export default function LanguageSwitcher() {
     i18n.changeLanguage(lng);
   };
 
+  const languages = [
+    { code: 'en', label: 'EN' },
+    { code: 'de', label: 'DE' },
+    { code: 'pt', label: 'PT' }
+  ];
+
+  const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
+  const otherLanguages = languages.filter(lang => lang.code !== i18n.language);
+
   return (
-    <div className="absolute top-0 right-0 gap-1 ">
-      <button
-        onClick={() => changeLanguage('en')}
-        className={`language-btn ${
-          i18n.language === 'en' ? 'bg-white text-black' : 'bg-black/20 text-white'
-        }`}
-      >
-        EN
+    <div className="absolute top-0 -right-2 group">
+      <button className="language-btn bg-white">
+        {currentLanguage.label}
       </button>
-      <button
-        onClick={() => changeLanguage('de')}
-        className={`language-btn ${
-          i18n.language === 'de' ? 'bg-white text-black' : 'bg-black/20 text-white transparent'
-        }`}
-      >
-        DE
-      </button>
-      <button
-        onClick={() => changeLanguage('pt')}
-        className={`language-btn ${
-          i18n.language === 'pt' ? 'bg-white text-black' : 'bg-black/20 text-white transparent'
-        }`}
-      >
-        PT
-      </button>
+
+      <div className="hidden group-hover:flex flex-col gap-1 mt-1">
+        {otherLanguages.map((lang) => (
+          <button
+            key={lang.code}
+            onClick={() => changeLanguage(lang.code)}
+            className="language-btn bg-black/20 text-white hover:bg-black/25 hover:text-gray-900"
+          >
+            {lang.label}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }

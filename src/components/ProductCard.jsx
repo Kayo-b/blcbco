@@ -28,7 +28,7 @@ export default function ProductCard({ product, onAddToCart }) {
           </span>
           <button
             onClick={() => onAddToCart(product)}
-            className=" btn-base bg-blue-600 text-white hover:bg-blue-700 transition-colors min-h-[44px]"
+            className=" btn-base bg-blue-200 text-white hover:bg-blue-300 transition-colors min-h-[44px]"
           >
             {t('products.addToCart')}
           </button>

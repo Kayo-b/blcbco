@@ -139,7 +139,7 @@ export default function Checkout() {
 
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white px-8 py-3 hover:bg-blue-700 transition-colors min-h-[44px]"
+              className="w-full bg-blue-200 text-white px-8 py-3 hover:bg-blue-700 transition-colors min-h-[44px]"
             >
               Pay with Stripe
             </button>

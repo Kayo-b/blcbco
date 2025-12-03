@@ -7,7 +7,7 @@ export default function Catering() {
   return (
     <div className="min-h-screen bg-blue-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-blue-300 to-green-500 text-white py-16 px-4">
+      <div className="bg-gradient-to-br from-blue-300 to-gray-500 text-white py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             {t('catering.title')}
@@ -43,7 +43,7 @@ export default function Catering() {
             {t('catering.serviceOptions')}
           </h2>
           <div className="space-y-6">
-            <div className="bg-white -xl shadow-sm p-8 border-l-8 border-gray-400 hover:border-yellow-400 transition-colors">
+            <div className="bg-white -xl shadow-sm p-8 border-l-8 border-gray-400 hover:border-blue-400 transition-colors">
               <h3 className="text-2xl font-bold text-gray-800 mb-3">
                 {t('catering.service1.title')}
               </h3>
@@ -57,7 +57,7 @@ export default function Catering() {
               </div>
             </div>
 
-            <div className="bg-white -xl shadow-sm p-8 border-l-8 border-gray-400 hover:border-yellow-400 transition-colors">
+            <div className="bg-white -xl shadow-sm p-8 border-l-8 border-gray-400 hover:border-blue-400 transition-colors">
               <h3 className="text-2xl font-bold text-gray-800 mb-3">
                 {t('catering.service2.title')}
               </h3>
@@ -71,7 +71,7 @@ export default function Catering() {
               </div>
             </div>
 
-            <div className="bg-white -xl shadow-sm p-8 border-l-8 border-gray-400 hover:border-yellow-400 transition-colors">
+            <div className="bg-white -xl shadow-sm p-8 border-l-8 border-gray-400 hover:border-blue-400 transition-colors">
               <h3 className="text-2xl font-bold text-gray-800 mb-3">
                 {t('catering.service3.title')}
               </h3>
@@ -88,7 +88,7 @@ export default function Catering() {
         </div>
 
         {/* What's Served */}
-        <div className="bg-gradient-to-br from-yellow-50 to-gray-50 -xl shadow-sm p-8 mb-12 border-4 border-yellow-200">
+        <div className="bg-gradient-to-br from-blue-50 to-gray-50 -xl shadow-sm p-8 mb-12 border-4 border-blue-200">
           <h2 className="text-3xl font-bold text-gray-600 mb-6 text-center">
             {t('catering.menuOptions')}
           </h2>
@@ -168,7 +168,7 @@ export default function Catering() {
         </div>
 
         {/* Contact CTA */}
-        <div className="bg-gradient-to-br from-gray-400 to-yellow-400 text-white -2xl shadow-lg p-8 md:p-12 text-center">
+        <div className="bg-gradient-to-br from-gray-400 to-blue-400 text-white -2xl shadow-lg p-8 md:p-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             {t('catering.ctaHeading')}
           </h2>
