@@ -1,10 +1,13 @@
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 export default function LanguageSwitcher() {
   const { i18n } = useTranslation();
+  const [isOpen, setIsOpen] = useState(false);
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
+    setIsOpen(false); // Close menu after selection
   };
 
   const languages = [
@@ -17,12 +20,19 @@ export default function LanguageSwitcher() {
   const otherLanguages = languages.filter(lang => lang.code !== i18n.language);
 
   return (
-    <div className="absolute top-0 -right-2 group">
-      <button className="language-btn bg-white">
+    <div className="relative group">
+      {/* Current Language Button */}
+      <button 
+        onClick={() => setIsOpen(!isOpen)}
+        className="language-btn bg-white"
+      >
         {currentLanguage.label}
       </button>
 
-      <div className="hidden group-hover:flex flex-col gap-1 mt-1">
+      <div className={`
+        ${isOpen ? 'flex' : 'hidden'} 
+        flex-col gap-1 mt-1 absolute top-full left-0
+      `}>
         {otherLanguages.map((lang) => (
           <button
             key={lang.code}
@@ -33,6 +43,13 @@ export default function LanguageSwitcher() {
           </button>
         ))}
       </div>
+
+      {isOpen && (
+        <div 
+          className="fixed inset-0 z-[-1] md:hidden"
+          onClick={() => setIsOpen(false)}
+        />
+      )}
     </div>
   );
 }

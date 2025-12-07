@@ -9,7 +9,7 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
 
   return (
     <nav className="bg-white shadow-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-full mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <button
@@ -49,7 +49,7 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
           </div>
 
           {/* Desktop Navigation */}
-          {/* <div style={{ display: 'flex', gap: '32px' }} onMouseEnter={onContactClose}>
+          <div className='desktop-nav' onMouseEnter={onContactClose}>
             <Link 
               to="/products" 
               style={{ padding: '8px 12px' }}
@@ -73,7 +73,7 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
             >
               {t('nav.contact')}
             </Link>
-          </div> */}
+          </div>
 
           {/* Language Switcher & Cart Icon */}
           <div
@@ -137,7 +137,6 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
               </Link>
             <Link
               onMouseDown={onContactClick}
-              style={{ padding: '8px 12px' }}
               className="nav-link"
             >
               {t('nav.contact')}

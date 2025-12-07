@@ -60,5 +60,9 @@ body {
 }
 
 .mobile-menu {
-  @apply flex flex-col space-y-4
+  @apply flex flex-col space-y-8 h-screen
+}
+
+.desktop-nav {
+  @apply hidden md:flex md:gap-32
 }
