@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useCart } from '../context/CartContext';
 import ProductCard from '../components/ProductCard';
 import { products } from '../data/products';
+import maozinha from '../assets/maozinha.svg';
 
 export default function Products() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -19,10 +20,12 @@ export default function Products() {
   return (
     <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
       {/* Page Title */}
-      <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6 sm:mb-8 text-center">
-        {t('products.title')}
-      </h1>
-
+      <div className="flex justify-center items-center">
+        <img src={maozinha} className="w-12 h-auto pb-5 pr-2"/>
+        <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6 sm:mb-8 text-center">
+          {t('products.title')}
+        </h1>
+      </div>
       {/* Category Filters */}
       <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-6 sm:mb-8">
         {categories.map((category) => (

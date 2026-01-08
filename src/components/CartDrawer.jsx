@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useCart } from '../context/CartContext';
+import closeIcon from '../assets/cross-circle2.svg'
 
 export default function CartDrawer({ isOpen, onClose }) {
   const { cart, updateQuantity, removeFromCart, getTotal } = useCart();
@@ -18,7 +19,7 @@ export default function CartDrawer({ isOpen, onClose }) {
 
       {/* Drawer */}
       <div className={`
-        fixed right-0 top-0 h-full w-full sm:w-96 bg-gray-400 shadow-2xl z-50
+        fixed right-0 top-0 h-full w-full sm:w-106 bg-gray-400 shadow-2xl z-50
         transition-transform duration-300 ease-in-out
         ${isOpen ? 'translate-x-0' : 'translate-x-full'}
         flex flex-col
@@ -100,6 +101,7 @@ export default function CartDrawer({ isOpen, onClose }) {
                           className="ml-auto text-red-600 hover:text-red-700 text-xs"
                         >
                           {t('cart.remove')}
+                          {/* {<img src={closeIcon} className="h-6 brightness-0 hover:brightness-100 transition-all"/>} */}
                         </button>
                       </div>
                     </div>

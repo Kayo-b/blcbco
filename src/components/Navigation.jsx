@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
+import blbcLogo from '../assets/balacobaco.svg';
 
 export default function Navigation({ cartItemCount = 0, onCartClick, onContactClick, onContactClose }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,9 +43,11 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
 
           <div className="flex-shrink-0">
             <Link 
+              backgroundImage=''
               onMouseEnter={onContactClose}
               to="/" className="text-2xl font-bold text-gray-800">
-             balacobaco 
+             <img src={blbcLogo} alt='Logo' className="hidden md:block w-64 h-auto"/>
+             <img src={blbcLogo} alt='Logo' className="block md:hidden w-42 h-auto"/>
             </Link>
           </div>
 
