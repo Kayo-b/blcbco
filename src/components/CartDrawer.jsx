@@ -124,7 +124,7 @@ export default function CartDrawer({ isOpen, onClose }) {
           <div className="border-t border-gray-600 p-6 bg-gray-600">
             <div className="flex items-center justify-between mb-4 text-white">
               <span className="text-lg font-semibold">SUBTOTAL:</span>
-              <span className="text-2xl font-bold">£{getTotal().toFixed(2)}</span>
+              <span className="text-2xl font-bold">${getTotal().toFixed(2)}</span>
             </div>
             <Link
               to="/checkout"

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import copo from '../assets/copo.svg'
 
 export default function Catering() {
   const { t } = useTranslation();
@@ -7,14 +8,15 @@ export default function Catering() {
   return (
     <div className="min-h-screen bg-blue-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-blue-300 to-gray-500 text-white py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <div className="flex max-w-4xl mx-auto text-center items-center justify-center">
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6 sm:mb-8 text-center">
             {t('catering.title')}
           </h1>
-          <p className="text-xl md:text-2xl text-white">
+          <img src={copo} className="w-14 h-auto pl-5 pb-5"/>
+          {/* <p className="text-xl md:text-2xl text-white">
             {t('catering.subtitle')}
-          </p>
+          </p> */}
         </div>
       </div>
 
@@ -168,7 +170,7 @@ export default function Catering() {
         </div>
 
         {/* Contact CTA */}
-        <div className="bg-gradient-to-br from-gray-400 to-blue-400 text-white -2xl shadow-lg p-8 md:p-12 text-center">
+        <div className="bg-gray-400 text-white -2xl shadow-lg p-8 md:p-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             {t('catering.ctaHeading')}
           </h2>

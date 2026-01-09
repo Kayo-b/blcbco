@@ -1,33 +1,38 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import cadeira from '../assets/cadeira.svg';
 
 export default function Home() {
   const { t } = useTranslation();
   
   return (
-    <nav className="bg-white shadow-md w-64 h-screen left-0 top-5">
+    <nav className="bg-white w-100 h-screen left-0 top-5">
       {/* Vertical Menu Container */}
-      <div className="flex flex-col p-6 space-y-18">
+      <div className="flex flex-col p-2">
         <Link 
           to="/products" 
-          className="nav-link"
+          className="nav-link w-auto h-20 text-start justify-center p-4 "
         >
-          {t('nav.shop')}
+        <span className='hover:border-b-1'>{t('nav.shop')}</span>
         </Link>
         <Link 
           to="/catering" 
-          className="nav-link"
+          className="nav-link w-auto h-20 text-start justify-center p-4"
         >
-          {t('nav.catering')}
+        <span className='hover:border-b-1'>{t('nav.catering')}</span>
         </Link>
         <Link 
           to="/about" 
-          className="nav-link"
+          className="nav-link w-auto h-20 text-start justify-center p-4"
         >
-          {t('nav.about')}
+        <span className='hover:border-b-1 pb-0'>{t('nav.about')}</span>
         </Link>
       </div>
+      <div className='flex justify-end'>
+        <img src={cadeira} className="w-22 h-auto pr-2"/>
+      </div>
     </nav>
+
   );
 }
 

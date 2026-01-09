@@ -51,8 +51,9 @@ export default function About() {
       {/* Bakery Photo Placeholder */}
       <section>
         <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">{t('about.seeMore')}</h2>
-        <div className="bg-gray-200 h-48 sm:h-64 flex items-center justify-center">
+        <div className="flex-col bg-gray-200 h-48 sm:h-64 flex items-center justify-center">
           <p className="text-gray-500 text-base sm:text-lg">{t('about.photoPlaceholder')}</p>
+          <p>Adicionar um widget com a galeria de fotos do Instagram talvez?</p>
         </div>
       </section>
     </div>

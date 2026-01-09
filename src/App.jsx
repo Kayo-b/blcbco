@@ -28,7 +28,7 @@ function AppContent() {
         onContactClick={() => setIsContactOpen(true)}
         onContactClose={() => setIsContactOpen(false)}
       />
-      <main className="flex-grow">
+      <main className="flex-grow bg-white">
       {/* <Menu/> */}
         <Routes>
           <Route path="/" element={<Home />} />
@@ -50,7 +50,7 @@ function AppContent() {
 
 function App() {
   return (
-    <Router>
+    <Router basename="/blcbco">
       <CartProvider>
         <AppContent />
       </CartProvider>
