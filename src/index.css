@@ -64,5 +64,5 @@ body {
 }
 
 .desktop-nav {
-  @apply hidden md:flex md:gap-32
+  @apply hidden md:flex justify-between w-[60%]
 }

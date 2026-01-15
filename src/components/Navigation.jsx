@@ -11,7 +11,7 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
   return (
     <nav className="bg-white shadow-md">
       <div className="max-w-full mx-auto px-4 sm:px-6">
-        <div className="flex justify-between items-center h-16 border-b-1">
+        <div className="flex justify-between items-center h-16 border-b-1 pb-2 mt-2">
           {/* Logo */}
           <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -43,11 +43,11 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
 
           <div className="flex-shrink-0">
             <Link 
-              backgroundImage=''
+              // backgroundImage=''
               onMouseEnter={onContactClose}
               to="/" className="text-2xl font-bold text-gray-800">
              <img src={blbcLogo} alt='Logo' className="hidden md:block w-64 h-auto"/>
-             <img src={blbcLogo} alt='Logo' className="block md:hidden w-42 h-auto"/>
+             <img src={blbcLogo} alt='Logo' className="block md:hidden w-52 h-auto"/>
             </Link>
           </div>
 
@@ -76,12 +76,19 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
             >
               {t('nav.contact')}
             </Link>
+            <Link
+              to="/about" 
+              onMouseEnter={onContactClose}
+              style={{ padding: '8px 12px' }}
+              className="nav-link"
+            >
+              {t('nav.about')}
+            </Link>         
           </div>
-
           {/* Language Switcher & Cart Icon */}
           <div
             onMouseEnter={onContactClose}
-            className="flex items-center space-x-4">
+            className="items-center space-x-4">
             <LanguageSwitcher />
             <button 
               onClick={onCartClick} className="cart-btn relative">

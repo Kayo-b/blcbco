@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <nav className="bg-white w-100 h-screen left-0 top-5">
       {/* Vertical Menu Container */}
-      <div className="flex flex-col p-2">
+      {/* <div className="flex flex-col p-2">
         <Link 
           to="/products" 
           className="nav-link w-auto h-20 text-start justify-center p-4 "
@@ -30,7 +30,7 @@ export default function Home() {
       </div>
       <div className='flex justify-end'>
         <img src={cadeira} className="w-22 h-auto pr-2"/>
-      </div>
+      </div> */}
     </nav>
 
   );
