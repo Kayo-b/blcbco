@@ -4,6 +4,10 @@ import { useTranslation } from 'react-i18next';
 export default function ProductCard({ product, onAddToCart }) {
   const { t } = useTranslation();
   
+  // Use basePrice for products with sizes, or price for simple products
+  const displayPrice = product.basePrice || product.price;
+  const priceLabel = product.sizes ? t('products.startingAt') : '';
+  
   return (
     <div className="bg-white shadow-md overflow-hidden hover:shadow-lg transition-shadow flex flex-col h-full">
       <Link to={`/product/${product.id}`} className="block">
@@ -23,15 +27,18 @@ export default function ProductCard({ product, onAddToCart }) {
           {t(`productDescriptions.${product.descriptionKey}`)}
         </p>
         <div className="flex flex-col gap-2 mt-auto">
-          <span className="text-xl sm:text-lg md:text-xl font-bold text-gray-900">
-            ${product.price.toFixed(2)}
-          </span>
-          <button
-            onClick={() => onAddToCart(product)}
-            className=" btn-base bg-blue-200 text-white hover:bg-blue-300 transition-colors min-h-[44px]"
+          <div>
+            {priceLabel && <span className="text-xs text-gray-500 block">{priceLabel}</span>}
+            <span className="text-xl sm:text-lg md:text-xl font-bold text-gray-900">
+              €{displayPrice.toFixed(2)}
+            </span>
+          </div>
+          <Link
+            to={`/product/${product.id}`}
+            className=" btn-base bg-blue-200 text-white hover:bg-blue-300 transition-colors min-h-[44px] text-center"
           >
-            {t('products.addToCart')}
-          </button>
+            {product.customizable ? t('products.customize') : t('products.viewDetails')}
+          </Link>
         </div>
       </div>
     </div>

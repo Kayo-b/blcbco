@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useCart } from '../context/CartContext';
-import { products } from '../data/products';
+import { products, birthdayCakeOptions } from '../data/products';
 
 export default function ProductDetail() {
   const { id } = useParams();
@@ -10,6 +10,14 @@ export default function ProductDetail() {
   const { addToCart } = useCart();
   const { t } = useTranslation();
   const [quantity, setQuantity] = useState(1);
+  const [selectedSize, setSelectedSize] = useState(null);
+  const [selectedVariant, setSelectedVariant] = useState(null);
+  
+  // Birthday cake customization states
+  const [selectedBase, setSelectedBase] = useState(null);
+  const [selectedFrosting, setSelectedFrosting] = useState(null);
+  const [selectedDecorationStyle, setSelectedDecorationStyle] = useState(null);
+  const [selectedFlowers, setSelectedFlowers] = useState('none');
 
   const product = products.find((p) => p.id === parseInt(id));
 
@@ -29,8 +37,55 @@ export default function ProductDetail() {
     );
   }
 
+  // Set default size when component loads
+  if (product.sizes && !selectedSize) {
+    setSelectedSize(product.sizes[0].id);
+  }
+
+  const getCurrentPrice = () => {
+    let price = 0;
+    
+    if (product.sizes && selectedSize) {
+      const size = product.sizes.find(s => s.id === selectedSize);
+      price = size ? size.price : product.basePrice;
+    } else {
+      price = product.price || product.basePrice;
+    }
+
+    // Add flower decoration cost for birthday cakes
+    if (product.customizable && selectedFlowers === 'withFlowers') {
+      const flowerOption = birthdayCakeOptions.flowers.find(f => f.id === 'withFlowers');
+      price += flowerOption.price;
+    }
+
+    return price;
+  };
+
+  const canAddToCart = () => {
+    if (product.customizable) {
+      return selectedBase && selectedFrosting && selectedDecorationStyle && selectedFlowers;
+    }
+    if (product.sizes) {
+      return selectedSize !== null;
+    }
+    return true;
+  };
+
   const handleAddToCart = () => {
-    addToCart(product, quantity);
+    if (!canAddToCart()) return;
+
+    const cartItem = {
+      ...product,
+      selectedSize,
+      selectedVariant,
+      price: getCurrentPrice(),
+      customization: product.customizable ? {
+        flavors: selectedFlavors,
+        base: selectedBase,
+        frosting: selectedFrosting,
+        decoration: selectedDecoration
+      } : null
+    };Cart(cartItem, quantity);
     navigate('/cart');
   };
 
@@ -52,10 +107,150 @@ export default function ProductDetail() {
             {t(`productNames.${product.nameKey}`)}
           </h1>
           
-          <p className="text-gray-600 mb-4 sm:mb-6 text-base leading-relaxed">{t(`productFullDescriptions.${product.fullDescriptionKey}`)}</p>
+          <p className="text-gray-600 mb-4 sm:mb-6 text-base leading-relaxed">
+            {t(`productDescriptions.${product.fullDescriptionKey}`)}
+          </p>
+
+          {/* Size Selection */}
+          {product.sizes && (
+            <div className="mb-6">
+              <label className="block text-gray-700 mb-2 font-medium">
+                {t('productDetail.selectSize')}
+              </label>
+              <div className="grid grid-cols-2 gap-2">
+                {product.sizes.map((size) => (
+                  <button
+                    key={size.id}
+                    onClick={() => setSelectedSize(size.id)}
+                    className={`p-3 border-2 rounded ${
+                      selectedSize === size.id
+                        ? 'border-blue-500 bg-blue-50'
+                        : 'border-gray-300 hover:border-gray-400'
+                    }`}
+                  >
+                    <div className="font-semibold">{t(`productNames.${size.nameKey}`)}</div>
+                    <div className="text-sm text-gray-600">{t('productDetail.serves')} {size.serves}</div>
+                    <div className="text-lg font-bold text-gray-900 mt-1">€{size.price.toFixed(2)}</div>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Variant Selection for Empadão */}
+          {product.variants && (
+            <div className="mb-6">
+              <label className="block text-gray-700 mb-2 font-medium">
+                {t('productDetail.selectVariant')}
+              </label>
+              <select
+                value={selectedVariant || ''}
+                onChange={(e) => setSelectedVariant(e.target.value)}
+                className="w-full p-2 border-2 border-gray-300 rounded"
+              >
+                <option value="">{t('productDetail.chooseVariant')}</option>
+                {product.variants.map((variant) => (
+                  <option key={variant} value={variant}>
+                    {t(`productDetail.variants.${variant}`)}
+                  </option>
+                ))}
+              </select>
+            </div>
+          )}
+
+          {/* Birthday Cake Customization */}
+          {product.customizable && (
+            <div className="space-y-6 mb-6">              {/* Base Selection */}
+              <div>
+                <label className="block text-gray-700 mb-2 font-medium">
+                  {t('productDetail.selectBase')}
+                </label>
+                <div className="grid grid-cols-2 gap-2">
+                  {birthdayCakeOptions.bases.map((base) => (
+                    <button
+                      key={base.id}
+                      onClick={() => setSelectedBase(base.id)}
+                      className={`p-3 border-2 rounded ${
+                        selectedBase === base.id
+                          ? 'border-blue-500 bg-blue-50'
+                          : 'border-gray-300 hover:border-gray-400'
+                      }`}
+                    >
+                      {t(`productNames.${base.nameKey}`)}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Decoration Style Selection */}
+              <div>
+                <label className="block text-gray-700 mb-2 font-medium">
+                  {t('productDetail.selectDecorationStyle')}
+                </label>
+                <div className="grid grid-cols-2 gap-2">
+                  {birthdayCakeOptions.decorationStyles.map((style) => (
+                    <button
+                      key={style.id}
+                      onClick={() => setSelectedDecorationStyle(style.id)}
+                      className={`p-3 border-2 rounded ${
+                        selectedDecorationStyle === style.id
+                          ? 'border-blue-500 bg-blue-50'
+                          : 'border-gray-300 hover:border-gray-400'
+                      }`}
+                    >
+                      {t(`productNames.${style.nameKey}`)}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Decoration Selection */}
+              <div>
+                <label className="block text-gray-700 mb-2 font-medium">
+                  {t('productDetail.addFlowers')}
+                </label>
+                <div className="grid grid-cols-1 gap-2">
+                  {birthdayCakeOptions.flowers.map((flower) => (
+                    <button
+                      key={flower.id}
+                      onClick={() => setSelectedFlowers(flower.id)}
+                      className={`p-3 border-2 rounded text-left ${
+                        selectedFlowers === flower.id
+                          ? 'border-blue-500 bg-blue-50'
+                          : 'border-gray-300 hover:border-gray-400'
+                      }`}
+                    >
+                      <span>{t(`productNames.${flower.nameKey}`)}</span>
+                      {flower.price > 0 && (
+                        <span className="ml-2 text-sm text-gray-600">
+                          (+€{flower.price.toFixed(2)})
+                        </span>
+                      )}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Order Requirement Note */}
+              <div className="bg-blue-50 border border-blue-200 rounded p-4">
+                <p className="text-sm text-blue-800">
+                  <strong>{t('productDetail.orderRequirement')}:</strong> {t('productDetail.oneWeekAdvance')}
+                </p>
+              </div>
+            </div>
+          )}
+
+          {/* Fixed Menu Note */}
+          {product.category === 'fixedMenu' && (
+            <div className="bg-yellow-50 border border-yellow-200 rounded p-4 mb-6">
+              <p className="text-sm text-yellow-800">
+                <strong>{t('productDetail.notice')}:</strong> {t('productDetail.familySizeNotice')}
+              </p>
+            </div>
+          )}
 
           <div className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
-            ${product.price.toFixed(2)}
+            €{getCurrentPrice().toFixed(2)}
           </div>
 
           {/* Quantity Selector */}
@@ -64,7 +259,7 @@ export default function ProductDetail() {
             <div className="flex items-center space-x-4">
               <button
                 onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                className="bg-gray-200 text-gray-700 w-12 h-12  hover:bg-gray-300 min-h-[44px] text-xl font-semibold"
+                className="bg-gray-200 text-gray-700 w-12 h-12 hover:bg-gray-300 min-h-[44px] text-xl font-semibold"
               >
                 -
               </button>
@@ -73,7 +268,7 @@ export default function ProductDetail() {
               </span>
               <button
                 onClick={() => setQuantity(quantity + 1)}
-                className="bg-gray-200 text-gray-700 w-12 h-12  hover:bg-gray-300 min-h-[44px] text-xl font-semibold"
+                className="bg-gray-200 text-gray-700 w-12 h-12 hover:bg-gray-300 min-h-[44px] text-xl font-semibold"
               >
                 +
               </button>
@@ -84,7 +279,12 @@ export default function ProductDetail() {
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-auto">
             <button
               onClick={handleAddToCart}
-              className="bg-blue-200 text-white px-6 sm:px-8 py-3 hover:bg-blue-700 transition-colors flex-1 min-h-[44px] font-medium"
+              disabled={!canAddToCart()}
+              className={`px-6 sm:px-8 py-3 transition-colors flex-1 min-h-[44px] font-medium ${
+                canAddToCart()
+                  ? 'bg-blue-200 text-white hover:bg-blue-700'
+                  : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+              }`}
             >
               {t('products.addToCart')}
             </button>
