@@ -14,18 +14,11 @@
     "cateringServices": "Catering-Services"
   },
   "about": {
-    "title": "Über uns",
-    "ourStory": "Unsere Geschichte",
-    "paragraph1": "Willkommen in unserem Kuchengeschäft! Wir sind leidenschaftlich daran interessiert, köstliche Kuchen nach traditionellen brasilianischen und internationalen Rezepten mit hochwertigen Zutaten herzustellen.",
-    "paragraph2": "Unser Team erfahrener Bäcker arbeitet jeden Tag daran, Ihnen frische Kuchen mit erstaunlichen Füllungen und Toppings sowie maßgeschneiderte Catering-Services für Ihre besonderen Anlässe zu bieten.",
-    "paragraph3": "Wir glauben an die Kunst des Kuchenbackens und die Freude, die es unserer Gemeinschaft bringt. Jeder Kuchen wird mit Sorgfalt und Liebe zum Detail hergestellt.",
-    "ourValues": "Unsere Werte",
-    "value1": "Qualität: Wir verwenden nur die besten Zutaten",
-    "value2": "Tradition: Brasilianische und internationale Kuchenrezepte",
-    "value3": "Frische: Täglich frisch mit Sorgfalt hergestellt",
-    "value4": "Gemeinschaft: Wir bedienen unsere Nachbarn mit Stolz",
-    "seeMore": "Mehr Sehen",
-    "photoPlaceholder": "Kuchengeschäft Foto"
+    "ourStory": "Über",
+    "paragraph1": "Alles beginnt mit dem Privileg, Brasilianer zu sein mit der Stärke und Widerstandsfähigkeit eines Landes, das durch Kontraste, Üppigkeit und Widersprüche definiert ist. Ein Land, das das Herz mit Stolz erfüllt, weil wir selbst angesichts von Verlust und Herausforderung immer einen Weg finden, andere willkommen zu heißen. Das Zuhause zu verlassen ist nie einfach.",
+    "paragraph2": "Durch jede Herausforderung und Lektion ist mir eines immer geblieben: Liebe, ausgedrückt durch Essen. In jeder Mahlzeit habe ich die stille Stärke und grenzenlose Fürsorge meiner Mutter gelernt. Essen hat diese Kraft es bringt uns nach Hause, egal wie weit wir gegangen sind.",
+    "paragraph3": "Wenn ich koche, finde ich Freude und Sinn. Alles andere verblasst in Stille. Kochen ist, wie ich das Alltägliche in Magie verwandle es hat mich aus dunklen Orten herausgeholt und zum Leben zurückgebracht.",
+    "paragraph4": "Ich bin nicht alleine hierher gekommen. Es brauchte viele Hände, viele Gesten der Freundlichkeit, viele Geschichten, die mit meiner verflochten sind. Deshalb widme ich mich dem Zurückgeben Liebe und Zugehörigkeit durch das zu verbreiten, was ich erschaffe. Ich glaube, dass Einfachheit die Essenz des Glücks ist, und daraus entsteht mein Wunsch, die Wärme eines brasilianischen Hinterhofs zu teilen: die Aromen, die Zusammenkünfte und die stille Schönheit der einfachen Dinge, die unser Land so einzigartig machen."
   },
   "products": {
     "title": "Unsere Kuchen",
@@ -42,50 +35,30 @@
     "category": "Kategorie"
   },
   "catering": {
-    "title": "Catering-Services",
-    "subtitle": "Perfekt für Ihre besonderen Anlässe",
-    "intro1": "Wir bieten umfassende Catering-Services für alle Arten von Veranstaltungen. Unser erfahrenes Team arbeitet mit Ihnen zusammen, um das perfekte Menü für Ihren Anlass zu erstellen.",
-    "intro2": "Von intimen Zusammenkünften bis zu großen Feiern bieten wir frische, köstliche Speisen, die Ihre Gäste beeindrucken werden.",
-    "intro3": "Alle unsere Catering-Optionen sind anpassbar, um Ihre spezifischen Bedürfnisse und Ernährungsanforderungen zu erfüllen.",
-    "serviceHeading": "Unser Catering-Stil",
-    "serviceOptions": "Service-Optionen",
-    "menuOptions": "Was Wir Servieren",
-    "menuIntro": "Unser Catering-Menü bietet eine große Auswahl an frisch zubereiteten Speisen.",
-    "category1": "Herzhafte Optionen",
-    "category1Items": "Sandwiches, Wraps, Salate, Warme Gerichte, Vorspeisen, Hauptgerichte, Beilagen",
-    "category2": "Süße Optionen",
-    "category2Items": "Kuchen, Gebäck, Kekse, Desserts, Süßes Brot, Spezialitäten, Individuelle Kreationen",
-    "category3": "Getränke",
-    "category3Items": "Kaffee, Tee, Säfte, Erfrischungsgetränke, Individuelle Getränkepakete",
-    "menuOutro": "Alle Artikel werden am Tag Ihrer Veranstaltung frisch zubereitet.",
-    "processSteps": "Wie Es Funktioniert",
-    "step1Title": "Kontaktieren Sie Uns",
-    "step1Text": "Nehmen Sie Kontakt auf, um Ihre Veranstaltungsdetails, Gästezahl und Präferenzen zu besprechen.",
-    "step2Title": "Menüplanung",
-    "step2Text": "Wir arbeiten gemeinsam daran, ein individuelles Menü zu erstellen, das Ihren Bedürfnissen und Ihrem Budget entspricht.",
-    "step3Title": "Bestätigung",
-    "step3Text": "Sobald Sie das Menü und die Details genehmigt haben, bestätigen wir Ihre Buchung und den Zeitplan.",
-    "step4Title": "Veranstaltungstag",
-    "step4Text": "Wir bereiten alles frisch vor und liefern es, um sicherzustellen, dass Ihre Veranstaltung ein Erfolg wird.",
-    "ctaHeading": "Bereit, Ihre Veranstaltung Zu Planen?",
+    "contactEmail": " contato@balacobaco.com",
+    "title": "Catering",
+    "serviceOptions": "",
+    "ctaHeading": "",
     "viewProducts": "Produkte Anzeigen",
+    "service0": {
+      "title": "Wie Es Funktioniert",
+      "description": "Unser Catering-Service wurde entwickelt, um Wärme und Geborgenheit zu Ihren besonderen Anlässen zu bringen — um Feiern einfacher, gemütlicher und voller Zuneigung zu machen."
+    },    
     "service1": {
-      "title": "Firmenveranstaltungen",
-      "description": "Perfekt für Geschäftstreffen, Konferenzen und Bürofeiern.",
-      "examples": "Frühstücksplatten, Lunchboxen, Kaffeepausen, Meeting-Pakete"
+      "title": "Veranstaltungsgrößenlimit",
+      "description": "Bis zu 10 Personen."
     },
     "service2": {
-      "title": "Private Feiern",
-      "description": "Machen Sie Ihre Feier besonders mit unseren individuellen Catering-Optionen.",
-      "examples": "Geburtstagskuchen, Party-Platten, Vorspeisenauswahl, Desserttische, Themenmenüs, Individuelle Bestellungen"
+      "title": "Menüoptionen",
+      "description": "Bitte kontaktieren Sie uns einen Monat im Voraus, damit wir gemeinsam das Menü planen können.",
+      "description2": "Unsere festen Menüpunkte können auch in Ihrem Brunch, Frühstück oder als Desserts für Catering-Veranstaltungen enthalten sein."
     },
     "service3": {
-      "title": "Besondere Anlässe",
-      "description": "Elegantes Catering für Hochzeiten, Jubiläen und Meilenstein-Events.",
-      "examples": "Hochzeitstorten, Buffetservice, Elegante Vorspeisen, Mehrgängige Menüs, Champagner-Service, Individuelle Desserts, Fine-Dining-Optionen"
+      "title": "Buchungsanforderungen",
+      "description": "Mindestens einen Monat im Voraus per E-Mail an:"
     },
     "contactUs": "Kontaktieren Sie uns",
-    "contactText": "Interessiert an unseren Catering-Services? Kontaktieren Sie uns, um Ihre Veranstaltung zu besprechen und ein individuelles Angebot zu erhalten."
+    "contactText": "Interessiert an unseren Catering-Services? Nehmen Sie Kontakt auf."
   },
   "cart": {
     "title": "Warenkorb",

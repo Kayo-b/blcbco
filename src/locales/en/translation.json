@@ -14,18 +14,11 @@
     "cateringServices": "Catering Services"
   },
   "about": {
-    "title": "About Us",
-    "ourStory": "Our Story",
-    "paragraph1": "Welcome to our cake shop! We are passionate about creating delicious cakes using traditional Brazilian and international recipes with high-quality ingredients.",
-    "paragraph2": "Our team of experienced bakers works every day to bring you fresh cakes with amazing fillings and toppings, plus custom catering services for your special events.",
-    "paragraph3": "We believe in the art of cake making and the joy it brings to our community. Every cake is made with care and attention to detail.",
-    "ourValues": "Our Values",
-    "value1": "Quality: We use only the finest ingredients",
-    "value2": "Tradition: Brazilian and international cake recipes",
-    "value3": "Freshness: Made fresh daily with care",
-    "value4": "Community: Serving our neighbors with pride",
-    "seeMore": "See More",
-    "photoPlaceholder": "Cake Shop Photo"
+    "ourStory": "About",
+    "paragraph1": "Everything begins with the privilege of being Brazilian with the strength and resilience of a land defined by contrasts, exuberance, and contradiction. A country that fills the heart with pride because, even in the face of loss and challenge, we always find a way to welcome others. Leaving home is never easy.",
+    "paragraph2": "Through every challenge and lesson, one thing has always stayed with me: love expressed through food. It was in each meal that I learned my mother's quiet strength and boundless care. Food has that power it brings us home, no matter how far we've gone.",
+    "paragraph3": "When I cook, I find joy and purpose. Everything else fades into silence. Cooking is how I turn everyday life into magic it's what brought me out of dark places and back to life.",
+    "paragraph4": "I didn't get here alone. It took many hands, many gestures of kindness, many stories intertwined with mine. That's why I dedicate myself to giving back spreading love and belonging through what I create. I believe simplicity is the essence of happiness, and from it comes my desire to share the warmth of a Brazilian backyard: the flavors, the gatherings, and the quiet beauty of the simple things that make our land so unique."
   },
   "products": {
     "title": "Our Cakes",
@@ -42,50 +35,30 @@
     "category": "Category"
   },
   "catering": {
-    "title": "Catering Services",
-    "subtitle": "Perfect for your special occasions",
-    "intro1": "We offer comprehensive catering services for all types of events. Our experienced team will work with you to create the perfect menu for your occasion.",
-    "intro2": "From intimate gatherings to large celebrations, we provide fresh, delicious food that will impress your guests.",
-    "intro3": "All our catering options are customizable to meet your specific needs and dietary requirements.",
-    "serviceHeading": "Our Catering Style",
-    "serviceOptions": "Service Options",
-    "menuOptions": "What We Serve",
-    "menuIntro": "Our catering menu features a wide selection of freshly prepared items.",
-    "category1": "Savory Options",
-    "category1Items": "Sandwiches, Wraps, Salads, Hot dishes, Appetizers, Main courses, Side dishes",
-    "category2": "Sweet Options",
-    "category2Items": "Cakes, Pastries, Cookies, Desserts, Sweet breads, Specialty items, Custom creations",
-    "category3": "Beverages",
-    "category3Items": "Coffee, Tea, Juices, Soft drinks, Custom beverage packages",
-    "menuOutro": "All items are prepared fresh on the day of your event.",
-    "processSteps": "How It Works",
-    "step1Title": "Contact Us",
-    "step1Text": "Reach out to discuss your event details, number of guests, and preferences.",
-    "step2Title": "Menu Planning",
-    "step2Text": "We'll work together to create a customized menu that fits your needs and budget.",
-    "step3Title": "Confirmation",
-    "step3Text": "Once you approve the menu and details, we'll confirm your booking and timeline.",
-    "step4Title": "Event Day",
-    "step4Text": "We'll prepare and deliver everything fresh, ensuring your event is a success.",
-    "ctaHeading": "Ready to Plan Your Event?",
+    "contactEmail": " contato@balacobaco.com",
+    "title": "Catering",
+    "serviceOptions": "",
+    "ctaHeading": "",
     "viewProducts": "View Products",
+    "service0": {
+      "title": "How it Works",
+      "description": "Our catering service is designed to bring warmth and comfort to your special occasions — making celebrations easier, cozier, and full of affection."
+    },    
     "service1": {
-      "title": "Corporate Events",
-      "description": "Perfect for business meetings, conferences, and office celebrations.",
-      "examples": "Breakfast platters, Lunch boxes, Coffee breaks, Meeting packages"
+      "title": "Event Size limit",
+      "description": "Up to 10 people."
     },
     "service2": {
-      "title": "Private Parties",
-      "description": "Make your celebration special with our custom catering options.",
-      "examples": "Birthday cakes, Party platters, Appetizer selections, Dessert tables, Themed menus, Custom orders"
+      "title": "Menu options",
+      "description": "Please get in touch one month in advance, so we can plan together the menu.",
+      "description2": "Our fixed menu items can also be included in your brunch, breakfast, or as desserts for catering events."
     },
     "service3": {
-      "title": "Special Occasions",
-      "description": "Elegant catering for weddings, anniversaries, and milestone events.",
-      "examples": "Wedding cakes, Buffet service, Elegant appetizers, Multi-course meals, Champagne service, Custom desserts, Fine dining options"
+      "title": "Booking requirements",
+      "description": "At least one month in advance via email at:"
     },
     "contactUs": "Contact Us",
-    "contactText": "Interested in our catering services? Get in touch to discuss your event and receive a custom quote."
+    "contactText": "Interested in our catering services? Get in touch."
   },
   "cart": {
     "title": "Shopping Cart",

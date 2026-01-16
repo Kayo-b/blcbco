@@ -6,7 +6,7 @@ export default function Catering() {
   const { t } = useTranslation();
 
   return (
-    <div className="min-h-screen bg-blue-50">
+    <div className="min-h-screen">
       {/* Hero Section */}
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div className="flex max-w-4xl mx-auto text-center items-center justify-center">
@@ -22,7 +22,7 @@ export default function Catering() {
 
       {/* Introduction */}
       <div className="max-w-4xl mx-auto px-4 py-12">
-        <div className="bg-white -xl shadow-sm p-8 mb-12 border-4 border-gray-200">
+        {/* <div className="bg-white -xl -sm p-8 mb-12">
           <h2 className="text-3xl font-bold text-gray-600 mb-6 text-center">
             {t('catering.serviceHeading')}
           </h2>
@@ -30,14 +30,8 @@ export default function Catering() {
             <p className="leading-relaxed">
               {t('catering.intro1')}
             </p>
-            <p className="leading-relaxed">
-              {t('catering.intro2')}
-            </p>
-            <p className="leading-relaxed">
-              {t('catering.intro3')}
-            </p>
-          </div>
-        </div>
+         </div>
+        </div> */}
 
         {/* Catering Styles */}
         <div className="mb-12">
@@ -45,132 +39,46 @@ export default function Catering() {
             {t('catering.serviceOptions')}
           </h2>
           <div className="space-y-6">
-            <div className="bg-white -xl shadow-sm p-8 border-l-8 border-gray-400 hover:border-blue-400 transition-colors">
+            <div className="bg-white -xl p-8 transition-colors">
+              <h3 className="text-2xl font-bold text-gray-800 mb-3">
+                {t('catering.service0.title')}
+              </h3>
+              <p className="text-gray-700 text-lg mb-4 leading-relaxed">
+                {t('catering.service0.description')}
+              </p>
+            </div>
+            <div className="bg-white -xl p-8 transition-colors">
               <h3 className="text-2xl font-bold text-gray-800 mb-3">
                 {t('catering.service1.title')}
               </h3>
               <p className="text-gray-700 text-lg mb-4 leading-relaxed">
                 {t('catering.service1.description')}
               </p>
-              <div className="bg-gray-50 -xl p-4 mt-4">
-                <p className="text-gray-700 italic">
-                  {t('catering.service1.examples')}
-                </p>
-              </div>
             </div>
-
-            <div className="bg-white -xl shadow-sm p-8 border-l-8 border-gray-400 hover:border-blue-400 transition-colors">
+            <div className="bg-white -xl p-8 transition-colors">
               <h3 className="text-2xl font-bold text-gray-800 mb-3">
                 {t('catering.service2.title')}
               </h3>
               <p className="text-gray-700 text-lg mb-4 leading-relaxed">
                 {t('catering.service2.description')}
               </p>
-              <div className="bg-gray-50 -xl p-4 mt-4">
-                <p className="text-gray-700 italic">
-                  {t('catering.service2.examples')}
-                </p>
-              </div>
+              <p className="text-gray-700 text-lg mb-4 leading-relaxed">
+                {t('catering.service2.description2')}
+              </p>
             </div>
-
-            <div className="bg-white -xl shadow-sm p-8 border-l-8 border-gray-400 hover:border-blue-400 transition-colors">
+            <div className="bg-white -xl p-8 transition-colors">
               <h3 className="text-2xl font-bold text-gray-800 mb-3">
                 {t('catering.service3.title')}
               </h3>
               <p className="text-gray-700 text-lg mb-4 leading-relaxed">
-                {t('catering.service3.description')}
+                {t('catering.service3.description')+t('catering.contactEmail')}
               </p>
-              <div className="bg-gray-50 -xl p-4 mt-4">
-                <p className="text-gray-700 italic">
-                  {t('catering.service3.examples')}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* What's Served */}
-        <div className="bg-gradient-to-br from-blue-50 to-gray-50 -xl shadow-sm p-8 mb-12 border-4 border-blue-200">
-          <h2 className="text-3xl font-bold text-gray-600 mb-6 text-center">
-            {t('catering.menuOptions')}
-          </h2>
-          <div className="text-gray-700 space-y-6">
-            <p className="text-lg leading-relaxed text-center">
-              {t('catering.menuIntro')}
-            </p>
-            <div className="grid md:grid-cols-2 gap-8 my-8">
-              <div className="bg-white -xl p-6 shadow-sm">
-                <h4 className="text-2xl font-bold text-gray-500 mb-4">{t('catering.category1')}</h4>
-                <p className="text-gray-600 leading-relaxed">
-                  {t('catering.category1Items')}
-                </p>
-              </div>
-              <div className="bg-white -xl p-6 shadow-sm">
-                <h4 className="text-2xl font-bold text-gray-500 mb-4">{t('catering.category2')}</h4>
-                <p className="text-gray-600 leading-relaxed">
-                  {t('catering.category2Items')}
-                </p>
-              </div>
-            </div>
-            <div className="bg-white -xl p-6 shadow-sm">
-              <h4 className="text-2xl font-bold text-gray-500 mb-4 text-center">{t('catering.category3')}</h4>
-              <p className="text-gray-600 leading-relaxed text-center">
-                {t('catering.category3Items')}
-              </p>
-            </div>
-            <p className="text-lg leading-relaxed text-center mt-6">
-              {t('catering.menuOutro')}
-            </p>
-          </div>
-        </div>
-
-        {/* How It Works */}
-        <div className="bg-white -2xl shadow-sm p-8 mb-12 border-4 border-gray-200">
-          <h2 className="text-3xl font-bold text-gray-600 mb-6 text-center">
-            {t('catering.processSteps')}
-          </h2>
-          <div className="text-gray-700 space-y-6 text-lg">
-            <div className="flex items-start gap-4">
-              <span className="text-4xl font-bold text-gray-400 flex-shrink-0">1</span>
-              <div>
-                <h4 className="font-bold text-gray-800 mb-2">{t('catering.step1Title')}</h4>
-                <p className="leading-relaxed">
-                  {t('catering.step1Text')}
-                </p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <span className="text-4xl font-bold text-gray-400 flex-shrink-0">2</span>
-              <div>
-                <h4 className="font-bold text-gray-800 mb-2">{t('catering.step2Title')}</h4>
-                <p className="leading-relaxed">
-                  {t('catering.step2Text')}
-                </p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <span className="text-4xl font-bold text-gray-400 flex-shrink-0">3</span>
-              <div>
-                <h4 className="font-bold text-gray-800 mb-2">{t('catering.step3Title')}</h4>
-                <p className="leading-relaxed">
-                  {t('catering.step3Text')}
-                </p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <span className="text-4xl font-bold text-gray-400 flex-shrink-0">4</span>
-              <div>
-                <h4 className="font-bold text-gray-800 mb-2">{t('catering.step4Title')}</h4>
-                <p className="leading-relaxed">
-                  {t('catering.step4Text')}
-                </p>
-              </div>
             </div>
           </div>
         </div>
 
         {/* Contact CTA */}
-        <div className="bg-gray-400 text-white -2xl shadow-lg p-8 md:p-12 text-center">
+        <div className=" text-black -2xl  p-8 md:p-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             {t('catering.ctaHeading')}
           </h2>
@@ -180,13 +88,13 @@ export default function Catering() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
             <Link
               to="/about"
-              className="bg-white text-gray-500 px-8 py-4 -xl font-bold hover:bg-gray-50 transition text-lg shadow-lg"
+              className="bg-gray-200 text-gray-500 px-8 py-4 -xl font-bold hover:bg-gray-300 transition text-lg "
             >
               {t('catering.contactUs')}
             </Link>
             <Link
               to="/products"
-              className="bg-gray-600 text-white px-8 py-4 -xl font-bold hover:bg-gray-700 transition text-lg shadow-lg"
+              className="bg-gray-600 text-white px-8 py-4 -xl font-bold hover:bg-gray-700 transition text-lg "
             >
               {t('catering.viewProducts')}
             </Link>

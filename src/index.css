@@ -17,17 +17,17 @@ button {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #6086f7c8;
+    background-color: #fefaee;
   }
   a:hover {
-    color: #747bff;
+    color: #e1ddd3;
   }
   button {
-    background-color: #ffffff;
+    background-color: #fefaee;
 
   }
   button:hover {
-    background-color: rgb(241, 241, 241);
+    background-color: #fefaee;
   }
 }
 
@@ -36,7 +36,7 @@ body {
 }
 
 :root {
-  background-color: #91acc37a;
+  background-color: #fefaee;
 }
 
 .nav-link {
