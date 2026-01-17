@@ -4,11 +4,25 @@ export const birthdayCakeOptions = {
     { id: 'vanilla', nameKey: 'bases.vanilla' },
     { id: 'chocolate', nameKey: 'bases.chocolate' }
   ],
-  frostings: [
-    { id: 'buttercream', nameKey: 'frostings.buttercream' },
-    { id: 'brigadeiro', nameKey: 'frostings.brigadeiro' },
-    { id: 'naked', nameKey: 'frostings.naked' }
-  ],
+  frostings: {
+    mainCategories: [
+      { id: 'naked', nameKey: 'frostings.naked' },
+      { id: 'buttercream', nameKey: 'frostings.buttercreamMain' },
+      { id: 'brigadeiro', nameKey: 'frostings.brigadeiroMain' }
+    ],
+    subcategories: {
+      buttercream: [
+        { id: 'buttercream_mascarpone', nameKey: 'frostings.mascarpone' },
+        { id: 'buttercream_american', nameKey: 'frostings.americanButtercream' },
+        { id: 'buttercream_swiss', nameKey: 'frostings.swissButtercream' }
+      ],
+      brigadeiro: [
+        { id: 'brigadeiro_milk', nameKey: 'frostings.brigadeiroGanacheMilk' },
+        { id: 'brigadeiro_dark', nameKey: 'frostings.brigadeiroGanacheDark' },
+        { id: 'brigadeiro_white', nameKey: 'frostings.brigadeiroGanacheWhite' }
+      ]
+    }
+  },
   decorationStyles: [
     { id: 'vintage', nameKey: 'decorationStyles.vintage' },
     { id: 'plain', nameKey: 'decorationStyles.plain' }
@@ -103,7 +117,7 @@ export const products = [
     id: 6,
     nameKey: 'birthdayCakes.brigadeiro',
     category: 'birthdayCakes',
-    basePrice: 55.99,
+    price: 55.99,
     customizable: true,
     descriptionKey: 'birthdayCakes.brigadeiroDesc',
     fullDescriptionKey: 'birthdayCakes.brigadeiroFull',
@@ -113,7 +127,7 @@ export const products = [
     id: 7,
     nameKey: 'birthdayCakes.pineappleCoconut',
     category: 'birthdayCakes',
-    basePrice: 55.99,
+    price: 55.99,
     customizable: true,
     descriptionKey: 'birthdayCakes.pineappleCoconutDesc',
     fullDescriptionKey: 'birthdayCakes.pineappleCoconutFull',
@@ -123,7 +137,7 @@ export const products = [
     id: 8,
     nameKey: 'birthdayCakes.doceDeLeite',
     category: 'birthdayCakes',
-    basePrice: 55.99,
+    price: 55.99,
     customizable: true,
     descriptionKey: 'birthdayCakes.doceDeLeiteDesc',
     fullDescriptionKey: 'birthdayCakes.doceDeleiteFull',
@@ -133,7 +147,7 @@ export const products = [
     id: 9,
     nameKey: 'birthdayCakes.beijinho',
     category: 'birthdayCakes',
-    basePrice: 55.99,
+    price: 55.99,
     customizable: true,
     descriptionKey: 'birthdayCakes.beijinhoDesc',
     fullDescriptionKey: 'birthdayCakes.beijinhoFull',

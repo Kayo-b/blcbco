@@ -86,10 +86,10 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
             </Link>         
           </div>
           {/* Language Switcher & Cart Icon */}
+            <LanguageSwitcher />
           <div
             onMouseEnter={onContactClose}
             className="items-center space-x-4">
-            <LanguageSwitcher />
             <button 
               onClick={onCartClick} className="cart-btn relative">
               <svg 

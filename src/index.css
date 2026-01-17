@@ -66,3 +66,9 @@ body {
 .desktop-nav {
   @apply hidden md:flex justify-between w-[60%]
 }
+
+.languageContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

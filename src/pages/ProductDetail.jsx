@@ -15,7 +15,8 @@ export default function ProductDetail() {
   
   // Birthday cake customization states
   const [selectedBase, setSelectedBase] = useState(null);
-  const [selectedFrosting, setSelectedFrosting] = useState(null);
+  const [selectedFrostingCategory, setSelectedFrostingCategory] = useState(null);
+  const [selectedFrostingSubcategory, setSelectedFrostingSubcategory] = useState(null);
   const [selectedDecorationStyle, setSelectedDecorationStyle] = useState(null);
   const [selectedFlowers, setSelectedFlowers] = useState('none');
 
@@ -47,7 +48,7 @@ export default function ProductDetail() {
     
     if (product.sizes && selectedSize) {
       const size = product.sizes.find(s => s.id === selectedSize);
-      price = size ? size.price : product.basePrice;
+      price = size ? size.price : (product.basePrice || product.price);
     } else {
       price = product.price || product.basePrice;
     }
@@ -57,15 +58,22 @@ export default function ProductDetail() {
       const flowerOption = birthdayCakeOptions.flowers.find(f => f.id === 'withFlowers');
       price += flowerOption.price;
     }
+    if (product.customizable && selectedFrostingSubcategory === 'buttercream_mascarpone') {
+      price += 4;
+    }
 
     return price;
   };
 
   const canAddToCart = () => {
     if (product.customizable) {
-      return selectedBase && selectedFrosting && selectedDecorationStyle && selectedFlowers;
+      const frostingComplete = selectedFrostingCategory === 'naked' || 
+        (selectedFrostingCategory && selectedFrostingSubcategory);
+      const decorationComplete = selectedFrostingCategory === 'naked' || selectedDecorationStyle;
+      
+      return selectedBase && frostingComplete && decorationComplete && selectedFlowers;
     }
-    if (product.sizes) {
+    if (product.sizes && !product.customizable) {
       return selectedSize !== null;
     }
     return true;
@@ -80,12 +88,14 @@ export default function ProductDetail() {
       selectedVariant,
       price: getCurrentPrice(),
       customization: product.customizable ? {
-        flavors: selectedFlavors,
         base: selectedBase,
-        frosting: selectedFrosting,
-        decoration: selectedDecoration
+        frostingCategory: selectedFrostingCategory,
+        frostingSubcategory: selectedFrostingSubcategory,
+        decorationStyle: selectedDecorationStyle,
+        flowers: selectedFlowers
       } : null
-    };Cart(cartItem, quantity);
+    };
+    addToCart(cartItem, quantity);
     navigate('/cart');
   };
 
@@ -160,7 +170,8 @@ export default function ProductDetail() {
 
           {/* Birthday Cake Customization */}
           {product.customizable && (
-            <div className="space-y-6 mb-6">              {/* Base Selection */}
+            <div className="space-y-6 mb-6">
+              {/* Base Selection */}
               <div>
                 <label className="block text-gray-700 mb-2 font-medium">
                   {t('productDetail.selectBase')}
@@ -182,21 +193,81 @@ export default function ProductDetail() {
                 </div>
               </div>
 
-              {/* Decoration Style Selection */}
+              {/* Frosting Selection */}
               <div>
                 <label className="block text-gray-700 mb-2 font-medium">
+                  {t('productDetail.selectFrosting')}
+                </label>
+                
+                {/* Main Frosting Categories */}
+                <div className="grid grid-cols-1 gap-2 mb-4">
+                  {birthdayCakeOptions.frostings.mainCategories.map((category) => (
+                    <button
+                      key={category.id}
+                      onClick={() => {
+                        setSelectedFrostingCategory(category.id);
+                        setSelectedFrostingSubcategory(null);
+                        if (category.id === 'naked') {
+                          setSelectedDecorationStyle(null);
+                        }
+                      }}
+                      className={`p-3 border-2 rounded text-left ${
+                        selectedFrostingCategory === category.id
+                          ? 'border-blue-500 bg-blue-50'
+                          : 'border-gray-300 hover:border-gray-400'
+                      }`}
+                    >
+                      {t(`productNames.${category.nameKey}`)}
+                    </button>
+                  ))}
+                </div>
+
+                {/* Subcategory Selection */}
+                {selectedFrostingCategory && selectedFrostingCategory !== 'naked' && (
+                  <div className="pl-4 border-l-2 border-gray-200">
+                    <label className="block text-gray-600 mb-2 text-sm font-medium">
+                      {t('productDetail.selectSpecificType')}
+                    </label>
+                    <div className="grid grid-cols-1 gap-2">
+                      {birthdayCakeOptions.frostings.subcategories[selectedFrostingCategory]?.map((subcategory) => (
+                        <button
+                          key={subcategory.id}
+                          onClick={() => setSelectedFrostingSubcategory(subcategory.id)}
+                          className={`p-2 border-2 rounded text-left text-sm ${
+                            selectedFrostingSubcategory === subcategory.id
+                              ? 'border-blue-500 bg-blue-50'
+                              : 'border-gray-300 hover:border-gray-400'
+                          }`}
+                        >
+                          {t(`productNames.${subcategory.nameKey}`)}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Decoration Style Selection */}
+              <div className={selectedFrostingCategory === 'naked' ? 'opacity-50 pointer-events-none' : ''}>
+                <label className="block text-gray-700 mb-2 font-medium">
                   {t('productDetail.selectDecorationStyle')}
+                  {selectedFrostingCategory === 'naked' && (
+                    <span className="text-sm text-gray-500 ml-2">
+                      ({t('productDetail.notAvailableForNaked')})
+                    </span>
+                  )}
                 </label>
                 <div className="grid grid-cols-2 gap-2">
                   {birthdayCakeOptions.decorationStyles.map((style) => (
                     <button
                       key={style.id}
-                      onClick={() => setSelectedDecorationStyle(style.id)}
+                      onClick={() => selectedFrostingCategory !== 'naked' && setSelectedDecorationStyle(style.id)}
+                      disabled={selectedFrostingCategory === 'naked'}
                       className={`p-3 border-2 rounded ${
-                        selectedDecorationStyle === style.id
+                        selectedDecorationStyle === style.id && selectedFrostingCategory !== 'naked'
                           ? 'border-blue-500 bg-blue-50'
                           : 'border-gray-300 hover:border-gray-400'
-                      }`}
+                      } ${selectedFrostingCategory === 'naked' ? 'cursor-not-allowed' : ''}`}
                     >
                       {t(`productNames.${style.nameKey}`)}
                     </button>

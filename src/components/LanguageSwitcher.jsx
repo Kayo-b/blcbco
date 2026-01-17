@@ -20,9 +20,10 @@ export default function LanguageSwitcher() {
   const otherLanguages = languages.filter(lang => lang.code !== i18n.language);
 
   return (
-    <div className="relative group">
+
+    <div className="languageContainer relative group">
       {/* Current Language Button */}
-      <button 
+      <button
         onClick={() => setIsOpen(!isOpen)}
         className="language-btn bg-white"
       >
