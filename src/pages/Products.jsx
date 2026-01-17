@@ -18,7 +18,7 @@ export default function Products() {
       : products.filter((p) => p.category === selectedCategory);
 
   return (
-    <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-8">
       {/* Page Title */}
       <div className="flex justify-center items-center">
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6 sm:mb-8 text-center">

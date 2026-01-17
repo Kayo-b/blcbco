@@ -12,7 +12,7 @@ export const birthdayCakeOptions = {
     ],
     subcategories: {
       buttercream: [
-        { id: 'buttercream_mascarpone', nameKey: 'frostings.mascarpone' },
+        { id: 'buttercream_mascarpone', nameKey: 'frostings.mascarpone', price: 4 },
         { id: 'buttercream_american', nameKey: 'frostings.americanButtercream' },
         { id: 'buttercream_swiss', nameKey: 'frostings.swissButtercream' }
       ],
@@ -29,7 +29,7 @@ export const birthdayCakeOptions = {
   ],
   flowers: [
     { id: 'none', nameKey: 'flowers.none', price: 0 },
-    { id: 'withFlowers', nameKey: 'flowers.withFlowers', price: 5 }
+    { id: 'withFlowers', nameKey: 'flowers.withFlowers', price: 8 }
   ]
 };
 

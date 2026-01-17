@@ -6,7 +6,7 @@ export default function Cart() {
 
   if (cart.length === 0) {
     return (
-      <div className="max-w-4xl mx-auto px-4 py-12 text-center">
+      <div className="max-w-4xl mx-auto px-4 py-8 text-center">
         <h1 className="text-3xl font-bold text-gray-800 mb-4">Your Cart</h1>
         <p className="text-gray-600 mb-8">Your cart is empty</p>
         <Link
@@ -20,7 +20,7 @@ export default function Cart() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-8">
       <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 sm:mb-8">Your Cart</h1>
 
       {/* Cart Items */}

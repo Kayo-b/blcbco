@@ -8,7 +8,7 @@ export default function Confirmation() {
 
   if (!orderNumber) {
     return (
-      <div className="max-w-4xl mx-auto px-4 py-12 text-center">
+      <div className="max-w-4xl mx-auto px-4 py-8 text-center">
         <h1 className="text-3xl font-bold text-gray-800 mb-4">
           No Order Found
         </h1>
@@ -23,7 +23,7 @@ export default function Confirmation() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
+    <div className="max-w-4xl mx-auto px-4 py-8">
       {/* Success Message */}
       <div className="text-center mb-8">
         <div className="w-16 h-16 bg-green-500 -full flex items-center justify-center mx-auto mb-4">

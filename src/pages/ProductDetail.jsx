@@ -24,7 +24,7 @@ export default function ProductDetail() {
 
   if (!product) {
     return (
-      <div className="max-w-4xl mx-auto px-4 py-12 text-center">
+      <div className="max-w-4xl mx-auto px-4 py-8 text-center">
         <h1 className="text-2xl font-bold text-gray-800 mb-4">
           Product Not Found
         </h1>
@@ -53,13 +53,13 @@ export default function ProductDetail() {
       price = product.price || product.basePrice;
     }
 
-    // Add flower decoration cost for birthday cakes
     if (product.customizable && selectedFlowers === 'withFlowers') {
       const flowerOption = birthdayCakeOptions.flowers.find(f => f.id === 'withFlowers');
       price += flowerOption.price;
     }
     if (product.customizable && selectedFrostingSubcategory === 'buttercream_mascarpone') {
-      price += 4;
+      const mascarpone = birthdayCakeOptions.frostings.subcategories.buttercream.find(f => f.id === 'buttercream_mascarpone');
+      price += mascarpone.price;
     }
 
     return price;
@@ -100,7 +100,7 @@ export default function ProductDetail() {
   };
 
   return (
-    <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
         {/* Product Image */}
         <div>

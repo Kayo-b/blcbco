@@ -46,7 +46,7 @@ export default function CartDrawer({ isOpen, onClose }) {
         {/* Cart Items - Scrollable */}
         <div className="flex-1 overflow-y-auto p-6">
           {cart.length === 0 ? (
-            <div className="text-center text-white py-12">
+            <div className="text-center text-white py-8">
               <p className="mb-4">{t('cart.empty')}</p>
               <button
                 onClick={onClose}
@@ -129,7 +129,7 @@ export default function CartDrawer({ isOpen, onClose }) {
             <Link
               to="/checkout"
               onClick={onClose}
-              className="block w-full bg-white text-gray-500 text-center py-4  font-semibold hover:bg-gray-100 transition"
+              className="block w-full bg-white text-gray-500 text-center py-8  font-semibold hover:bg-gray-100 transition"
             >
               {t('cart.proceedToCheckout').toUpperCase()}
             </Link>

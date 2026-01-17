@@ -49,7 +49,7 @@
     "orderRequirement": "Order Requirement",
     "oneWeekAdvance": "One week in advance via email at contato@balacobaco.com",
     "notice": "Notice",
-    "familySizeNotice": "Family size options require two days' notice with pick-up arranged in advance.",
+    "familySizeNotice": "Orders require two day's notice with pick-up arranged in advance.",
     "variants": {
       "chicken": "Chicken",
       "mushroom": "Mushroom",
@@ -126,6 +126,18 @@
     "phone": "Phone",
     "email": "Email",
     "visitUs": "Visit Us"
+  },
+  "contactForm": {
+    "name": "Name",
+    "email": "Email Address",
+    "message": "Message",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "your.email@example.com",
+    "messagePlaceholder": "Tell us about your event, number of guests, and any special requirements...",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "successMessage": "Message sent successfully! We'll get back to you soon.",
+    "errorMessage": "Failed to send the message. Please try again or contact us directly."
   },
   "productNames": {
     "fixedMenu.boloGelado": "Bolo Gelado",

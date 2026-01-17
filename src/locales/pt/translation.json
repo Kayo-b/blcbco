@@ -127,6 +127,18 @@
     "email": "E-mail",
     "visitUs": "Visite-nos"
   },
+  "contactForm": {
+    "name": "Nome",
+    "email": "Endereço de E-mail",
+    "message": "Mensagem",
+    "namePlaceholder": "Seu nome",
+    "emailPlaceholder": "seu.email@exemplo.com",
+    "messagePlaceholder": "Conte-nos sobre seu evento, número de convidados e quaisquer requisitos especiais...",
+    "send": "Enviar Mensagem",
+    "sending": "Enviando...",
+    "successMessage": "Mensagem enviada com sucesso! Entraremos em contato em breve.",
+    "errorMessage": "Falha ao enviar a mensagem. Por favor, tente novamente ou entre em contato diretamente."
+  },
   "productNames": {
     "fixedMenu.boloGelado": "Bolo Gelado",
     "fixedMenu.boloMilho": "Bolo de Milho",
