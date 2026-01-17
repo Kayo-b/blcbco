@@ -7,23 +7,12 @@ export default function Footer() {
     <footer className="bg-gray-800 text-white mt-auto">
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Business Hours */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Business Hours</h3>
-            <ul className="space-y-2 text-gray-300">
-              <li>Monday - Friday: 7am - 7pm</li>
-              <li>Saturday: 8am - 6pm</li>
-              <li>Sunday: 9am - 5pm</li>
-            </ul>
-          </div>
-
           {/* Contact Info */}
           <div>
             <h3 className="text-lg font-semibold mb-4">{t('nav.contact')}</h3>
             <ul className="space-y-2 text-gray-300">
               <li>{t('footer.phone')}: (555) 123-4567</li>
               <li>{t('footer.email')}: contact@placeholder.com</li>
-              <li>{t('footer.address')}: 123 Main St, City, ST 12345</li>
             </ul>
           </div>
 

@@ -240,6 +240,11 @@ export default function ProductDetail() {
                           }`}
                         >
                           {t(`productNames.${subcategory.nameKey}`)}
+                          {subcategory.buttercream.price > 0 && (
+                            <span className="ml-2 text-sm text-gray-600">
+                              (+€{subcategory.price.toFixed(2)})
+                            </span>
+                        )}
                         </button>
                       ))}
                     </div>

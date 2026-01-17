@@ -4,7 +4,7 @@ export default function About() {
   const { t } = useTranslation();
   
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-8">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-8 about-content">
       {/* Header */}
       {/* <div className="text-center mb-8 sm:mb-12">
         <div className="w-24 h-24 sm:w-32 sm:h-32 bg-gray-300 -full mx-auto mb-4 sm:mb-6"></div>

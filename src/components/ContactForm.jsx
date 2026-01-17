@@ -28,7 +28,7 @@ export default function ContactForm() {
     <form
       ref={form}
       onSubmit={sendEmail}
-      className="max-w-2xl mx-auto bg-white p-6 sm:p-8 rounded-lg shadow-md"
+      className="max-w-2xl bg-white p-6 sm:p-4 rounded-lg"
     >
       <div className="mb-6">
         <label htmlFor="name" className="block text-gray-700 text-sm font-medium mb-2">
@@ -75,10 +75,10 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isSending}
-        className={`w-full py-3 px-6 rounded-lg font-bold text-lg transition-colors ${
+        className={`w-full py-3 px-6 font-bold text-lg transition-colors ${
           isSending
             ? 'bg-gray-400 text-gray-200 cursor-not-allowed'
-            : 'bg-blue-600 text-white hover:bg-blue-700'
+            : 'bg-green-500 text-white hover:bg-green-700'
         }`}
       >
         {isSending ? t('contactForm.sending') : t('contactForm.send')}

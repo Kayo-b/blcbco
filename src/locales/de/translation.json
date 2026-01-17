@@ -21,7 +21,7 @@
     "paragraph4": "Ich bin nicht alleine hierher gekommen. Es brauchte viele Hände, viele Gesten der Freundlichkeit, viele Geschichten, die mit meiner verflochten sind. Deshalb widme ich mich dem Zurückgeben Liebe und Zugehörigkeit durch das zu verbreiten, was ich erschaffe. Ich glaube, dass Einfachheit die Essenz des Glücks ist, und daraus entsteht mein Wunsch, die Wärme eines brasilianischen Hinterhofs zu teilen: die Aromen, die Zusammenkünfte und die stille Schönheit der einfachen Dinge, die unser Land so einzigartig machen."
   },
   "products": {
-    "title": "Unser Menü",
+    "title": "Menü",
     "allProducts": "Vollständiges Menü",
     "fixedMenu": "Festes Menü",
     "birthdayCakes": "Geburtstagskuchen",
@@ -80,7 +80,7 @@
       "description": "Mindestens einen Monat im Voraus per E-Mail an:"
     },
     "contactUs": "Kontaktieren Sie uns",
-    "contactText": "Interessiert an unseren Catering-Services? Nehmen Sie Kontakt auf."
+    "contactText": "Nehmen Sie Kontakt auf."
   },
   "cart": {
     "title": "Warenkorb",
@@ -165,8 +165,8 @@
     "frostings.brigadeiroGanacheDark": "Brigadeiro-Ganache - Zartbitterschokolade",
     "frostings.brigadeiroGanacheWhite": "Brigadeiro-Ganache - Weiße Schokolade",
     "frostings.naked": "Nackter Kuchen (ohne Glasur)",
-    "decorationStyles.vintage": "Vintage-Stil",
-    "decorationStyles.plain": "Schlichter Stil",
+    "decorationStyles.vintage": "Vintage",
+    "decorationStyles.plain": "Schlichter",
     "flowers.none": "Keine Blumen",
     "flowers.withFlowers": "Dekorative Blumen hinzufügen"
   },

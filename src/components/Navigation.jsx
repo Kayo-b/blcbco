@@ -11,7 +11,7 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
   return (
     <nav className="bg-white shadow-md">
       <div className="max-w-full mx-auto px-4 sm:px-6">
-        <div className="flex justify-between items-center h-16 border-b-1 pb-2 mt-2">
+        <div className="flex justify-between items-center h-16 border-b-1 pb-6 mt-6">
           {/* Logo */}
           <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -46,7 +46,7 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
               // backgroundImage=''
               onMouseEnter={onContactClose}
               to="/" className="text-2xl font-bold text-gray-800">
-             <img src={blbcLogo} alt='Logo' className="hidden md:block w-64 h-auto"/>
+             <img src={blbcLogo} alt='Logo' className="hidden md:block w-78 h-auto"/>
              <img src={blbcLogo} alt='Logo' className="block md:hidden w-52 h-auto"/>
             </Link>
           </div>

@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 button:focus,
 button:focus-visible {
@@ -32,7 +33,43 @@ button {
 }
 
 body {
-  font-family: ui-monospace, monospace; /* Monospace font */
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+/* Uppercase styles for titles and headings */
+h1, h2, h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* Navigation uppercase */
+.nav-link {
+  text-transform: uppercase;
+}
+
+/* Product titles uppercase */
+.product-title {
+  text-transform: uppercase;
+}
+
+/* Button text uppercase */
+button {
+  text-transform: uppercase;
+}
+
+/* About page specific - smaller uppercase text */
+.about-content h2 {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.about-content p {
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.contactCta {
+  text-transform: uppercase;;
 }
 
 :root {
@@ -40,11 +77,11 @@ body {
 }
 
 .nav-link {
-  @apply text-gray-700 hover:text-gray-900 font-mono;
+  @apply text-gray-700 hover:text-gray-900;
 }
 
 .product-filter {
-  @apply px-4 sm:px-6 py-2.5 text-sm sm:text-base capitalize transition-colors min-h-[44px];
+  @apply px-4 sm:px-6 py-2.5 text-sm sm:text-base uppercase transition-colors min-h-[44px];
 }
 
 .btn-base {

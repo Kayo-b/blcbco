@@ -21,7 +21,7 @@
     "paragraph4": "I didn't get here alone. It took many hands, many gestures of kindness, many stories intertwined with mine. That's why I dedicate myself to giving back spreading love and belonging through what I create. I believe simplicity is the essence of happiness, and from it comes my desire to share the warmth of a Brazilian backyard: the flavors, the gatherings, and the quiet beauty of the simple things that make our land so unique."
   },
   "products": {
-    "title": "Our Menu",
+    "title": "Menu",
     "allProducts": "Complete Menu",
     "fixedMenu": "Fixed Menu",
     "birthdayCakes": "Birthday Cakes",
@@ -80,7 +80,7 @@
       "description": "At least one month in advance via email at:"
     },
     "contactUs": "Contact Us",
-    "contactText": "Interested in our catering services? Get in touch."
+    "contactText": "Get in touch"
   },
   "cart": {
     "title": "Shopping Cart",
@@ -165,8 +165,8 @@
     "frostings.brigadeiroGanacheDark": "Brigadeiro Ganache - Dark Chocolate",
     "frostings.brigadeiroGanacheWhite": "Brigadeiro Ganache - White Chocolate",
     "frostings.naked": "Naked cake (no frosting)",
-    "decorationStyles.vintage": "Vintage style",
-    "decorationStyles.plain": "Plain style",
+    "decorationStyles.vintage": "Vintage",
+    "decorationStyles.plain": "Plain",
     "flowers.none": "No flowers",
     "flowers.withFlowers": "Add decorative flowers"
   },

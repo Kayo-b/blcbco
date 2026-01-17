@@ -20,13 +20,13 @@ export default function Products() {
   return (
     <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-8">
       {/* Page Title */}
-      <div className="flex justify-center items-center">
+      <div className="flex justify-start items-center">
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6 sm:mb-8 text-center">
           {t('products.title')}
         </h1>
       </div>
       {/* Category Filters */}
-      <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-6 sm:mb-8">
+      <div className="flex flex-wrap justify-start gap-2 sm:gap-4 mb-6 sm:mb-8">
         {categories.map((category) => (
           <button
             key={category}

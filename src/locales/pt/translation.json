@@ -21,7 +21,7 @@
     "paragraph4": "Não cheguei aqui sozinha. Precisei de muitas mãos, muitos gestos de bondade, muitas histórias entrelaçadas com a minha. É por isso que me dedico a retribuir espalhando amor e pertencimento através do que crio. Acredito que a simplicidade é a essência da felicidade, e dela vem meu desejo de compartilhar o calor de um quintal brasileiro: os sabores, as reuniões e a beleza silenciosa das coisas simples que tornam nossa terra tão única."
   },
   "products": {
-    "title": "Nosso Cardápio",
+    "title": "Cardápio",
     "allProducts": "Cardápio Completo",
     "fixedMenu": "Cardápio Fixo",
     "birthdayCakes": "Bolos de Aniversário",
@@ -80,7 +80,7 @@
       "description": "Pelo menos um mês de antecedência via e-mail em:"
     },
     "contactUs": "Entre em Contato",
-    "contactText": "Interessado em nossos serviços de catering? Entre em contato."
+    "contactText": "Entre em contato"
   },
   "cart": {
     "title": "Carrinho de Compras",
@@ -164,9 +164,9 @@
     "frostings.brigadeiroGanacheMilk": "Ganache de Brigadeiro - Chocolate ao Leite",
     "frostings.brigadeiroGanacheDark": "Ganache de Brigadeiro - Chocolate Meio Amargo",
     "frostings.brigadeiroGanacheWhite": "Ganache de Brigadeiro - Chocolate Branco",
-    "frostings.naked": "Bolo pelado (sem cobertura)",
-    "decorationStyles.vintage": "Estilo vintage",
-    "decorationStyles.plain": "Estilo simples",
+    "frostings.naked": "Naked cake(sem cobertura)",
+    "decorationStyles.vintage": "Vintage",
+    "decorationStyles.plain": "Simples",
     "flowers.none": "Sem flores",
     "flowers.withFlowers": "Adicionar flores decorativas"
   },

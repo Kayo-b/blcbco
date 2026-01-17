@@ -55,7 +55,7 @@ export default function Confirmation() {
           <h2 className="text-xl font-bold text-gray-800 mb-2">
             {t('confirmation.orderNumber')}
           </h2>
-          <p className="text-2xl font-mono text-blue-600">#{orderNumber}</p>
+          <p className="text-2xl text-blue-600">#{orderNumber}</p>
         </div>
 
         <div className="mb-6">
