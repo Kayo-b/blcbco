@@ -28,7 +28,7 @@ export default function ContactForm() {
     <form
       ref={form}
       onSubmit={sendEmail}
-      className="max-w-2xl bg-white p-6 sm:p-4 rounded-lg"
+      className="max-w-2xl bg-white p-4 sm:p-2 rounded-lg"
     >
       <div className="mb-6">
         <label htmlFor="name" className="block text-gray-700 text-sm font-medium mb-2">

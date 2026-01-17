@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -47,49 +47,49 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
               onMouseEnter={onContactClose}
               to="/" className="text-2xl font-bold text-gray-800">
              <img src={blbcLogo} alt='Logo' className="hidden md:block w-78 h-auto"/>
-             <img src={blbcLogo} alt='Logo' className="block md:hidden w-52 h-auto"/>
+             <img src={blbcLogo} alt='Logo' className="block md:hidden w-62 h-auto"/>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className='desktop-nav' onMouseEnter={onContactClose}>
-            <Link 
+            <NavLink 
               to="/products" 
-              style={{ padding: '8px 12px' }}
+              style={{ padding: '8px 0px' , marginLeft: '12px'}}
               onMouseEnter={onContactClose}
-              className="nav-link"
+              className={({ isActive }) => `nav-link ${isActive ? 'active-nav-link' : ''}`}
             >
               {t('nav.shop')}
-            </Link>
-            <Link 
+            </NavLink>
+            <NavLink 
               to="/catering" 
-              style={{ padding: '8px 12px' }}
+              style={{ padding: '8px 0px' , marginLeft: '12px'}}
               onMouseEnter={onContactClose}
-              className="nav-link"
+              className={({ isActive }) => `nav-link ${isActive ? 'active-nav-link' : ''}`}
             >
               {t('nav.catering')}
-            </Link>
+            </NavLink>
             <Link
               onMouseEnter={onContactClick}
-              style={{ padding: '8px 12px' }}
+              style={{ padding: '8px 0px' , marginLeft: '12px'}}
               className="nav-link"
             >
               {t('nav.contact')}
             </Link>
-            <Link
+            <NavLink
               to="/about" 
               onMouseEnter={onContactClose}
-              style={{ padding: '8px 12px' }}
-              className="nav-link"
+              style={{ padding: '8px 0px' , marginLeft: '12px'}}
+              className={({ isActive }) => `nav-link ${isActive ? 'active-nav-link' : ''}`}
             >
               {t('nav.about')}
-            </Link>         
+            </NavLink>         
           </div>
           {/* Language Switcher & Cart Icon */}
             <LanguageSwitcher />
           <div
             onMouseEnter={onContactClose}
-            className="items-center space-x-4">
+            className="items-center p-4 space-x-4">
             <button 
               onClick={onCartClick} className="cart-btn relative">
               <svg 

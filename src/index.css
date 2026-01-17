@@ -58,16 +58,16 @@ button {
 }
 
 /* About page specific - smaller uppercase text */
-.about-content h2 {
+/* .about-content h2 {
   font-size: 1.25rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-}
+} */
 
-.about-content p {
+/* .about-content p {
   text-transform: uppercase;
   letter-spacing: 0.02em;
-}
+} */
 .contactCta {
   text-transform: uppercase;;
 }
@@ -78,6 +78,18 @@ button {
 
 .nav-link {
   @apply text-gray-700 hover:text-gray-900;
+  position: relative;
+  display: inline-block;
+}
+
+.active-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: currentColor;
 }
 
 .product-filter {
@@ -106,6 +118,6 @@ button {
 
 .languageContainer {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 4px;
+  right: 4px;
 }

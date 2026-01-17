@@ -13,7 +13,7 @@ export default function About() {
 
       {/* Company Story */}
       <section className="mb-8 sm:mb-12">
-        <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">{t('about.ourStory')}</h2>
+        {/* <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4">{t('about.ourStory')}</h2> */}
         <p className="text-base text-gray-600 mb-3 sm:mb-4 leading-relaxed">
           {t('about.paragraph1')}
         </p>

@@ -29,7 +29,6 @@ export default function NavOverlay({ isOpen, onClose }) {
         className="flex flex-col gap-2 p-6 border-b border-gray-600">
           <p>{t('overlay.phone')}: (555) 123-4567</p>
           <p>{t('overlay.email')}: contact@placeholder.com</p>
-          <p>{t('footer.address')}: 123 Main St, City, ST 12345</p>
         </div>
       </div>
     </>

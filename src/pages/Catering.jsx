@@ -9,17 +9,6 @@ export default function Catering() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-8">
-        <div className="flex max-w-4xl mx-auto text-center items-center justify-center">
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 text-center">
-            {t('catering.title')}
-          </h1>
-          {/* <p className="text-xl md:text-2xl text-white">
-            {t('catering.subtitle')}
-          </p> */}
-        </div>
-      </div>
-
       {/* Introduction */}
       <div className="max-w-4xl mx-auto px-4 py-8">
         {/* <div className="bg-white -xl -sm p-2 mb-12">
@@ -78,7 +67,7 @@ export default function Catering() {
         </div>
 
         {/* Contact CTA */}
-        <div className="text-black p-2 md:p-4 text-left">
+        <div className="text-black p-2">
           <p className="contactCta text-xl md:text-2xl leading-relaxed font-bold">
             {t('catering.contactText')}
           </p>
