@@ -9,13 +9,13 @@ export function CartProvider({ children }) {
     setCart((prevCart) => {
       const existingItem = prevCart.find((item) => item.id === product.id);
       
-      if (existingItem) {
-        return prevCart.map((item) =>
-          item.id === product.id
-            ? { ...item, quantity: item.quantity + quantity }
-            : item
-        );
-      }
+      // if (existingItem) {
+      //   return prevCart.map((item) =>
+      //     item.id === product.id
+      //       ? { ...item, quantity: item.quantity + quantity, value: item.value + product.price}
+      //       : item
+      //   );
+      // }
       
       return [...prevCart, { ...product, quantity }];
     });

@@ -46,7 +46,9 @@ h1, h2, h3 {
 .nav-link {
   text-transform: uppercase;
 }
-
+.mobile-menu {
+  text-transform: uppercase;
+}
 /* Product titles uppercase */
 .product-title {
   text-transform: uppercase;
