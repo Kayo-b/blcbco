@@ -46,7 +46,7 @@ export default function Cart() {
             </div>
 
             {/* Quantity Controls */}
-            <div className="flex items-center justify-center space-x-3 sm:space-x-4">
+            {/* <div className="flex items-center justify-center space-x-3 sm:space-x-4">
               <button
                 onClick={() => updateQuantity(item.id, item.quantity - 1)}
                 className="bg-gray-200 text-gray-700 w-10 h-10 sm:w-12 sm:h-12  hover:bg-gray-300 min-h-[44px] flex items-center justify-center text-lg font-semibold"
@@ -62,7 +62,7 @@ export default function Cart() {
               >
                 +
               </button>
-            </div>
+            </div> */}
 
             {/* Price & Remove */}
             <div className="flex sm:flex-col items-center sm:items-end justify-between sm:justify-between gap-2">
@@ -70,7 +70,7 @@ export default function Cart() {
                 ${(item.price * item.quantity).toFixed(2)}
               </p>
               <button
-                onClick={() => removeFromCart(item.id)}
+                onClick={() => removeFromCart(item.cartId)}
                 className="text-red-600 hover:text-red-700 text-sm font-medium min-h-[44px] px-2"
               >
                 Remove
