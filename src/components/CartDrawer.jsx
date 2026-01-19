@@ -82,21 +82,6 @@ export default function CartDrawer({ isOpen, onClose }) {
                       {/* Quantity Controls */}
                       <div className="flex items-center gap-2">
                         <button
-                          onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                          className="bg-gray-200 text-gray-700 w-8 h-8  hover:bg-gray-300 flex items-center justify-center"
-                        >
-                          −
-                        </button>
-                        <span className="text-sm font-semibold w-8 text-center">
-                          {item.quantity}
-                        </span>
-                        <button
-                          onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                          className="bg-gray-200 text-gray-700 w-8 h-8  hover:bg-gray-300 flex items-center justify-center"
-                        >
-                          +
-                        </button>
-                        <button
                           onClick={() => removeFromCart(item.cartId)}
                           className="ml-auto text-red-600 hover:text-red-700 text-xs"
                         >

@@ -14,7 +14,7 @@ export default function ProductCard({ product, onAddToCart }) {
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-48 sm:h-40 md:h-44 lg:h-48 object-cover"
+          className="w-full h-64 sm:h-56 md:h-64 lg:h-72 object-cover"
         />
       </Link>
       <div className="p-4 sm:p-3 md:p-4 flex flex-col flex-grow">
