@@ -145,6 +145,13 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
               >
                 {t('nav.catering')}
               </Link>
+              <Link
+                to="/about"
+                className="text-gray-700 hover:text-gray-900 py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t('nav.about')}
+              </Link>
             <Link
               onMouseDown={onContactClick}
               className="nav-link"
