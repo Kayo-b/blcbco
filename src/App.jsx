@@ -28,7 +28,7 @@ function AppContent() {
         onContactClick={() => setIsContactOpen(true)}
         onContactClose={() => setIsContactOpen(false)}
       />
-      <main className="flex-grow bg-white">
+      <main className="flex-grow">
       {/* <Menu/> */}
         <Routes>
           <Route path="/" element={<Home />} />

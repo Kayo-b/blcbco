@@ -6,7 +6,7 @@ export default function Home() {
   const { t } = useTranslation();
   
   return (
-    <nav className="bg-white w-100 h-screen left-0 top-5">
+    <nav className="h-screen left-0 top-5">
       {/* Vertical Menu Container */}
       {/* <div className="flex flex-col p-2">
         <Link 

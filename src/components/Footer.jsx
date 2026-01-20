@@ -20,11 +20,8 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-white">
+              <a href="https://www.instagram.com/balacobacoberlin/">
                 Instagram
-              </a>
-              <a href="#" className="text-gray-300 hover:text-white">
-                TikTok 
               </a>
             </div>
           </div>

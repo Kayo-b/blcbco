@@ -7,14 +7,18 @@ import blbcLogo from '../assets/balacobaco.svg';
 export default function Navigation({ cartItemCount = 0, onCartClick, onContactClick, onContactClose }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t } = useTranslation();
+  const closeContactAndMenu = () => {
+    onContactClose();
+    setIsMenuOpen(!isMenuOpen);
+  }
 
   return (
-    <nav className="bg-white shadow-md">
+    <nav className="">
       <div className="max-w-full mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center h-16 border-b-1 pb-6 mt-6">
           {/* Logo */}
           <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              onClick={() => closeContactAndMenu()}
               className="md:hidden text-gray-700"
             >
               <svg
@@ -43,8 +47,8 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
 
           <div className="flex-shrink-0">
             <Link 
-              // backgroundImage=''
               onMouseEnter={onContactClose}
+              onClick={() => closeContactAndMenu()}
               to="/" className="text-2xl font-bold text-gray-800">
              <img src={blbcLogo} alt='Logo' className="hidden md:block w-78 h-auto"/>
              <img src={blbcLogo} alt='Logo' className="block md:hidden w-62 h-auto"/>
@@ -79,7 +83,7 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
             <NavLink
               to="/about" 
               onMouseEnter={onContactClose}
-              style={{ padding: '8px 0px' , marginLeft: '12px'}}
+              style={{ padding: '8px 0px 0px' , marginRight: '12px'}}
               className={({ isActive }) => `nav-link ${isActive ? 'active-nav-link' : ''}`}
             >
               {t('nav.about')}
@@ -89,7 +93,7 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
             <LanguageSwitcher />
           <div
             onMouseEnter={onContactClose}
-            className="items-center p-4 space-x-4">
+            className="items-center space-x-4">
             <button 
               onClick={onCartClick} className="cart-btn relative">
               <svg 

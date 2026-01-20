@@ -6,7 +6,6 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
   pointer-events:all
 }
-
 button:hover {
   cursor: pointer;
 }
@@ -31,9 +30,12 @@ button {
     background-color: #fefaee;
   }
 }
-
+main {
+  background-color: #fefaee;
+}
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  background-color: #fefaee;
 }
 
 /* Uppercase styles for titles and headings */
@@ -41,7 +43,9 @@ h1, h2, h3 {
   text-transform: uppercase;
   letter-spacing: 0.02em;
 }
-
+.navOverlay {
+  background-color: #fefaee;
+}
 /* Navigation uppercase */
 .nav-link {
   text-transform: uppercase;
