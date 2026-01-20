@@ -43,6 +43,7 @@ h1, h2, h3 {
   text-transform: uppercase;
   letter-spacing: 0.02em;
 }
+
 .navOverlay {
   background-color: #fefaee;
 }
@@ -111,7 +112,8 @@ button {
 }
 
 .language-btn {
-  @apply text-xs px-2 py-1
+  @apply text-xs px-2 py-1;
+  z-index: 99;
 }
 
 .mobile-menu {

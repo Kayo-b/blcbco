@@ -25,7 +25,7 @@ export default function LanguageSwitcher() {
       {/* Current Language Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="language-btn bg-white"
+        className="language-btn"
       >
         {currentLanguage.label}
       </button>
@@ -38,7 +38,7 @@ export default function LanguageSwitcher() {
           <button
             key={lang.code}
             onClick={() => changeLanguage(lang.code)}
-            className="language-btn bg-black/20 text-white hover:bg-black/25 hover:text-gray-900"
+            className="language-btn bg-black/20 text-white hover:bg-white hover:text-gray-900"
           >
             {lang.label}
           </button>
