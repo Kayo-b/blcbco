@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useCart } from '../context/CartContext';
-import { products, birthdayCakeOptions } from '../data/products';
+import { products, birthdayCakeOptions, customCakeFlavors } from '../data/products';
 
 export default function ProductDetail() {
   const { id } = useParams();
@@ -19,6 +19,10 @@ export default function ProductDetail() {
   const [selectedFrostingSubcategory, setSelectedFrostingSubcategory] = useState(null);
   const [selectedDecorationStyle, setSelectedDecorationStyle] = useState(null);
   const [selectedFlowers, setSelectedFlowers] = useState('none');
+  
+  // Custom cake flavor combination states
+  const [selectedFlavor1, setSelectedFlavor1] = useState(null);
+  const [selectedFlavor2, setSelectedFlavor2] = useState(null);
 
   const product = products.find((p) => p.id === parseInt(id));
 
@@ -63,7 +67,18 @@ export default function ProductDetail() {
     }
 
     return price;
-  };
+  };// For custom cake with flavor combination
+      if (product.hasFlavorCombination) {
+        const frostingComplete = selectedFrostingCategory === 'naked' || 
+          (selectedFrostingCategory && selectedFrostingSubcategory);
+        const decorationComplete = selectedFrostingCategory === 'naked' || selectedDecorationStyle;
+        
+        return selectedBase && selectedFlavor1 && selectedFlavor2 && 
+               frostingComplete && decorationComplete && selectedFlowers;
+      }
+      
+      // For regular birthday cakes
+      
 
   const canAddToCart = () => {
     if (product.customizable) {
@@ -92,7 +107,11 @@ export default function ProductDetail() {
         frostingCategory: selectedFrostingCategory,
         frostingSubcategory: selectedFrostingSubcategory,
         decorationStyle: selectedDecorationStyle,
-        flowers: selectedFlowers
+        flowers: selectedFlowers,
+        ...(product.hasFlavorCombination && {
+          flavor1: selectedFlavor1,
+          flavor2: selectedFlavor2
+        })
       } : null
     };
     addToCart(cartItem, quantity);
@@ -171,6 +190,53 @@ export default function ProductDetail() {
           {/* Birthday Cake Customization */}
           {product.customizable && (
             <div className="space-y-6 mb-6">
+              {/* Flavor Combination Selection (only for custom cakes) */}
+              {product.hasFlavorCombination && (
+                <>
+                  <div>
+                    <label className="block text-gray-700 mb-2 font-medium">
+                      {t('productDetail.selectFlavor1')}
+                    </label>
+                    <div className="grid grid-cols-2 gap-2">
+                      {customCakeFlavors.map((flavor) => (
+                        <button
+                          key={flavor.id}
+                          onClick={() => setSelectedFlavor1(flavor.id)}
+                          className={`p-3 border-2 rounded ${
+                            selectedFlavor1 === flavor.id
+                              ? 'border-blue-500 bg-blue-50'
+                              : 'border-gray-300 hover:border-gray-400'
+                          }`}
+                        >
+                          {t(`productNames.${flavor.nameKey}`)}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-gray-700 mb-2 font-medium">
+                      {t('productDetail.selectFlavor2')}
+                    </label>
+                    <div className="grid grid-cols-2 gap-2">
+                      {customCakeFlavors.map((flavor) => (
+                        <button
+                          key={flavor.id}
+                          onClick={() => setSelectedFlavor2(flavor.id)}
+                          className={`p-3 border-2 rounded ${
+                            selectedFlavor2 === flavor.id
+                              ? 'border-blue-500 bg-blue-50'
+                              : 'border-gray-300 hover:border-gray-400'
+                          }`}
+                        >
+                          {t(`productNames.${flavor.nameKey}`)}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </>
+              )}
+
               {/* Base Selection */}
               <div>
                 <label className="block text-gray-700 mb-2 font-medium">

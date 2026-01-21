@@ -41,6 +41,8 @@
     "selectSpecificType": "Selecione o tipo específico:",
     "notAvailableForNaked": "Não disponível para bolos pelados",
     "selectBase": "Selecione a Massa",
+    "selectFlavor1": "Selecione o Primeiro Sabor",
+    "selectFlavor2": "Selecione o Segundo Sabor",
     "selectFrosting": "Selecione a Cobertura",
     "selectDecorationStyle": "Selecione o Estilo de Decoração",
     "addFlowers": "Adicionar Flores",
@@ -150,6 +152,11 @@
     "birthdayCakes.pineappleCoconut": "Bolo de Aniversário - Abacaxi com Coco",
     "birthdayCakes.doceDeLeite": "Bolo de Aniversário - Doce de Leite",
     "birthdayCakes.beijinho": "Bolo de Aniversário - Beijinho",
+    "birthdayCakes.customCake": "Bolo de Aniversário Personalizado",
+    "flavors.brigadeiro": "Brigadeiro (brigadeiro brasileiro)",
+    "flavors.pineappleCoconut": "Abacaxi com Coco",
+    "flavors.doceDeLeite": "Doce de Leite (com nozes ou ameixas)",
+    "flavors.beijinho": "Beijinho (coco e leite condensado)",
     "sizes.small": "Pequeno",
     "sizes.medium": "Médio",
     "sizes.familySmall": "Família (Pequeno)",
@@ -181,6 +188,7 @@
     "birthdayCakes.pineappleCoconutDesc": "Bolo de aniversário tropical de abacaxi com coco — escolha seu estilo de cobertura",
     "birthdayCakes.doceDeLeiteDesc": "Bolo de aniversário de doce de leite com nozes ou ameixas — escolha seu estilo de cobertura",
     "birthdayCakes.beijinhoDesc": "Bolo de aniversário de beijinho com coco e leite condensado — escolha seu estilo de cobertura",
+    "birthdayCakes.customCakeDesc": "Crie seu próprio bolo de aniversário combinando dois sabores",
     "fixedMenu.boloGeladoFull": "Nosso Bolo Gelado é um clássico brasileiro dos anos 90 — um bolo de coco gelado que traz memórias da infância. Leve, úmido e refrescante, perfeito para qualquer dia da semana.",
     "fixedMenu.boloMilhoFull": "Este bolo cremoso de milho é feito com amor usando receitas tradicionais brasileiras. Doce, úmido e reconfortante — tem gosto de casa. Perfeito com café ou como lanche da tarde.",
     "fixedMenu.boloCenouraFull": "Bolo de cenoura tradicional brasileiro com nossa cobertura de brigadeiro característica. Super úmido e cheio de sabor, este bolo é um básico em todas as casas brasileiras.",
@@ -189,6 +197,7 @@
     "birthdayCakes.brigadeiroFull": "Sabemos como os aniversários são especiais em nossa cultura. Este bolo de brigadeiro tem gosto de casa, como a cozinha de uma mãe. Feito com massa de baunilha. Escolha seu estilo de cobertura (buttercream, ganache de brigadeiro ou pelado) e opcionalmente adicione flores decorativas. Design simples e elegante. Requisito do pedido: uma semana de antecedência.",
     "birthdayCakes.pineappleCoconutFull": "Um bolo de celebração tropical com sabores de abacaxi e coco. Feito com massa de baunilha. Escolha seu estilo de cobertura (buttercream, ganache de brigadeiro ou pelado) e opcionalmente adicione flores decorativas. Design simples e elegante. Requisito do pedido: uma semana de antecedência.",
     "birthdayCakes.doceDeleiteFull": "Bolo de aniversário tradicional de doce de leite com sua escolha de nozes ou ameixas. Feito com massa de baunilha. Escolha seu estilo de cobertura (buttercream, ganache de brigadeiro ou pelado) e opcionalmente adicione flores decorativas. Design simples e elegante. Requisito do pedido: uma semana de antecedência.",
-    "birthdayCakes.beijinhoFull": "Um doce bolo de aniversário de beijinho com sabores de coco e leite condensado. Feito com massa de baunilha. Escolha seu estilo de cobertura (buttercream, ganache de brigadeiro ou pelado) e opcionalmente adicione flores decorativas. Design simples e elegante. Requisito do pedido: uma semana de antecedência."
+    "birthdayCakes.beijinhoFull": "Um doce bolo de aniversário de beijinho com sabores de coco e leite condensado. Feito com massa de baunilha. Escolha seu estilo de cobertura (buttercream, ganache de brigadeiro ou pelado) e opcionalmente adicione flores decorativas. Design simples e elegante. Requisito do pedido: uma semana de antecedência.",
+    "birthdayCakes.customCakeFull": "Crie seu bolo de aniversário personalizado combinando dois dos nossos sabores exclusivos: Brigadeiro (brigadeiro brasileiro), Abacaxi com Coco, Doce de Leite (com nozes ou ameixas) ou Beijinho (coco e leite condensado). Você pode combinar sabores, mas só trabalhamos com essas opções. Escolha sua massa, estilo de cobertura (buttercream, ganache de brigadeiro ou pelado) e opcionalmente adicione flores decorativas. Design simples e elegante. Requisito do pedido: uma semana de antecedência."
   }
 }

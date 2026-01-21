@@ -11,7 +11,7 @@ export default function Catering() {
       {/* Hero Section */}
       {/* Introduction */}
       <div className="max-w-4xl mx-auto px-4 py-8">
-        {/* <div className="bg-white -xl -sm p-2 mb-12">
+        {/* <div className=" -xl -sm p-2 mb-12">
           <h2 className="text-3xl font-bold text-gray-600 mb-6 text-center">
             {t('catering.serviceHeading')}
           </h2>
@@ -28,7 +28,7 @@ export default function Catering() {
             {t('catering.serviceOptions')}
           </h2>
           <div className="space-y-6">
-            <div className="bg-white -xl p-2 transition-colors">
+            <div className=" -xl p-2 transition-colors">
               <h3 className="text-2xl font-bold text-gray-800 mb-3">
                 {t('catering.service0.title')}
               </h3>
@@ -36,7 +36,7 @@ export default function Catering() {
                 {t('catering.service0.description')}
               </p>
             </div>
-            <div className="bg-white -xl p-2 transition-colors">
+            <div className=" -xl p-2 transition-colors">
               <h3 className="text-2xl font-bold text-gray-800 mb-3">
                 {t('catering.service1.title')}
               </h3>
@@ -44,7 +44,7 @@ export default function Catering() {
                 {t('catering.service1.description')}
               </p>
             </div>
-            <div className="bg-white -xl p-2 transition-colors">
+            <div className=" -xl p-2 transition-colors">
               <h3 className="text-2xl font-bold text-gray-800 mb-3">
                 {t('catering.service2.title')}
               </h3>
@@ -55,7 +55,7 @@ export default function Catering() {
                 {t('catering.service2.description2')}
               </p>
             </div>
-            <div className="bg-white -xl p-2 transition-colors">
+            <div className=" -xl p-2 transition-colors">
               <h3 className="text-2xl font-bold text-gray-800 mb-3">
                 {t('catering.service3.title')}
               </h3>

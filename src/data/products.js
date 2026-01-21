@@ -33,6 +33,14 @@ export const birthdayCakeOptions = {
   ]
 };
 
+// Custom Cake Flavor Options
+export const customCakeFlavors = [
+  { id: 'brigadeiro', nameKey: 'flavors.brigadeiro' },
+  { id: 'pineappleCoconut', nameKey: 'flavors.pineappleCoconut' },
+  { id: 'doceDeLeite', nameKey: 'flavors.doceDeLeite' },
+  { id: 'beijinho', nameKey: 'flavors.beijinho' }
+];
+
 export const products = [
   // Fixed Menu
   {
@@ -152,5 +160,18 @@ export const products = [
     descriptionKey: 'birthdayCakes.beijinhoDesc',
     fullDescriptionKey: 'birthdayCakes.beijinhoFull',
     image: 'https://images.unsplash.com/photo-1558636508-e0db3814bd1d?w=400&h=300&fit=crop',
+  },
+
+  // Custom Cake with Flavor Combination
+  {
+    id: 10,
+    nameKey: 'birthdayCakes.customCake',
+    category: 'birthdayCakes',
+    price: 55.99,
+    customizable: true,
+    hasFlavorCombination: true,
+    descriptionKey: 'birthdayCakes.customCakeDesc',
+    fullDescriptionKey: 'birthdayCakes.customCakeFull',
+    image: 'https://images.unsplash.com/photo-1535141192574-5d4897c12636?w=400&h=300&fit=crop',
   }
 ];

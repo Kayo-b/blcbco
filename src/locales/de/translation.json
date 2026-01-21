@@ -41,6 +41,8 @@
     "selectSpecificType": "Spezifischen Typ auswählen:",
     "notAvailableForNaked": "Nicht verfügbar für nackte Kuchen",
     "selectBase": "Kuchenbasis auswählen",
+    "selectFlavor1": "Ersten Geschmack auswählen",
+    "selectFlavor2": "Zweiten Geschmack auswählen",
     "selectFrosting": "Glasur auswählen",
     "selectDecorationStyle": "Dekorationsstil auswählen",
     "addFlowers": "Blumen hinzufügen",
@@ -150,6 +152,11 @@
     "birthdayCakes.pineappleCoconut": "Geburtstagskuchen - Ananas mit Kokosnuss",
     "birthdayCakes.doceDeLeite": "Geburtstagskuchen - Doce de Leite",
     "birthdayCakes.beijinho": "Geburtstagskuchen - Beijinho",
+    "birthdayCakes.customCake": "Individueller Geburtstagskuchen",
+    "flavors.brigadeiro": "Brigadeiro (brasilianischer Schokoladenfudge)",
+    "flavors.pineappleCoconut": "Ananas mit Kokosnuss",
+    "flavors.doceDeLeite": "Doce de Leite (mit Walnüssen oder Pflaumen)",
+    "flavors.beijinho": "Beijinho (Kokosnuss und Kondensmilch)",
     "sizes.small": "Klein",
     "sizes.medium": "Mittel",
     "sizes.familySmall": "Familie (Klein)",
@@ -181,6 +188,7 @@
     "birthdayCakes.pineappleCoconutDesc": "Tropischer Ananas-Kokosnuss-Geburtstagskuchen — wählen Sie Ihren Glasurstil",
     "birthdayCakes.doceDeLeiteDesc": "Doce de leite Geburtstagskuchen mit Walnüssen oder Pflaumen — wählen Sie Ihren Glasurstil",
     "birthdayCakes.beijinhoDesc": "Kokosnuss-Kondensmilch-Geburtstagskuchen — wählen Sie Ihren Glasurstil",
+    "birthdayCakes.customCakeDesc": "Erstellen Sie Ihren eigenen Geburtstagskuchen durch Kombination von zwei Geschmacksrichtungen",
     "fixedMenu.boloGeladoFull": "Unser Bolo Gelado ist ein beliebter brasilianischer Klassiker der 90er Jahre — ein gekühlter Kokosnusskuchen, der Kindheitserinnerungen weckt. Leicht, saftig und erfrischend, perfekt für jeden Tag der Woche.",
     "fixedMenu.boloMilhoFull": "Dieser cremige Maiskuchen wird mit Liebe nach traditionellen brasilianischen Rezepten hergestellt. Süß, saftig und trostreich — er schmeckt wie zu Hause. Perfekt zu Kaffee oder als Nachmittagssnack.",
     "fixedMenu.boloCenouraFull": "Traditioneller brasilianischer Karottenkuchen mit unserem charakteristischen Brigadeiro (Schokoladenfudge) Topping. Super saftig und voller Geschmack, dieser Kuchen ist ein Grundnahrungsmittel in jedem brasilianischen Haushalt.",
@@ -189,6 +197,7 @@
     "birthdayCakes.brigadeiroFull": "Wir wissen, wie besonders Geburtstage in unserer Kultur sind. Dieser Brigadeiro-Geburtstagskuchen schmeckt wie zu Hause, wie in Mutters Küche. Hergestellt mit Vanille-Biskuitkuchen. Wählen Sie Ihren Glasurstil (Buttercreme, Brigadeiro-Ganache oder nackt) und fügen Sie optional dekorative Blumen hinzu. Einfaches, elegantes Design. Bestellanforderung: eine Woche im Voraus.",
     "birthdayCakes.pineappleCoconutFull": "Ein tropischer Feiertagskuchen mit Ananas- und Kokosnussaromen. Hergestellt mit Vanille-Biskuitkuchen. Wählen Sie Ihren Glasurstil (Buttercreme, Brigadeiro-Ganache oder nackt) und fügen Sie optional dekorative Blumen hinzu. Einfaches, elegantes Design. Bestellanforderung: eine Woche im Voraus.",
     "birthdayCakes.doceDeleiteFull": "Traditioneller Doce de leite Geburtstagskuchen mit Ihrer Wahl von Walnüssen oder Pflaumen. Hergestellt mit Vanille-Biskuitkuchen. Wählen Sie Ihren Glasurstil (Buttercreme, Brigadeiro-Ganache oder nackt) und fügen Sie optional dekorative Blumen hinzu. Einfaches, elegantes Design. Bestellanforderung: eine Woche im Voraus.",
-    "birthdayCakes.beijinhoFull": "Ein süßer Beijinho-Geburtstagskuchen mit Kokosnuss- und Kondensmilcharomen. Hergestellt mit Vanille-Biskuitkuchen. Wählen Sie Ihren Glasurstil (Buttercreme, Brigadeiro-Ganache oder nackt) und fügen Sie optional dekorative Blumen hinzu. Einfaches, elegantes Design. Bestellanforderung: eine Woche im Voraus."
+    "birthdayCakes.beijinhoFull": "Ein süßer Beijinho-Geburtstagskuchen mit Kokosnuss- und Kondensmilcharomen. Hergestellt mit Vanille-Biskuitkuchen. Wählen Sie Ihren Glasurstil (Buttercreme, Brigadeiro-Ganache oder nackt) und fügen Sie optional dekorative Blumen hinzu. Einfaches, elegantes Design. Bestellanforderung: eine Woche im Voraus.",
+    "birthdayCakes.customCakeFull": "Erstellen Sie Ihren personalisierten Geburtstagskuchen durch Kombination von zwei unserer charakteristischen Geschmacksrichtungen: Brigadeiro (brasilianischer Schokoladenfudge), Ananas mit Kokosnuss, Doce de Leite (mit Walnüssen oder Pflaumen) oder Beijinho (Kokosnuss und Kondensmilch). Sie können Geschmacksrichtungen kombinieren, aber wir arbeiten nur mit diesen Optionen. Wählen Sie Ihre Kuchenbasis, Glasurstil (Buttercreme, Brigadeiro-Ganache oder nackt) und fügen Sie optional dekorative Blumen hinzu. Einfaches, elegantes Design. Bestellanforderung: eine Woche im Voraus."
   }
 }

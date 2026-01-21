@@ -41,6 +41,8 @@
     "selectSpecificType": "Select specific type:",
     "notAvailableForNaked": "Not available for naked cakes",
     "selectBase": "Select Cake Base",
+    "selectFlavor1": "Select First Flavor",
+    "selectFlavor2": "Select Second Flavor",
     "selectFrosting": "Select Frosting",
     "selectDecorationStyle": "Select Decoration Style",
     "addFlowers": "Add Flowers",
@@ -150,6 +152,11 @@
     "birthdayCakes.pineappleCoconut": "Birthday Cake - Pineapple with Coconut",
     "birthdayCakes.doceDeLeite": "Birthday Cake - Doce de Leite",
     "birthdayCakes.beijinho": "Birthday Cake - Beijinho",
+    "birthdayCakes.customCake": "Custom Birthday Cake",
+    "flavors.brigadeiro": "Brigadeiro (Brazilian chocolate fudge)",
+    "flavors.pineappleCoconut": "Pineapple with Coconut",
+    "flavors.doceDeLeite": "Doce de Leite (with walnuts or prunes)",
+    "flavors.beijinho": "Beijinho (coconut and condensed milk)",
     "sizes.small": "Small",
     "sizes.medium": "Medium",
     "sizes.familySmall": "Family (Small)",
@@ -181,6 +188,7 @@
     "birthdayCakes.pineappleCoconutDesc": "Tropical pineapple and coconut birthday cake — choose your frosting style",
     "birthdayCakes.doceDeLeiteDesc": "Doce de leite birthday cake with walnuts or prunes — choose your frosting style",
     "birthdayCakes.beijinhoDesc": "Coconut and condensed milk birthday cake — choose your frosting style",
+    "birthdayCakes.customCakeDesc": "Create your own birthday cake by combining two flavors",
     "fixedMenu.boloGeladoFull": "Our Bolo Gelado is a beloved 90's Brazilian classic — a chilled coconut cake that brings back childhood memories. Light, moist, and refreshing, perfect for any day of the week.",
     "fixedMenu.boloMilhoFull": "This creamy corn cake is made with love using traditional Brazilian recipes. Sweet, moist, and comforting — it tastes like home. Perfect with coffee or as an afternoon snack.",
     "fixedMenu.boloCenouraFull": "Traditional Brazilian carrot cake with our signature brigadeiro (chocolate fudge) topping. Super moist and full of flavor, this cake is a staple in every Brazilian household.",
@@ -189,6 +197,7 @@
     "birthdayCakes.brigadeiroFull": "We know how special birthdays are in our culture. This brigadeiro (Brazilian chocolate fudge) birthday cake tastes like home, like a mother's kitchen. Made with vanilla sponge cake. Choose your frosting style (buttercream, brigadeiro ganache, or naked) and optionally add decorative flowers. Simple, elegant design. Order requirement: one week in advance.",
     "birthdayCakes.pineappleCoconutFull": "A tropical celebration cake with pineapple and coconut flavors. Made with vanilla sponge cake. Choose your frosting style (buttercream, brigadeiro ganache, or naked) and optionally add decorative flowers. Simple, elegant design. Order requirement: one week in advance.",
     "birthdayCakes.doceDeleiteFull": "Traditional doce de leite birthday cake with your choice of walnuts or prunes. Made with vanilla sponge cake. Choose your frosting style (buttercream, brigadeiro ganache, or naked) and optionally add decorative flowers. Simple, elegant design. Order requirement: one week in advance.",
-    "birthdayCakes.beijinhoFull": "A sweet beijinho birthday cake with coconut and condensed milk flavors. Made with vanilla sponge cake. Choose your frosting style (buttercream, brigadeiro ganache, or naked) and optionally add decorative flowers. Simple, elegant design. Order requirement: one week in advance."
+    "birthdayCakes.beijinhoFull": "A sweet beijinho birthday cake with coconut and condensed milk flavors. Made with vanilla sponge cake. Choose your frosting style (buttercream, brigadeiro ganache, or naked) and optionally add decorative flowers. Simple, elegant design. Order requirement: one week in advance.",
+    "birthdayCakes.customCakeFull": "Create your personalized birthday cake by combining two of our signature flavors: Brigadeiro (Brazilian chocolate fudge), Pineapple with Coconut, Doce de Leite (with walnuts or prunes), or Beijinho (coconut and condensed milk). You may combine any flavors, but we only work with these options. Choose your cake base, frosting style (buttercream, brigadeiro ganache, or naked) and optionally add decorative flowers. Simple, elegant design. Order requirement: one week in advance."
   }
 }
