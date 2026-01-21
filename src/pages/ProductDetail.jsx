@@ -67,18 +67,7 @@ export default function ProductDetail() {
     }
 
     return price;
-  };// For custom cake with flavor combination
-      if (product.hasFlavorCombination) {
-        const frostingComplete = selectedFrostingCategory === 'naked' || 
-          (selectedFrostingCategory && selectedFrostingSubcategory);
-        const decorationComplete = selectedFrostingCategory === 'naked' || selectedDecorationStyle;
-        
-        return selectedBase && selectedFlavor1 && selectedFlavor2 && 
-               frostingComplete && decorationComplete && selectedFlowers;
-      }
-      
-      // For regular birthday cakes
-      
+  };
 
   const canAddToCart = () => {
     if (product.customizable) {

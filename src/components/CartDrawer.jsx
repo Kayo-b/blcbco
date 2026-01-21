@@ -75,8 +75,40 @@ export default function CartDrawer({ isOpen, onClose }) {
                       <h3 className="font-semibold text-gray-800 text-sm mb-1">
                         {t(`productNames.${item.nameKey}`)}
                       </h3>
-                      <p className="text-gray-600 text-sm mb-2">
-                        ${item.price.toFixed(2)}
+                      
+                      {/* Size info */}
+                      {item.selectedSize && (
+                        <p className="text-xs text-gray-600">
+                          {t(`productNames.sizes.${item.selectedSize}`)}
+                        </p>
+                      )}
+                      
+                      {/* Variant info */}
+                      {item.selectedVariant && (
+                        <p className="text-xs text-gray-600">
+                          {t(`productDetail.variants.${item.selectedVariant}`)}
+                        </p>
+                      )}
+                      
+                      {/* Customization details */}
+                      {item.customization && (
+                        <div className="text-xs text-gray-600 mt-1 space-y-0.5">
+                          {item.customization.flavor1 && item.customization.flavor2 && (
+                            <p>{t('productDetail.flavorsLabel')}: {t(`productNames.flavors.${item.customization.flavor1}`)}, {t(`productNames.flavors.${item.customization.flavor2}`)}</p>
+                          )}
+                          <p>{t('productDetail.baseLabel')}: {t(`productNames.bases.${item.customization.base}`)}</p>
+                          <p>{t('productDetail.frostingLabel')}: {t(`productNames.frostings.${item.customization.frostingSubcategory || item.customization.frostingCategory}`)}</p>
+                          {item.customization.decorationStyle && (
+                            <p>{t('productDetail.decorationLabel')}: {t(`productNames.decorationStyles.${item.customization.decorationStyle}`)}</p>
+                          )}
+                          <p className={item.customization.flowers === 'withFlowers' ? 'font-bold' : ''}>
+                            {t(`productNames.flowers.${item.customization.flowers}`)}
+                          </p>
+                        </div>
+                      )}
+                      
+                      <p className="text-gray-600 text-sm mt-1">
+                        €{item.price.toFixed(2)}
                       </p>
 
                       {/* Quantity Controls */}
@@ -94,7 +126,7 @@ export default function CartDrawer({ isOpen, onClose }) {
                     {/* Price */}
                     <div className="text-right">
                       <p className="font-bold text-gray-900">
-                        ${(item.price * item.quantity).toFixed(2)}
+                        €{(item.price * item.quantity).toFixed(2)}
                       </p>
                     </div>
                   </div>
@@ -109,7 +141,7 @@ export default function CartDrawer({ isOpen, onClose }) {
           <div className="border-t border-gray-600 p-6 bg-gray-600">
             <div className="flex items-center justify-between mb-4 text-white">
               <span className="text-lg font-semibold">SUBTOTAL:</span>
-              <span className="text-2xl font-bold">${getTotal().toFixed(2)}</span>
+              <span className="text-2xl font-bold">€{getTotal().toFixed(2)}</span>
             </div>
             <Link
               to="/checkout"

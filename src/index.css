@@ -100,7 +100,7 @@ button {
 }
 
 .product-filter {
-  @apply px-4 sm:px-6 py-2.5 text-sm sm:text-base uppercase transition-colors min-h-[44px];
+  @apply px-4 sm:px-6 py-2.5 max-sm:w-200 text-sm sm:text-base uppercase transition-colors min-h-[44px];
 }
 
 .btn-base {

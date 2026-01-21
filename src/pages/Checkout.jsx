@@ -29,13 +29,61 @@ export default function Checkout() {
     // Generate order number
     const orderNumber = Math.floor(100000 + Math.random() * 900000);
     
+    // Create detailed order object
+    const orderDetails = {
+      orderNumber,
+      orderDate: new Date().toISOString(),
+      customer: {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+      },
+      delivery: {
+        type: formData.deliveryType,
+        address: formData.deliveryType === 'delivery' ? formData.address : null,
+      },
+      specialInstructions: formData.specialInstructions,
+      items: cart.map(item => ({
+        productId: item.id,
+        productName: item.nameKey,
+        quantity: item.quantity,
+        price: item.price,
+        totalPrice: item.price * item.quantity,
+        // Size selection
+        size: item.selectedSize || null,
+        // Variant selection
+        variant: item.selectedVariant || null,
+        // Customization details
+        customization: item.customization ? {
+          flavors: item.customization.flavor1 && item.customization.flavor2 
+            ? [item.customization.flavor1, item.customization.flavor2]
+            : null,
+          base: item.customization.base,
+          frosting: {
+            category: item.customization.frostingCategory,
+            subcategory: item.customization.frostingSubcategory || null,
+          },
+          decorationStyle: item.customization.decorationStyle || null,
+          flowers: item.customization.flowers,
+        } : null,
+      })),
+      totals: {
+        subtotal: getTotal(),
+        total: getTotal(),
+      },
+    };
+    
+    // Log the order object for now (will be sent to backend later)
+    console.log('Order Details:', JSON.stringify(orderDetails, null, 2));
+    
     // Clear cart and navigate to confirmation
     clearCart();
     navigate('/confirmation', { 
       state: { 
         orderNumber, 
         formData,
-        total: getTotal()
+        total: getTotal(),
+        orderDetails
       } 
     });
   };
@@ -156,13 +204,46 @@ export default function Checkout() {
             <div className="space-y-3 mb-6">
               {cart.map((item) => (
                 <div
-                  key={item.id}
-                  className="flex justify-between text-gray-700"
+                  key={item.cartId}
+                  className="border-b border-gray-300 pb-3"
                 >
-                  <span>
-                    {t(`productNames.${item.nameKey}`)} x {item.quantity}
-                  </span>
-                  <span>${(item.price * item.quantity).toFixed(2)}</span>
+                  <div className="flex justify-between text-gray-800 font-semibold mb-1">
+                    <span>{t(`productNames.${item.nameKey}`)}</span>
+                    <span>€{(item.price * item.quantity).toFixed(2)}</span>
+                  </div>
+                  
+                  {/* Size info */}
+                  {item.selectedSize && (
+                    <p className="text-sm text-gray-600 ml-2">
+                      • {t('productDetail.sizeLabel')}: {t(`productNames.sizes.${item.selectedSize}`)}
+                    </p>
+                  )}
+                  
+                  {/* Variant info */}
+                  {item.selectedVariant && (
+                    <p className="text-sm text-gray-600 ml-2">
+                      • {t('productDetail.variantLabel')}: {t(`productDetail.variants.${item.selectedVariant}`)}
+                    </p>
+                  )}
+                  
+                  {/* Customization details */}
+                  {item.customization && (
+                    <div className="text-sm text-gray-600 ml-2 mt-1">
+                      {item.customization.flavor1 && item.customization.flavor2 && (
+                        <p>• {t('productDetail.flavorsLabel')}: {t(`productNames.flavors.${item.customization.flavor1}`)}, {t(`productNames.flavors.${item.customization.flavor2}`)}</p>
+                      )}
+                      <p>• {t('productDetail.baseLabel')}: {t(`productNames.bases.${item.customization.base}`)}</p>
+                      <p>• {t('productDetail.frostingLabel')}: {t(`productNames.frostings.${item.customization.frostingSubcategory || item.customization.frostingCategory}`)}</p>
+                      {item.customization.decorationStyle && (
+                        <p>• {t('productDetail.decorationLabel')}: {t(`productNames.decorationStyles.${item.customization.decorationStyle}`)}</p>
+                      )}
+                      <p className={item.customization.flowers === 'withFlowers' ? 'font-bold' : ''}>
+                        • {t(`productNames.flowers.${item.customization.flowers}`)}
+                      </p>
+                    </div>
+                  )}
+                  
+                  <p className="text-sm text-gray-500 mt-1">Qty: {item.quantity}</p>
                 </div>
               ))}
             </div>
@@ -171,7 +252,7 @@ export default function Checkout() {
               <div className="flex justify-between items-center">
                 <span className="text-xl font-bold text-gray-800">{t('checkout.total')}:</span>
                 <span className="text-2xl font-bold text-gray-900">
-                  ${getTotal().toFixed(2)}
+                  €{getTotal().toFixed(2)}
                 </span>
               </div>
             </div>
