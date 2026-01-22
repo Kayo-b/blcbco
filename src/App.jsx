@@ -12,6 +12,8 @@ import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import Confirmation from './pages/Confirmation';
 import Catering from './pages/Catering';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import Impressum from './pages/Impressum';
 import NavOverlay from './components/NavOverlay';
 
 function AppContent() {
@@ -39,6 +41,8 @@ function AppContent() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/confirmation" element={<Confirmation />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/impressum" element={<Impressum />} />
         </Routes>
       </main>
       <Footer />

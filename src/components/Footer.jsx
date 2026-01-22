@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -29,6 +30,15 @@ export default function Footer() {
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
           <p>&copy; {new Date().getFullYear()} BalacoBaco. All rights reserved.</p>
+          <div className="mt-4 space-x-4">
+            <Link to="/impressum" className="hover:text-white transition-colors">
+              Impressum
+            </Link>
+            <span>|</span>
+            <Link to="/privacy-policy" className="hover:text-white transition-colors">
+              Datenschutzerklärung
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
