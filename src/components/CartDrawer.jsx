@@ -112,22 +112,23 @@ export default function CartDrawer({ isOpen, onClose }) {
                       </p>
 
                       {/* Quantity Controls */}
+                      
+                    </div>
+
+                    {/* Price */}
+                    <div className="text-right flex flex-col justify-between">
+                      <p className="font-bold text-gray-900">
+                        €{(item.price * item.quantity).toFixed(2)}
+                      </p>
                       <div className="flex items-center gap-2">
                         <button
                           onClick={() => removeFromCart(item.cartId)}
-                          className="ml-auto text-red-600 hover:text-red-700 text-xs"
+                          className="ml-auto text-red-600 hover:text-red-700 text-xs p-1"
                         >
                           {t('cart.remove')}
                           {/* {<img src={closeIcon} className="h-6 brightness-0 hover:brightness-100 transition-all"/>} */}
                         </button>
                       </div>
-                    </div>
-
-                    {/* Price */}
-                    <div className="text-right">
-                      <p className="font-bold text-gray-900">
-                        €{(item.price * item.quantity).toFixed(2)}
-                      </p>
                     </div>
                   </div>
                 </div>

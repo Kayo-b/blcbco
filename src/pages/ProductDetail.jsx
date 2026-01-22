@@ -384,7 +384,7 @@ export default function ProductDetail() {
             €{getCurrentPrice().toFixed(2)}
           </div>
 
-          {/* Quantity Selector */}
+          {/* Quantity Selector
           <div className="mb-6">
             <label className="block text-gray-700 mb-2 font-medium">{t('cart.quantity')}</label>
             <div className="flex items-center space-x-4">
@@ -404,7 +404,7 @@ export default function ProductDetail() {
                 +
               </button>
             </div>
-          </div>
+          </div> */}
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-auto">
