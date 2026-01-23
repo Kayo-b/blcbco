@@ -21,24 +21,27 @@ export default function LanguageSwitcher() {
 
   return (
 
-    <div className="languageContainer relative group">
+    <div 
+      onBlur={() => setIsOpen(false)} 
+      className="languageContainer relative group">
       {/* Current Language Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="language-btn"
+        className="language-btn"  
       >
         {currentLanguage.label}
       </button>
-
-      <div className={`
+    
+      <div
+       className={`
         ${isOpen ? 'flex' : 'hidden'} 
-        flex-col gap-1 mt-1 absolute top-full left-0
+        flex-col gap-1 mt-1 absolute top-full left-0 
       `}>
         {otherLanguages.map((lang) => (
           <button
             key={lang.code}
             onClick={() => changeLanguage(lang.code)}
-            className="language-btn bg-black/20 text-white hover:bg-white hover:text-gray-900"
+            className="language-btn bg-white/90 text-white hover:bg-gray hover:text-gray-400"
           >
             {lang.label}
           </button>

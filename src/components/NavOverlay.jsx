@@ -29,11 +29,11 @@ export default function NavOverlay({ isOpen, onClose }) {
         <div 
         className="flex flex-col gap-2 p-4 border-b border-gray-600">
         <div className="md:hidden">
-          <button onClick={onClose} className="hover:opacity-70 transition-opacity">
+          <button onClick={onClose} className="hover:opacity-70 transition-opacity h-10 w-10">
             <svg 
-              width="24" 
-              height="24" 
-              viewBox="0 0 24 24" 
+              width="34" 
+              height="28" 
+              viewBox="0 0 34 28" 
               fill="none" 
               stroke="currentColor" 
               strokeWidth="1"
