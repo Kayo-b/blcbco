@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { CartProvider, useCart } from './context/CartContext';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -16,6 +16,16 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import Impressum from './pages/Impressum';
 import NavOverlay from './components/NavOverlay';
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function AppContent() {
   const { getItemCount } = useCart();
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -23,32 +33,34 @@ function AppContent() {
   console.log(isContactOpen)
   
   return (
-    <div className="flex flex-col min-h-screen">
-      <Navigation 
-        cartItemCount={getItemCount()} 
-        onCartClick={() => setIsCartOpen(true)}
-        onContactClick={() => setIsContactOpen(true)}
-        onContactClose={() => setIsContactOpen(false)}
-      />
-      <main className="flex-grow">
-      {/* <Menu/> */}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/product/:id" element={<ProductDetail />} />
-          <Route path="/catering" element={<Catering />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/checkout" element={<Checkout />} />
-          <Route path="/confirmation" element={<Confirmation />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/impressum" element={<Impressum />} />
-        </Routes>
-      </main>
-      <Footer />
-      <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
-      <NavOverlay isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
-    </div>
+    <>
+      <ScrollToTop />
+      <div className="flex flex-col min-h-screen">
+        <Navigation
+          cartItemCount={getItemCount()}
+          onCartClick={() => setIsCartOpen(true)}
+          onContactClick={() => setIsContactOpen(true)}
+          onContactClose={() => setIsContactOpen(false)}
+        />
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/product/:id" element={<ProductDetail />} />
+            <Route path="/catering" element={<Catering />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/confirmation" element={<Confirmation />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/impressum" element={<Impressum />} />
+          </Routes>
+        </main>
+        <Footer />
+        <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
+        <NavOverlay isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
+      </div>
+    </>
   );
 }
 

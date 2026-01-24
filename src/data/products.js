@@ -51,8 +51,7 @@ export const products = [
     sizes: [
       { id: 'small', nameKey: 'sizes.small', price: 18.99, serves: '3-4' },
       { id: 'medium', nameKey: 'sizes.medium', price: 28.99, serves: '4-8' },
-      { id: 'familySmall', nameKey: 'sizes.familySmall', price: 38.99, serves: '8-12' },
-      { id: 'familyLarge', nameKey: 'sizes.familyLarge', price: 48.99, serves: '12-16' }
+      { id: 'large', nameKey: 'sizes.large', price: 38.99, serves: '8-12' }
     ],
     descriptionKey: 'fixedMenu.boloGeladoDesc',
     fullDescriptionKey: 'fixedMenu.boloGeladoFull',
@@ -66,8 +65,7 @@ export const products = [
     sizes: [
       { id: 'small', nameKey: 'sizes.small', price: 16.99, serves: '3-4' },
       { id: 'medium', nameKey: 'sizes.medium', price: 26.99, serves: '4-8' },
-      { id: 'familySmall', nameKey: 'sizes.familySmall', price: 36.99, serves: '8-12' },
-      { id: 'familyLarge', nameKey: 'sizes.familyLarge', price: 46.99, serves: '12-16' }
+      { id: 'large', nameKey: 'sizes.large', price: 36.99, serves: '8-12' }
     ],
     descriptionKey: 'fixedMenu.boloMilhoDesc',
     fullDescriptionKey: 'fixedMenu.boloMilhoFull',
@@ -81,8 +79,7 @@ export const products = [
     sizes: [
       { id: 'small', nameKey: 'sizes.small', price: 19.99, serves: '3-4' },
       { id: 'medium', nameKey: 'sizes.medium', price: 29.99, serves: '4-8' },
-      { id: 'familySmall', nameKey: 'sizes.familySmall', price: 39.99, serves: '8-12' },
-      { id: 'familyLarge', nameKey: 'sizes.familyLarge', price: 49.99, serves: '12-16' }
+      { id: 'large', nameKey: 'sizes.large', price: 39.99, serves: '8-12' }
     ],
     descriptionKey: 'fixedMenu.boloCenouraDesc',
     fullDescriptionKey: 'fixedMenu.boloCenouraFull',
@@ -96,8 +93,7 @@ export const products = [
     sizes: [
       { id: 'small', nameKey: 'sizes.small', price: 22.99, serves: '3-4' },
       { id: 'medium', nameKey: 'sizes.medium', price: 32.99, serves: '4-8' },
-      { id: 'familySmall', nameKey: 'sizes.familySmall', price: 42.99, serves: '8-12' },
-      { id: 'familyLarge', nameKey: 'sizes.familyLarge', price: 52.99, serves: '12-16' }
+      { id: 'large', nameKey: 'sizes.large', price: 42.99, serves: '8-12' }
     ],
     descriptionKey: 'fixedMenu.empadaoDesc',
     fullDescriptionKey: 'fixedMenu.empadaoFull',
@@ -112,8 +108,7 @@ export const products = [
     sizes: [
       { id: 'small', nameKey: 'sizes.small', price: 24.99, serves: '3-4' },
       { id: 'medium', nameKey: 'sizes.medium', price: 34.99, serves: '4-8' },
-      { id: 'familySmall', nameKey: 'sizes.familySmall', price: 44.99, serves: '8-12' },
-      { id: 'familyLarge', nameKey: 'sizes.familyLarge', price: 54.99, serves: '12-16' }
+      { id: 'large', nameKey: 'sizes.large', price: 44.99, serves: '8-12' }
     ],
     descriptionKey: 'fixedMenu.salpicaoDesc',
     fullDescriptionKey: 'fixedMenu.salpicaoFull',

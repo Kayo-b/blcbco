@@ -19,7 +19,7 @@ export default function NavOverlay({ isOpen, onClose }) {
       // onClick={(e) => e.stopPropagation()}
       id="NavOverlay"
       className={`
-        navOverlay fixed top-21 left-0 w-full h-[400px] bg-gray-100 
+        navOverlay fixed top-21 left-0 w-full h-[120px] bg-gray-100 
         transition-opacity duration-300 ease-in-out
         ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}
         flex flex-col

@@ -135,7 +135,7 @@ export default function ProductDetail() {
               <label className="block text-gray-700 mb-2 font-medium">
                 {t('productDetail.selectSize')}
               </label>
-              <div className="grid grid-cols-2 gap-2">
+              <div className="grid grid-cols-3 gap-2">
                 {product.sizes.map((size) => (
                   <button
                     key={size.id}
