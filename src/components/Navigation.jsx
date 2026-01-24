@@ -8,9 +8,14 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t } = useTranslation();
 
-  const closeContactAndMenu = () => {
-    onContactClose();
-    setIsMenuOpen(!isMenuOpen);
+  const closeContactAndMenu = (onlyCloseMenu) => {
+    if(onlyCloseMenu) {
+      onContactClose();
+      setIsMenuOpen(false);
+    } else {
+      onContactClose();
+      setIsMenuOpen(!isMenuOpen);
+    } 
   }
 
   return (
@@ -19,7 +24,7 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
         <div className="flex justify-between items-center h-16 border-b-1 pb-6 mt-6">
           {/* Logo */}
           <button
-              onClick={() => closeContactAndMenu()}
+              onClick={() => closeContactAndMenu(false)}
               className="md:hidden text-gray-700"
             >
               <svg
@@ -49,7 +54,7 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
           <div className="flex-shrink-0">
             <Link 
               onMouseEnter={onContactClose}
-              onClick={() => closeContactAndMenu()}
+              onClick={() => closeContactAndMenu(true)}
               to="/" className="text-2xl font-bold text-gray-800">
              <img src={blbcLogo} alt='Logo' className="hidden md:block w-78 h-auto"/>
              <img src={blbcLogo} alt='Logo' className="block md:hidden w-62 h-auto"/>
