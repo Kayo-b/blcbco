@@ -68,7 +68,7 @@ export default function Catering() {
 
         {/* Contact CTA */}
         <div className="text-black p-2">
-          <p className="contactCta text-xl md:text-2xl leading-relaxed font-bold">
+          <p className="contactCta text-2xl leading-relaxed font-bold">
             {t('catering.contactText')}
           </p>
         </div>

@@ -20,8 +20,8 @@ export default function NavOverlay({ isOpen, onClose }) {
       id="NavOverlay"
       className={`
         navOverlay fixed top-21 left-0 h-[130px] max-sm:h-[169px] w-full bg-gray-100 
-        transition-opacity duration-300 ease-in-out
-        ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}
+        transition-all duration-500 ease-in-out
+        ${isOpen ? 'opacity-100 ' : 'opacity-0 pointer-events-none'}
         flex flex-col
       `}>
         {/* Header */}

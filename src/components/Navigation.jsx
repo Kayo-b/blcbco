@@ -1,11 +1,12 @@
 import { Link, NavLink } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 import blbcLogo from '../assets/balacobaco.svg';
 
 export default function Navigation({ cartItemCount = 0, onCartClick, onContactClick, onContactClose }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [shouldHide, setShouldHide] = useState(true);
   const { t } = useTranslation();
 
   const closeContactAndMenu = (onlyCloseMenu) => {
@@ -17,6 +18,17 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
       setIsMenuOpen(!isMenuOpen);
     } 
   }
+  
+  useEffect(() => {
+    if (isMenuOpen) {
+      setShouldHide(false);
+    } else {
+      const timer = setTimeout(() => {
+        setShouldHide(true);
+      }, 50); 
+      return () => clearTimeout(timer);
+    }
+  }, [isMenuOpen]);
 
   return (
     <nav className="">
@@ -119,9 +131,8 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
         </div>
 
         {/* Mobile menu */}
-        {isMenuOpen && (
-          <div className="md:hidden pb-4">
-            <div className="mobile-menu ">
+        <div className={`md:hidden pb-4 overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-100' : 'opacity-0'} ${shouldHide ? 'hidden' : ''}`}>
+          <div className="mobile-menu ">
               <Link
                 to="/"
                 className="text-gray-700 hover:text-gray-900 py-2"
@@ -158,7 +169,6 @@ export default function Navigation({ cartItemCount = 0, onCartClick, onContactCl
             </Link>
             </div>
           </div>
-        )}
       </div>
     </nav>
   );
